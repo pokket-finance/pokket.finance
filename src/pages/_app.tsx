@@ -13,11 +13,9 @@ import lightTheme from '@/theme/light';
 class ReactApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
-
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
-
     return { pageProps };
   }
 
@@ -33,8 +31,11 @@ class ReactApp extends App {
       (page) => page.route === route,
     );
 
-    if (pageIndex === -1) dynamicPageThemes.push({ route, dynamicTheme });
-    else dynamicPageThemes[pageIndex] = { route, dynamicTheme };
+    if (pageIndex === -1) {
+      dynamicPageThemes.push({ route, dynamicTheme });
+    } else {
+      dynamicPageThemes[pageIndex] = { route, dynamicTheme };
+    }
 
     this.setState({ dynamicPageThemes });
   };
@@ -52,12 +53,9 @@ class ReactApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     const dynamicTheme = this.getDynamicPageTheme();
-    const theme = {
-      ...dynamicTheme,
-    };
     return (
       <>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={dynamicTheme}>
           <PageLoader />
           <Head>
             <title>POKKET</title>
