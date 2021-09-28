@@ -1,6 +1,17 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@sb/*": [
+        "stories/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -9,19 +20,24 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "typeRoots": [
+      "next-env.d.ts"
+    ]
   },
+  "exclude": [
+    "node_modules",
+    "./cypress",
+    "./stories"
+  ],
   "include": [
-    "src"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

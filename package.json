@@ -1,56 +1,87 @@
 {
-  "name": "pokket-launch-app",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@craco/craco": "^6.3.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.24",
-    "@types/react-dom": "^17.0.0",
-    "antd": "^4.16.13",
-    "craco-alias": "^3.0.1",
-    "craco-antd": "^1.19.0",
-    "craco-less": "^1.20.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "terser-webpack-plugin": "^4.2.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
+  "name": "app",
+  "version": "1.0.0",
+  "main": "src/index.js",
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+    "dev": "npx cross-env NODE_ENV=development node scripts/start.js",
+    "start": "npx cross-env NODE_ENV=development node scripts/start.js",
+    "serve": "npx cross-env NODE_ENV=production npx next start",
+    "build": "npx cross-env NODE_ENV=production npx next build && node scripts/build.js",
+    "analyze": "npx cross-env ANALYZE=true npx next build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "engines": {
+    "node": ">=12.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "compression-webpack-plugin": "^6.1.1",
-    "eslint-config-airbnb-typescript": "^14.0.0"
+    "@babel/core": "^7.14.8",
+    "@next/bundle-analyzer": "^11.0.1",
+    "@nicepack/eslint-ts": "^2.1.1",
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-select": "^4.0.17",
+    "@types/styled-components": "^5.1.11",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "core-js": "^3.16.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "ncp": "^2.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5",
+    "webpack": "^5.47.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@use-it/event-listener": "^0.1.6",
+    "activity-detector-ssr": "^3.0.0",
+    "auto-bind": "^4.0.0",
+    "autoprefixer": "^10.3.1",
+    "broadcast-channel": "^4.0.0",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.23.0",
+    "decimal.js": "^10.3.1",
+    "framer-motion": "^4.1.17",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "next": "^11.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-i18next": "^8.5.5",
+    "nextjs-progressbar": "0.0.11",
+    "postcss": "^8.3.6",
+    "react": "^17.0.2",
+    "react-accessible-accordion": "^3.3.4",
+    "react-csv": "^2.0.3",
+    "react-day-picker": "^7.4.10",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.12.1",
+    "react-is": "^17.0.2",
+    "react-notifications": "^1.7.2",
+    "react-select": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "react-svg": "^14.0.6",
+    "react-switch": "^6.0.0",
+    "react-tabs": "^3.2.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.0",
+    "swr": "^0.5.6",
+    "tailwindcss": "^2.2.7"
+  },
+  "optionalDependencies": {
+    "cypress": "^8.1.0"
   }
 }

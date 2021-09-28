@@ -1,0 +1,356 @@
+{
+    "faqs": [
+      {
+        "category": {
+          "category_en": "Introduction/How it works",
+          "category_zh": "简介/如何使用"
+        },
+        "list": [
+          {
+            "id": "what-is-pokket",
+            "title": {
+              "title_en": "What is POKKET?",
+              "title_zh": "POKKET是什么？"
+            },
+            "content": {
+              "content_en": "<div>POKKET is a new digital asset savings account service. Using our in-depth knowledge of traditional financial instruments, we’ve created new and innovative products for the crypto holders to earn passive income.<br /><br />With POKKET you can earn interest returns on your crypto assets. We have various products to earn passive returns, including a new type of structured products that earn more interest during volatile periods of the market.<br /> <br />With our innovative approach mixing traditional financial instruments with crypto, we are able to offer higher interest rates, wider selection of tokens, and easier to start compared to our peers in the market. And the best part is, we don’t charge you any fees!<br /> <br /> You can check out our intro slide deck <a href='/doc/en-US/Pokket_Intro.pdf' target='_blank' rel='noreferrer noopener'> here</a>.<br /><br /></div>",
+              "content_zh": "<div><br /><br />POKKET是一种全新的数字资产存储服务。基于对传统金融工具深入的知识储备，我们开发出一款专为加密货币持有者获取额外收入的创新性产品。<br /><br />在POKKET，您的加密资产可以获得利息。我们提供不同的产品为您增加被动收入，其中一种新产品叫做结构性定存，可以为您在市场动荡期中获取更多利息。<br /> <br /> 将传统金融工具创新性运用于加密货币市场的举动，使得POKKET相比市场同类产品能够提供更高的利率，更加广泛的币种选择，和非常容易上手的操作方式。最棒的是，我们的服务不收取任何佣金！<br /> <br /> 您可以点击<a href='/doc/zh-CN/Pokket_Intro.pdf' target='_blank' rel='noreferrer noopener'> 此处</a>查看我们的简介。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "how-does-it-work",
+            "title": {
+              "title_en": "How does it work?",
+              "title_zh": "POKKET如何使用？"
+            },
+            "content": {
+              "content_en": "<div>We currently have 2 types of interest earning products: Simple Saving and Structured Saving products.<br /><br />Simple Saving:<br /><br />We pay you interest on the digital assets you save with us at a fixed period of 14, 30 or 90 days. The interest is paid in the original token you've saved with us, regardless of the market price of the token. When you create a new saving, your token is locked for the duration, and the interest is fixed during the saving period.<br /><br />Creation of new savings and maturing of the savings occur once a day at 07:00 UTC Settlement Time.<br /><br />Structured Saving:<br /><br />With the Structured Saving products, we pay you interest on the digital assets you save with us at a fixed period of one-week. When you create a new saving, your token is locked for a period of one week until maturity. The interest rate is set and fixed on the day the new saving is created and the interest is paid upon expiry, along with the initial amount.<br /><br />Our Structured Saving products are designed for you to take advantage of market swings. You will be able to automatically buy tokens when the market goes down, and sell tokens when the market goes up, all while earning interest.<br /><br />Because we offer structured saving for crypto assets using derivatives, our interest rates are correlated with market volatility of the asset. This is how we are able to provide our users with higher interest rates.<br /><br />When you create a Token Structured Saving with us, there are two potential outcomes at maturity. These outcomes are different depending on the structured product.<br /><br />Token Structured Savings:<br /><br />Choose from one of the 60+ token selections to create a saving, and then select the underlying stablecoin (USDT, USDC or TUSD). After one-week, the Token Structured Savings have one of the 2 outcomes at the maturity date:<br /><br />1. If the market price of the token is within +10% (token price at maturity < 110% token price at start) after the one-week period, you get the saving amount + interest, in the original token you saved with us.<br /><br />2. If the market price of the token is above or equal to +10% (token price at maturity >= 110% token price at start) after the one-week period, you get stablecoin equivalent of both the saving amount and interest, with the original tokens converted at strike price (110% of the value at start) to USDT, USDC or TrueUSD (stablecoins that has a constant value of 1 USD).<br /><br />Stablecoin Structured Savings:<br /><br />Our Stablecoin Structured Savings, is a creative and profitable way to earn interest on your stablecoins. Structurally it is the opposite of our traditional Token Structured Savings product.<br /><br />When creating a new Stablecoin Structured Saving, you first select the stablecoin (USDT, USDC or TUSD) and then choose the underlying token from one of the 60+ token selections. After one-week, the Stablecoin Structured Savings have one of the 2 outcomes at the maturity date:<br /><br />1. If the market price of the underlying token is within -9% (underlying token price at maturity > 91% underlying token price at start) after the one-week period, you get the saving amount + interest, in the stablecoin you saved with us.<br /><br />2. If the market price of the token is below or equal to -9% (underlying token price at maturity <= 91% underlying token price at start) after the one-week period, you get underlying token equivalent of both the saving amount and interest, converted at strike price (91% of the value at start) to the underlying token. In other words, you have purchased your chosen token at a 9% discount, all while earning interest!<br /><br />By using these two types of structured saving products, you will be able to take full advantage of the market volatility, buying when price is cheap and selling when price is high, all the while earning high interest returns.<br /><br />Settlement and maturity:<br /><br />Creation of new savings and maturing of the savings occur once a day at 07:00 UTC Settlement Time. The cutoff time for token price calculations and new interest rate for the day are also updated daily at Settlement Time. Prices are calculated from prices at one of the following exchanges: <a href='https://www.binance.com/' target='_blank' rel='noreferrer noopener'>Binance</a>, <a href='https://www.bitfinex.com/' target='_blank' rel='noreferrer noopener'>Bitfinex</a>, <a href='https://www.okex.com/' target='_blank' rel='noreferrer noopener'>OKEX</a>, and <a href='https://www.huobi.com/' target='_blank' rel='noreferrer noopener'>Huobi Global</a>.<br /><br />Please see our video <a href='https://www.youtube.com/channel/UC7gH6n5CuxlcBeDdd4sddMA' target='_blank' rel='noreferrer noopener'>here</a> to learn about how the Structured Saving products work, and tutorials on how to use POKKET.<br /><br /></div>",
+              "content_zh": "<div>现在我们有两种加密货币存储生息的产品：普通定存和结构性定存。<br /><br />普通定存：<br /><br />您将数字资产在POKKET定期存放14天，30天或者90天我们支付利息给您。返还的本金和利息都以您出借币的形式返回，无关币价。当您以出借币建立新的定存时，您的币将在选定期限内被锁定，利率也随之固定。<br /><br />新普通定存建立后的生效生息和定存到期结算时间均为香港时间15:00。<br /><br />结构性定存<br /><br />使用结构性定存产品，您将数字资产在POKKET定期存放7天，我们支付利息给您。当您建立新的定存时，您的币将在一周时间内被锁定直至到期；利率也随之确定并固定，到期时我们支付您本金和利息。<br /><br />结构性定存产品是为了充分利用市场波动获息而专门开发的。使用此产品市场下跌时会自动买入，反之市场上涨时会自动卖出，同时还可以获取利息。<br /><br />因为我们使用衍生工具为您的数字资产提供结构性定存服务，所以我们的利率和币市波动相关。这也是我们为什么能提供用户较高利息的原因。<br /><br />当您在POKKET建立结构性定存时，到期后将以两种结算方式中的其中一种进行结算。具体结算方式还取决于您选择的结构性定存产品类型。<br /><br />代币结构性定存：<br /><br />从60+的币种中选择一个开始创建定存，然后再选择标的币种（USDT, USDC或者TUSD）。七天到期时您的代币结构性定存将以下两种方式中的其中一种进行结算：<br /><br />1.如果一周后币价没有上涨或者涨幅在10%以内(到期结算时的币价低于定存开始结算时币价的110%），您将得到本金外加利息，以存入本币形式返还。<br /><br />2.如果一周后币价涨幅等于或者高于10%（到期结算时的币价等于或者高于定存开始结算时币价的110%），您将得到与定存开始时币值的110%外加利息等值的稳定币TrueUSD, USDC或者USDT。(其稳定价值一般为1 USD)<br /><br />稳定币结构性定存：<br /><br />我们的新产品，稳定币结构性定存，是用来使稳定币生息的一种创新型盈利方式。产品结构和我们的代币结构性定存正好相反。<br /><br />当创建新的稳定币结构性定存时，您要先选择稳定币来定存（USDT, USDC或者TUSD）并从60+的币种中选择一种来作为标的币。七天到期时您的稳定币结构性定存将以下两种方式中的其中一种进行结算：<br /><br />1.如果一周后标的币币价没有下跌或者跌幅在9%以内(到期结算时的标的币币价高于定存开始结算时标的币币价的91%），您将得到本金外加利息，以稳定币形式返还。<br /><br />2.如果一周后标的币币价跌幅大于等于9%（到期结算时的标的币币价等于或者低于定存开始结算时标的币币价的91%），您将得到稳定币币值外加利息以定存开始时标的币币价的91%而转换成的标的币。也就是说，在标的币币价跌至91%时，您用本金和利息买入了标的币。<br /><br />通过以上两种类型的结构性定存产品，您可以充分利用市场流动性，在币价较低时买入，而在币价较高时卖出；并同时赢取高额的利息。<br /><br />结算和到期：<br /><br />新结构性定存建立后的生效时间和定存到期结算时间均为每日香港时间15:00。币价结算和新利率更新也在每日结算时间进行。POKKET用来结算币价的交易所有：<a href='https://www.binance.com/' target='_blank' rel='noreferrer noopener'>币安</a>, <a href='https://www.bitfinex.com/' target='_blank' rel='noreferrer noopener'>Bitfinex</a>, <a href='https://www.okex.com/' target='_blank' rel='noreferrer noopener'>OKEX</a>, and <a href='https://www.huobi.com/' target='_blank' rel='noreferrer noopener'>火币</a>，请参考。<br /><br />请点击<a href='https://www.youtube.com/channel/UC7gH6n5CuxlcBeDdd4sddMA' target='_blank' rel='noreferrer noopener'>此处</a>观看我们的快速上手视频。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "interest-rates",
+            "title": {
+              "title_en": "What are the interest rates?",
+              "title_zh": "收益率是多少？"
+            },
+            "content": {
+              "content_en": "<div>All displayed rates for the Structured Saving products are the interest return you will receive for one-week savings. As for the interest rates for the Simple Saving product, it is shown as inferred annual percentage yield, or APY, as a standardized way to compare our rates with other platforms on the market. Similar to other platforms, the APY calculation includes compounded interest earnings, and can be higher than a simple annualized interest rate, or APR (annual percentage rate).<br /><br />Our interest rates are calculated daily at settlement time (07:00 UTC), and is fixed for the duration of the savings you've created. All rates displayed are net figures and we don’t charge you fee for the savings you create.<br /><br />We use advanced financial instruments to earn you the interest rates and that’s why the interest rate on our tokens are much higher than elsewhere. Depending on market volatility, our rates historically have been ranging between 0.5-450% per annum, with 30% on average. The more market moves, the higher our interest rates and vice versa. It's a great way for our customers to take advantage of the market volatility!<br /><br /></div>",
+              "content_zh": "<div>结构性定存产品上所有显示的利率均为七天到期后返还利率。而对于普通定存产品，其显示利率为推导出的年收益率（APY），以便对标其他平台的类似产品方便客户比对。与其他平台一样，用APY计算利息时包含复利，所以会比简单只包含单利的APR(年百分率)高一些。<br /><br />利率会在每天香港时间15:00进行结算更新，结构性定存或者普通定存创建成功后利率即固定直至到期返还。所有显示的利率均为净值，POKKET 不收取任何定存费用。<br /><br />我们利用先进的金融工具为您获利，这也是POKKET的利率比其他任何平台都高的原因。因为市场波动大小的不同，产品的历史年收益率从0.5到450%不等，平均达到30%。市场波动越大，利率越高，反之亦然。POKKET就是要充分利用币市起伏使得我们的用户获益！<br /><br /></div>"
+            }
+          },
+          {
+            "id": "how-to-get-started",
+            "title": {
+              "title_en": "What do I need to get started?",
+              "title_zh": "需要满足什么条件才能使用POKKET获息吗？"
+            },
+            "content": {
+              "content_en": "<div>All you need is your email address to register, send your crypto assets into your wallet, create a saving, and you can start earning interest returns on your digital assets. Easy as that!<br /><br /></div>",
+              "content_zh": "<div>您只需用电子邮箱注册POKKET账户，将币存入您的钱包，然后选择相应产品进行定存，您的数字资产就可以开始获息了。获利就是这么轻松！<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "About us",
+          "category_zh": "关于我们"
+        },
+        "list": [
+          {
+            "id": "who-are-we",
+            "title": {
+              "title_en": "Who are we?",
+              "title_zh": "POKKET团队"
+            },
+            "content": {
+              "content_en": "<div>The founding team at POKKET consists of world-class professionals in finance, software and web development, hailing from the likes of Citigroup, GE, JPMorgan, Morgan Stanley, Microsoft and Nomura. We have over 100 years of professional experience between us.<br /><br />We started this service on June 2019 and our company is registered at Seychelles. Like many of the companies in the industry, we don't have a centralized HQ but we are based in Hong Kong, Tokyo, Shanghai and Ulaanbaatar.<br /><br />CEO – Bill<br /><br />Bill has over a decade of experience in finance and investment banking at Nomura Securities in Tokyo, Provenance Investment Management in London, and more recently Golomt Capital in Ulaanbaatar, Mongolia. He holds an MBA degree from London Business School.<br /><br />Co-founder & Advisor – Mikio<br /><br />Mikio has a decade of experience trading and marketing equity and other derivatives at Citigroup, Nomura Securities, and BlueMountain Capital out of Tokyo, New York and Hong Kong. Most recently he helped run a boutique family office out of Asia. <br /><br />Co-founder & Advisor – Wei<br /><br />Wei is an entrepreneur and investor in Fintech who seeks to bring innovative and efficient solutions to real world applications. Wei has a background in technology and finance, and is running a Fintech consultancy for the past three years. Before that, he spent over 10 years at Morgan Stanley and has been a CFA charter holder since 2011. <br /><br />Architect & Development Lead – Edward<br /><br />Edward first worked at Microsoft to provide front-end solutions for six years. Following this, he joined DNV-GL as senior developer for structure and hydrodynamic analysis. The past four years he has been designing & architecting trading systems for hedge funds.<br /><br />Wallet & Blockchain Development Lead – Ada<br /><br />Ada has over 13 years of experience in developing enterprise and trading system at General Electric and Morgan Stanley, specializing in infrastructure component development based on .Net.<br /><br />Contact us at: <a href='mailto:hello@pokket.com'>hello@pokket.com</a><br /><br /></div>",
+              "content_zh": "<div>POKKET 的创始团队由金融，软件和网页开发领域世界一流的专家组成，他们出身于花旗，通用，JP 摩根，摩根史丹利，微软和野村证券这样的知名企业。成员经历累计拥有超过100年的专业经验。<br /><br />我们是从二零一九年六月开始正式提供服务的，公司注册于塞舌尔群岛。和行业内的许多其他公司一样，公司不设立中心化总部，而是分散在香港，东京，上海和乌兰巴托等地。<br /><br />执行官—Bill<br /><br />Bill拥有超过十年的金融投资领域从业经验，曾供职于位于东京的野村证券，位于伦敦的Provenance投资管理，在POKKET之前供职于位于蒙古乌兰巴托的Golomt资本。而且他拥有伦敦商业学院的MBA学位。<br /><br />联合创始人 & 顾问 — Mikio<br /><br />Mikio 曾先后在花旗，野村证券和 BlueMountain 资产拥有数十年的股权及其衍生品的交易和营销经验，辗转于东京、纽约和香港等地。近年他在亚洲运营一个家族精品理财办公室。<br /><br />联合创始人 & 顾问 — Wei<br /><br />Wei是致力于将Fintech领域中高效创新的解决方案在现实中实践应用的企业家和投资人。他拥有科技金融领域的背景并在过去三年运营一个金融科技咨询机构。在此之前，他在摩根士丹利有数十年的经验且从2011年起成为CFA资格持证者。<br /><br />架构师和开发团队负责人 — Edward<br /><br />Edward 在微软工作的最初六年，主要从事提供前端解决方案的工作。之后，他作为一名架构和动力学资深分析师加入了 DNV-GL。过去四年他致力于对冲基金交易系统的设计和架构工作。<br /><br />钱包和区块链开发负责人 — Ada<br /><br />Ada 在通用电气和摩根史丹利有 13 年的项目发展和交易系统开发经验，尤为擅长 .Net 框架下的基础设施组件的开发。<br /><br />请发邮件至 <a href='mailto:hello@pokket.com'>hello@pokket.com</a> 联系管理团队。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "why-pokket",
+            "title": {
+              "title_en": "Why did we make POKKET?",
+              "title_zh": "POKKET的理念？"
+            },
+            "content": {
+              "content_en": "<div>The majority of people holding cryptocurrencies are in it for the long run. We at POKKET believe in the future of frictionless digital assets and the limitless things we can achieve with them.<br /><br />However, constant price fluctuations make it hard for crypto holders to keep holding their assets. But we don’t want to sell because FOMO! There are products on the market that offers interest earnings by lending your crypto assets. But interest rate offered on these crypto lending platforms are low and has limited variety of cryptocurrencies to choose from. What about my altcoins?<br /><br />That is why we decided to create POKKET, an interest earning digital assets savings account, that earns high interest and has tons of tokens to earn interest on. We utilized our decades of traditional financial industry knowledge and mixed it with the technology advancements of cryptocurrencies. And voila, after 2 years of hard work, now everyone can take advantage of market volatility and earn interest returns, while still holding on to their crypto assets.<br /><br /></div>",
+              "content_zh": "<div>大多数加密货币拥有者都是长期持有。我们相信数字资产会在未来通行并且拥有广阔的前景。<br /><br />但是不间断的大幅价格波动使得币拥有者很难持续持有。同时我们又因害怕错过风口而不愿抛掉！市场上有一些产品提供借币还息的服务，但是这些加密货币借贷平台提供的利息率都很低，而且币种有限。我们拥有的代币怎么才能获息？<br /><br />这就是为什么我们决定要推出POKKET，提供数字资产定存获息服务的原因，获取高额利息的同时还有多样的币种选择。我们利用了在传统金融行业数十年工作积累的知识和经验，并将其与最先进的加密货币技术相结合。最终，在两年的勤勉工作后，现在每个人都可以利用市场波动来获取利息回报了，与此同时还可以继续持有他们的加密货币。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "high-interest-rates",
+            "title": {
+              "title_en": "How does POKKET make money and how do you afford to pay such high interest rates?",
+              "title_zh": "POKKET是如何赚钱的，你们为何能支付得起如此高的利率？"
+            },
+            "content": {
+              "content_en": "<div>We work with third parties to lend tokens. We charge these third parties for fees, not from our customers who have savings account with us. These third-party partners have gone through a strict audit and due diligence process.<br /><br />In working with these third parties, we utilize advanced financial structured products to produce fixed interest returns, which by design, are much higher than what the normal lending rates earned by our peers on the market. Because of this nature of our product, our interest rates are correlated with price volatility of the tokens, and our interest rates are higher when market volatility is high.<br /><br /></div>",
+              "content_zh": "<div>我们借币给第三方，并向第三方收取佣金，而不对在POKKET拥有存币账户的客户收费。这些第三方合作伙伴都是POKKET经过特定流程严格审计后谨慎筛选出的。<br /><br />与这些第三方合作时，我们利用先进的结构性金融产品获取固定的利息收益，产品性质本身就导致其利率比市场上同行普通的出借币产品利率要高很多。也是因为我们产品的这种特性，POKKET的利率会和市场币价波动相关联，市场越波动，利率越高！<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Security",
+          "category_zh": "资产安全"
+        },
+        "list": [
+          {
+            "id": "is-it-safe",
+            "title": {
+              "title_en": "How do you guarantee that my assets are safe?",
+              "title_zh": "如何保障我的资产是安全的？"
+            },
+            "content": {
+              "content_en": "<div>All customer funds are stored in a cold storage and requires multiple in-person checks to move funds out of this wallet. In addition, signatories of this wallet are dispersed geographically to mitigate single jurisdiction risk. In case this wallet is compromised, we will utilize our Collateral and Insurance Fund that is kept separate and publicly auditable.<br /><br />The Collateral and Insurance Fund works as insurance for customer assets even in the unlikely event of security breaches of our platform. When a user creates a new saving with us, we lend these assets to our third-party lenders that pays our users the interest as fees. However, these lenders are required to deposit a collateral in order to borrow user funds. This is deposited into the Collateral and Insurance Fund, which will be utilized to make our customers whole in the case of security breaches or other serious emergency situations. The Collateral and Insurance Fund is stored offline (cold storage) and kept separately from our other wallets for extra security measures. We use this method and chose not to pay third-party insurance companies any fees, so as to give out these costs as higher interest returns to our customers.<br /><br />In addition, we are completely transparent with our Collateral and Insurance Fund, and the <a href='https://etherscan.io/address/0xba54cae02c4053226ab5dbe3f6c176a46d097357' target='_blank' rel='noreferrer noopener'>Insurance Fund cold wallet balance</a> is publicly auditable at Etherscan.<br /><br /></div>",
+              "content_zh": "<div>所有的客户资产都使用冷储存技术保管，且任何资产的转出都需要多人协作。此外，该钱包的签名者在地理位置上分散，以减轻单一管辖区的风险。万一这个钱包被盗，我们将利用我们的抵押品和保险金，这些资金是分开存放并可以公开审计的。<br /><br />即使在发生平台安全漏洞这种极小概率事件时，抵押和保险金也可以保护客户资产安全。当客户在创建新的定存时，我们会将这些资产借贷给第三方，也是他们在向我们的客户支付利息。同时，这些第三方必须存入相应的抵押资金给 POKKET 作为借出币资的担保。这些资金被存入抵押保险钱包，会在发生安全漏洞或者其他紧急情况下被启用保障用户资产完整。抵押和保险金离线存储（冷存储），并与我们的其他钱包分开存放，采用额外的安全措施。我们使用这种方法，并选择不向第三方保险公司支付任何费用，是为了将这些费用作为更高的利息回报给我们的客户。<br /><br />此外，我们的抵押和保险金钱包完全透明，此<a href='https://etherscan.io/address/0xba54cae02c4053226ab5dbe3f6c176a46d097357' target='_blank' rel='noreferrer noopener'>保险金冷钱包</a>的资金来往可在Etherscan进行公开审计。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "security-measures",
+            "title": {
+              "title_en": "What security measures have you implemented for tokens?",
+              "title_zh": "保障币资的安全的措施有哪些？"
+            },
+            "content": {
+              "content_en": "<div>POKKET takes all deposit and withdrawal related actions very seriously. All POKKET addresses are secured and all storage is kept offline. In the most extreme event of a full system compromise, there would not be enough keys available for an attacker to access funds. Every withdrawal is audited in person by at least two POKKET employees prior to processing. Absolutely no private keys are connected to the internet.<br /><br /></div>",
+              "content_zh": "<div>在 POKKET 所有与充值和提币有关的操作都是非常谨慎的。POKKET 的所有地址都是离线安全保存的。即便在整个系统都受到威胁的极端情况下，攻击者也会因为没有足够的密钥而无法取得资金。每笔提币操作都在至少两名 POKKET 员工的亲身参审下按流程完成。绝对没有任何私钥是联网保存的。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "infrastructure-security",
+            "title": {
+              "title_en": "How secure is your infrastructure?",
+              "title_zh": "你们的基础架构安全吗？"
+            },
+            "content": {
+              "content_en": "<div>POKKET takes full advantage of Amazon Web Services’ security. All systems require multiple forms of authentication to access, while individual systems are unable to communicate with each other except across approved and heavily monitored channels. Our development team is experienced in building enterprise trading systems and keeping them safe at top financial institutions worldwide.<br /><br /></div>",
+              "content_zh": "<div>POKKET 全面使用亚马逊云服务的安全保护措施。所有的系统都需要多重形式认证才能获取，并且各个系统间如果没有通过严密的批准和监督渠道是不能相互通连的。我们的团队拥有在世界顶级金融机构开发企业级交易系统并维护其安全的丰富经验。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "personal-data-security",
+            "title": {
+              "title_en": "How do I trust you with my personal data?",
+              "title_zh": "我如何放心将个人资料交付于你们？"
+            },
+            "content": {
+              "content_en": "<div>POKKET is committed to protect our customers’ privacy and we process your personal data with great care. Personally Identifiable Information provided by you as part of our KYC process is stored safely in a secure storage inaccessible by any unauthorised persons inside and outside our organisation, and it will not be disclosed to any parties unless by legal requirements or yourself. We will not process your personal information for other purposes as per our <a href='https://pokket.com/privacypolicy' target='_blank' rel='noreferrer noopener'>Privacy Policy</a>.</div>",
+              "content_zh": "<div>POKKET致力于保护我们客户的隐私，并会非常小心谨慎地处理您的个人数据。您在身份验证流程中提供的个人识别信息将会被安全存储，公司组织内外任何未经授权的人员都无信息获取权限；除非依据法律法规或您自己的要求，否则不会向任何第三方披露。除了我们的<a href='https://pokket.com/privacypolicy' target='_blank' rel='noreferrer noopener'>隐私政策</a>所涉及的范围，我们不会为其他任何目的处理您的个人信息</div>"
+            }
+          },
+          {
+            "id": "what-if-pokket-close",
+            "title": {
+              "title_en": "What happens if POKKET were to fail as a business?",
+              "title_zh": "如果 POKKET 运作面临不利将会怎样？"
+            },
+            "content": {
+              "content_en": "<div>If POKKET were to dissolve or go bankrupt, all tokens plus interest accumulated for the period would be returned to all users. Even if this fails, the USDT and TUSD reserved in the Collateral and Insurance Fund would be tapped to repay users in full. It is our mission to assure customer funds in savings are always covered by the Collateral and Insurance Fund at any given time.<br /><br /></div>",
+              "content_zh": "<div>即便万一 POKKET 面临危机甚至出现破产事由，所有代币本金以及在定存期间累计的利息都会结算给所有用户。即便不能返还本币，所有作为抵押保险资金留存的 TUSD 和 USDT 也会被清算足额返还给用户。我们的使命是时刻保障所有用户的币资都有抵押保险资金做保障。<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Settlement",
+          "category_zh": "结算规则"
+        },
+        "list": [
+          {
+            "id": "settlement-time",
+            "title": {
+              "title_en": "When is the settlement done? What is the timer for?",
+              "title_zh": "什么时候进行结算的？计时器是干什么的？"
+            },
+            "content": {
+              "content_en": "<div>The settlement occurs on 07:00 UTC each day. This is when the interest rates of the tokens of that day are calculated, prices for underlying assets are fixed, and savings are created or matured. All fund transfers between customer wallet and the cold wallet that securely stores customer funds happens at this time as well.<br /><br />The timer on the homepage is a countdown to the next settlement time of 07:00 UTC. It will automatically restart and count down the next 24 hours.<br /><br />Customer deposits to customer wallet at POKKET can happen anytime, while transfers between customer wallets and the cold wallet that stores customer savings happen at 07:00 UTC settlement time.<br /><br />Customer withdrawals from the customer wallet at POKKET can be requested anytime, but is executed 3 times a day during weekdays at 02:00 UTC, 07:00 UTC, and 07:30 UTC; and twice a day during weekends at 07:00 UTC and 07:30 UTC. This is because every withdrawal is audited in person by at least two POKKET employees prior to processing.<br /><br />You may cancel your pending new savings before the next settlement time at 07:00 UTC, but once it is created, the funds are locked until maturity.<br /><br /></div>",
+              "content_zh": "<div>每日香港时间15:00:00进行结算。结构性定存和普通定存的利率每天是在此结算点进行计算更新的，新创建和到期定存也是在此刻正式开始确定利率计息或者进行返还的。所有客户钱包和冷钱包以及保险钱包的资金转存也都是在结算点进行的。<br /><br />计时器是用来倒数到下一个结算节点—香港时间 15:00:00（07:00:00 UTC）的剩余时间的。结算节点过后它会自动重启并倒数接下来的 24 小时。<br /><br />客户可以在任何时间充值币资到自己的POKKET账户钱包，而客户钱包到冷存储钱包的转账每天只在结算节点即香港时间 15:00:00（07:00:00 UTC）集中发生。<br /><br />客户可以在任何时间提交提币请求，但会在最近一次的提币转出操作中被执行。工作日的提币转出操作时间有三次，分别是香港时间 10：00（02:00 UTC）, 15：00（7:00 UTC）和 15：30（7:30 UTC）；周末有两次，分别是香港时间 15：00（7:00 UTC）和 15：30（7:30 UTC）。POKKET为确保安全采取冷存储技术保存币，所以需要在定时批量操作，而且每笔提币操作都在至少两名POKKET员工的亲身参审下按流程完成。<br /><br />新定存创建后在正式结算计息开始前会处于“待结算”状态，您可以在结算节点即香港时间 15:00之前取消此笔定存，但是一旦定存正式建立成功计息开始，币资将会被锁定直到定存到期。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "crypto-interest-returns-calculation",
+            "title": {
+              "title_en": "How are the expected returns calculated?",
+              "title_zh": "预期回报要怎么计算？"
+            },
+            "content": {
+              "content_en": "<div>Before creating a savings on your token, we show you what your expected returns are for the chosen saving product.<br /><br />For the Simple Saving product, the expected return is the amount you will receive at the end of the saving period and is accurate. You will receive the interest and the principal in the original token you've saved, regardless of market price of the token.<br /><br />For Token Structured Savings, the token return amount is calculated with one-week interest of that day and is accurate. While the USDT, USDC or TUSD expected amount is the original token value multiplied by 110%, plus one-week interest, all converted into USDT, USDC or TUSD using the exchange rates from previous settlement at 07:00 UTC, and it may differ from what you actually get at maturity. The actual exchange rate used to calculate the USDT, USDC or TUSD amount is fixed on next settlement time at 07:00 UTC, when the saving is actually created.<br /><br />As for Stablecoin Structured Savings, the USDT, USDC or TUSD expected amount is calculated with one-week interest of that day and is accurate. While the Underlying Token expected amount is the price of Underlying Token multiplied by 91%, plus one-week interest, all converted into Underlying Token using the exchange rates from previous settlement at 07:00 UTC, and it may differ from what you actually get at maturity. The actual exchange rate used to calculate the Underlying Token amount is fixed on next settlement time at 07:00 UTC, when the saving is actually created.<br /><br />Prices are calculated from prices at one of the following exchanges: <a href='https://www.binance.com/' target='_blank' rel='noreferrer noopener'>Binance</a>, <a href='https://www.bitfinex.com/' target='_blank' rel='noreferrer noopener'>Bitfinex</a>, <a href='https://www.okex.com/' target='_blank' rel='noreferrer noopener'>OKEX</a>, and <a href='https://www.huobi.com/' target='_blank' rel='noreferrer noopener'>Huobi</a>.<br /><br /></div>",
+              "content_zh": "<div>在您在创建结构性定存或者普通定存订单时，我们会将对应产品的预期回报计算显示出来。<br /><br />对于普通定存生息产品，预期回报是您在固定期限结束后将会得到的币量并且是准确的。本金和利息将会以存入的本币的形式返还给您，与币价无关。<br /><br />对于代币结构性定存，本币回报数额是基于当日周定期利率计算所得且是准确的。TUSD/USDC/USDT预计回报数额是定存本币兑换为TUSD/USDC/USDT的初始价值乘 110% 再加上基于当日周定期利率所得利息的总和转换而得，但是由于此处使用的代币和TUSD/USDC/USDT兑换率是前面一次结算时的数值，而实际用来计算初始币值的兑换率将是以定存下单后最近一次结算时（香港时间15:00）为准的，所以此处TUSD/USDC/USDT回报数额为预期数值，可能和您将来所得的实际回报有出入。<br /><br />对于稳定币结构性定存，稳定币回报数额是基于当日周定期利率计算所得且是准确的。标的币预计回报数额是定存稳定币价值再加上基于当日周定期利率所得利息的总和以标的币币价的91%转换的数额，但是由于此处使用的标的币币价是前面一次结算时的数值，而实际用来计算标的币币价将是定存下单后最近一次结算时（香港时间15:00）为准的，所以此处标的币回报数额为预期数值，可能和您将来所得的实际回报有出入。<br /><br />POKKET用来结算币价的交易所有：<a href='https://www.binance.com/' target='_blank' rel='noreferrer noopener'>币安</a>, <a href='https://www.bitfinex.com/' target='_blank' rel='noreferrer noopener'>Bitfinex</a>, <a href='https://www.okex.com/' target='_blank' rel='noreferrer noopener'>OKEX</a>, 和 <a href='https://www.huobi.com/' target='_blank' rel='noreferrer noopener'>火币</a>，请参考。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "redeem-tokens-before-settlement",
+            "title": {
+              "title_en": "Can I redeem my tokens before settlement?",
+              "title_zh": "我可以提前赎回币吗？"
+            },
+            "content": {
+              "content_en": "<div>At the moment, all savings are locked until settlement. This means we unfortunately cannot release the tokens until the saving period has elapsed. In the future we may implement a function to return tokens earlier at a penalty, if there is enough demand for this function.<br /><br /></div>",
+              "content_zh": "<div>目前所有处于定存状态的币在到期结算前都是锁定的。这就意味着很不幸我们不能在固定期限结束之前返还您的币。将来如果提前赎币的需求量够多的话，我们可能会增加新的功能，使得您可以补偿一定的罚金来提前赎回币。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "crypto-savings-autoroll",
+            "title": {
+              "title_en": "What is Automatic Rollover (Autoroll)? How to turn it ON or OFF?",
+              "title_zh": "什么是滚动定存（滚存）？怎么打开和关闭滚存？"
+            },
+            "content": {
+              "content_en": "<div>When your Savings are matured after saving period, you can choose to automatically create a new Savings from the matured amount. This is called Automatic Rollover or Autoroll of your Savings. It allows you to earn compounded interest on your Savings without having to create new Savings manually.<br /><br />If you choose to turn this feature ON, when the Savings are matured, new Savings are created automatically from the matured amount (original amount + interest earned), with new interest rates from previous day at settlement time. For Structured Saving, the new strike price is set on the same day at settlement.<br /><br />When the Automatic Rollover feature is turned ON, it will keep creating new Savings automatically until you turn it OFF, or until the Saving is converted to the Underlying Token in the case of Structured Savings (as a result of token price reaching strike price).<br /><br />To turn Automatic Rollover ON or OFF when creating new Savings, you can click on the \"Automatic Rollover ON\" or \"Automatic Rollover OFF\" button at the Step 3 screen of New Saving popup menu.<br /><br />To turn Automatic Rollover ON or OFF for already created and active Savings before its maturity, you can click on the little square check box on your Savings. If the check box is checked, it means the Automatic Rollover feature is ON for that Saving.<br /><br /></div>",
+              "content_zh": "<div>您可以选择当定存到期结算时，将返还得到的币自动创建新的定存，这就是滚动定存或者滚存。滚存功能使得您不用手动创建就可以自动创建新的定存来获取复利。<br /><br />如果您在创建新定存时选择打开滚存功能，那么当定存到期时，到期币额（本金+利息）会被自动创建成新的定存，新定存的利率为前笔定存到期当日结算前的利率，而执行价格则根据到期日当日结算时币价计算。<br /><br />当滚存打开时，您的定存会在无限期内在到期时创建新的定存，直到您将其关闭为止，除非您的结构性定存到期返还为被转换后的标的币（即到期时币价符合执行币价条件而被转换）。<br /><br />创建新定存时您可以在弹框中的第三个步骤中通过勾选“滚存打开”或者“滚存关闭”按钮来选择此笔定存的滚存状态。<br /><br />对于已经创建成功但是还未到期的定存记录您可以点击右边的小方框来打勾或者取消打勾从而选择此笔定存的滚存状态。如果勾选框已经勾选则表示滚存已经打开。<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Fees and minimum savings",
+          "category_zh": "手续费及最低定存额"
+        },
+        "list": [
+          {
+            "id": "crypto-savings-fees",
+            "title": {
+              "title_en": "What are the fees?",
+              "title_zh": "充值提币费用？"
+            },
+            "content": {
+              "content_en": "<div>There are no fees for creating fixed savings with us.<br /><br />Withdrawal: Withdrawal fees are adjusted weekly according to blockchain network conditions. These fees are the network fees we pay to execute the transactions of each token. We don’t charge you extra for withdrawal and we don't make any money from withdrawals.<br /><br />Here are our current withdrawal fees for each token<br /><br /></div>",
+              "content_en2": "<br />Minimum transfer amount: We have minimum allowed transfer amount for each tokens depending on the network fees. Please refrain from depositing less than or equal to minimum transfer amount or your tokens will be wasted in network fees and cannot be recovered.<br /><br />The minimum transfer amount and Minimum Savings amount for each token is the same and can be seen on the token popup menus in your Account page.",
+              "content_zh": "<div>我们不收取充值定存费用。<br /><br />提币：提币费用每周都会根据区块链网络状况进行相应的调整。这些费用是用来支付币的网络移转消耗的。POKKET不会收取任何提币附加费用因为我们不从提币赚取利润。<br /><br />请在以下列表查看各币种提币费用：<br /><br /></div>",
+              "content_zh2": "<br/>最小充值数量：根据各币种网络移转费用的不同我们有设置最小充值数量。请不要将小于或等于最小充值额的币单笔转入，这些币会被作为网络费用而消耗以致无法挽回。<br /><br />每种币的最小充值数量和最小定存数量是相同的，您可以在币种列表中点击相应币在弹框中查看具体数值。"
+            }
+          },
+          {
+            "id": "crypto-savings-limits",
+            "title": {
+              "title_en": "Are there any lower or upper limits to how much I can create a savings?",
+              "title_zh": "定存的数量有没有上下限？"
+            },
+            "content": {
+              "content_en": "<div>As long as there is enough Available Token Quota for the day on the particular token, you are free to place as large a savings as possible.<br /><br />However, there is Minimum Savings amount showing on the \"New Savings\" prompt in Token list of Account page. This is set depending on the network fees of each tokens. The Minimum Savings amount and the minimum transfer amount for each token is the same and it is there to prevent your tokens being wasted on network fees.<br /><br /></div>",
+              "content_zh": "<div>只要选择币种的当日额度足够，您就可以定存任意大数量的币。<br /><br />定存弹框中有提示最小定存数量，大小取决于该币种的网络移转费用。每种币的最小充值数量和最小定存数量是相同的，限制最小充值定存数量是为了防止单笔充值币会被作为网络费用而消耗浪费掉。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "minimum-withdrawal",
+            "title": {
+              "title_en": "What happens if my coins/tokens in balance cannot cover the withdraw fee?",
+              "title_zh": "如果我的账户余额不够支付提币费用怎么办？"
+            },
+            "content": {
+              "content_en": "<div>In the event your balance amount is below the minimum withdrawal amount and is too small to transfer out due to withdrawal fees, you will need to move in more token to withdraw as a larger lump size should you wish to.<br /><br /></div>",
+              "content_zh": "<div>如果您账户余额低于最小提币数量而不够支付提币费用以致于不能转出时，您需要转入更多的币进而尝试较大数额的提币。<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Account",
+          "category_zh": "账户信息"
+        },
+        "list": [
+          {
+            "id": "crypto-savings-collateral",
+            "title": {
+              "title_en": "What is the collateral amount on Savings screen in my Account page for?",
+              "title_zh": "在账户页面定存项下的担保总额是什么？"
+            },
+            "content": {
+              "content_en": "<div>This amount is 110% of the value of your tokens plus interest in Structured Savings, calculated at the start of the one-week vesting period, collateralized and priced in USDT, USDC or TUSD. In other words, for every $1 USDT, USDC or TUSD worth of token you placed as Structured Savings, $1.10 plus interest worth of USDT, USDC or TUSD is held in a separate cold wallet as collateral against your savings tokens. This is to ensure that your funds are protected at all times, and also serve as proof of ability to payout in USDT, USDC or TUSD when the token price upper limit is triggered on maturity.<br /><br />When you create a Structured Savings, you can choose either USDT, USDC or TUSD as your underlying token, which serves as the payout token in which your original tokens gets converted to, when the strike price is triggered on maturity of your Structured Savings.<br /><br /></div>",
+              "content_zh": "<div>当您使用结构性定存产品时会有的TUSD/USDC/USDT 形式保存的担保物，其数额价值等同于计息开始时定存币值的 110% 外加利息。换句话说，当您在 POKKET 每定存相当于 $1 TUSD/USDC/USDT 价值的币时，就有 $1.10 TUSD/USDC/USDT 外加利息被存入单独的冷钱包作担保。这样就能使所有的资金时时刻刻都有保障，而且也证明如果 10% 价格上限在到期结算时被触发，我们有能力支付您相应的 TUSD/USDC/USDT。<br /><br />当您创建代币结构性定存产品时，您可以选择TUSD，USDC或者USDT作为标的币；如果您的本币因为在到期时触发执行价格而被转换，我们将以您选择的标的币形式返还本金和利息。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "tokens-in-account",
+            "title": {
+              "title_en": "What can I do if my tokens don’t show in my Account?",
+              "title_zh": "我的充值没有在账户余额中显示怎么办？"
+            },
+            "content": {
+              "content_en": "<div>You may track your transaction by the link provided in the Deposit Received notice email. POKKET will acknowledge tokens deposit after several confirmations.<br /><br />If you have sent your tokens to the wrong address, there is unfortunately nothing POKKET can do to recover them. We recommend you locate the owner of the wallet address and contact them as soon as possible to try and recover them.<br /><br /></div>",
+              "content_zh": "<div>您可以通过点击在“充值到账”提醒邮件里面的追踪链接来查询转账细节。POKKET 会在充足数量确认发生后收到充值币。<br /><br />如果您将币不小心转移到了错误地址，很不幸 POKKET 没有任何有效措施可以帮助您找回。我们建议您尽快找到钱包地址所有者并联系取回。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "what-is-stablecoin",
+            "title": {
+              "title_en": "Should I worry about the price of TUSD/USDT, and will it have any effect on my assets?",
+              "title_zh": "TUSD/USDT价格的变化是否会对我的币资有影响？"
+            },
+            "content": {
+              "content_en": "<div>POKKET uses TUSD stable coin as collateral as it is issued by a well-respected institution with proper audited bank accounts. As an official partner, we work closely with TrueUSD to ensure our customer collateral is stable and secure. However, we cannot guarantee the par value of TUSD, and will be proactive in ensuring the best stable coin is used for collateral.<br /><br />For more information on TUSD, please visit <a href='https://www.trusttoken.com/trueusd' target='_blank' class='tusd-web' rel='noreferrer noopener'>TrueUSD</a>.<br /><br />As for USDT, Tether is one of the largest stablecoins on the market, and you can learn more about <a href='https://tether.to/' target='_blank' class='tusd-web' rel='noreferrer noopener' >Tether</a> from their website.<br /><br /></div>",
+              "content_zh": "<div>POKKET 用TUSD稳定币做担保，是因为它是由拥有合规审计的银行账户并且声誉良好的机构发行的。作为TrueUSD的官方合作伙伴，我们和他们保持紧密的联系保证为用户提供的担保是安全稳定的。当然POKKET 并不能保证 TUSD 的平价，但是会积极寻求使用最好的稳定币作担保。<br /><br />如果您想获取有关 TUSD 的更多信息，请访问 <a href='https://www.trusttoken.com/trueusd' target='_blank' class='tusd-web' rel='noreferrer noopener'>TrueUSD</a> 网站。<br /><br />至于USDT，Tether是市场上流通量最大的稳定币之一，您可以在 <a href='https://tether.to/' target='_blank' class='tusd-web' rel='noreferrer noopener' >Tether</a> 的官网了解更多信息。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "identity-verification",
+            "title": {
+              "title_en": "Identity verification (KYC)",
+              "title_zh": "身份验证(KYC)"
+            },
+            "content": {
+              "content_en": "<div>In order to continue to contribute to the development of the cryptocurrency industry, POKKET officially implemented KYC on June 1, 2021. KYC stands for &quot;Know Your Customer&quot; and is a standard procedure for any company offering financial services globally. It helps combat fraud, money laundering, and terrorist financing, amongst other malicious activities.<br /><br />If you want to create more than $9,000 in total active savings on POKKET, you must first complete the Identity Verification process. You can do this from your Account page, under Account Settings.<br /><br />Please note that the following nationals are restricted from using POKKET as per our Terms of Service, and therefore are not able to complete the identity verification: <br />United States of America, the Republic of Seychelles, Mainland China, Cuba, Crimea and Sevastopol, Iran, Syria, North Korea and Sudan, or any other jurisdiction where the services offered by Pokket are restricted and prohibited. <br /><br />The verification process normally takes only few minutes. If manual review is required, we will send you an email notification upon completion.<br /><br />Please note that POKKET only requires personal information for KYC/AML purposes and we don't share this information with other third parties. Our Privacy Policy can be found <a href='https://pokket.com/privacypolicy' target='_blank' rel='noreferrer noopener'>here</a>.<br /><br />Our KYC/AML service provider is GetID, an all-in-one identity verification service provider based in EU. As a GDPR compliant company with appropriate measures ensuring data protection, the company uses ISO/IEC 27001:2013, 27017:2015, 27018:2014 certified architecture for data processing and your personal data is encrypted with Secure Sockets Layered (SSL) technology. You can learn more about GetID <a href='https://getid.ee/' target='_blank' rel='noreferrer noopener'>here</a>.</div>",
+              "content_zh": "<div>为了继续为加密货币行业的发展做出贡献，POKKET将于2021年6月1日开始正式实施KYC政策。KYC代表“了解您的客户”，是在全球范围内提供金融服务公司的标准行业程序。它有助于打击欺诈，洗钱和恐怖分子融资以及其他恶意活动。<br /><br />如果您在POKKET的活跃定存的总额超过$9,000，则必须先完成身份验证。您可以从“帐户”页面的“帐户设置”下执行此操作。<br /><br />请注意，根据我们的服务条款以下国家的客户被禁止使用POKKET所提供的服务，因此也无法通过身份验证：<br />美利坚合众国、中国大陆、塞舌尔共和国、古巴、克里米亚和塞瓦斯托波尔地区、伊朗、叙利亚、朝鲜和苏丹，以及限制或者禁止POKKET运营以及提供相关服务的其他司法管辖区。<br /><br />一般只需几分钟就可以完成身份验证。如需人工审核，我们会在完成时发送邮件通知您。<br /><br />请注意，POKKET仅出于KYC / AML的目的要求提供个人信息，我们不会与其他第三方共享此信息。我们的隐私政策可以在<a href='https://getid.ee/' target='_blank' rel='noreferrer noopener'>这里</a>找到。<br /><br />我们的KYC / AML服务提供商是GetID，一家总部位于欧盟的一体化身份验证服务提供商。作为符合GDPR要求且采取与其相对应措施确保数据安全的企业，GetID使用经过ISO / IEC 27001：2013、27017：2015、27018：2014认证的体系结构进行数据处理，并且您的个人数据将通过安全套接字层（SSL）技术进行加密。您可以在<a href='https://getid.ee/' target='_blank' rel='noreferrer noopener'>此处</a>了解有关GetID的更多信息。</div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Customer support",
+          "category_zh": "帮助中心"
+        },
+        "list": [
+          {
+            "id": "2fa-help",
+            "title": {
+              "title_en": "I lost my two-factor authentication (2-fa) device, can I reset this please?",
+              "title_zh": "如果双重身份验证设备（2-fa）丢失了，请问我能重置吗？"
+            },
+            "content": {
+              "content_en": "<div>Please send an email to <a href='mailto:help@pokket.com?subject=Reset%202-fa'>help@pokket.com</a> with the subject line “Reset 2-fa”. Our support staff will assist you in the process of resetting your two-factor authentication, and in doing so will request you answer a few security questions along with submitting documents proving your account ownership.<br /><br /></div>",
+              "content_zh": "<div>请以“Reset 2-fa”为主题发送邮件到 <a href='mailto:help@pokket.com?subject=Reset%202-fa'>help@pokket.com</a> 我们的客服人员会协助您开始重置双重身份验证的程序，此过程中需要您回答一些安全问题并提交可以证明账户所有权的文件。<br /><br /></div>"
+            }
+          },
+          {
+            "id": "contact-support",
+            "title": {
+              "title_en": "How do I contact customer service?",
+              "title_zh": "如何联系客服人员？"
+            },
+            "content": {
+              "content_en": "<div>Customer support staff can be reached at <a href='mailto:help@pokket.com'>help@pokket.com</a>. Alternatively, you can <a href='/support'>contact us</a> from the Support screen on your Account page.<br /><br />Please note business hours are weekdays from 01:30 to 09:00 (UTC), and replies may be delayed depending on volume.<br /><br /></div>",
+              "content_zh": "<div>您可以发送邮件到 <a href='mailto:help@pokket.com'>help@pokket.com</a> 联系客服人员。或者，您也可以从账户进入 <a href='/support'>联系我们</a> 页面进行留言。<br /><br />请注意我们的上班时间为工作日的香港时间 09:30 到 17:00，如遇工作量较大，可能会有部分延迟回复的情形，敬请谅解。<br /><br /></div>"
+            }
+          }
+        ]
+      },
+      {
+        "category": {
+          "category_en": "Affiliate Program",
+          "category_zh": "推广计划"
+        },
+        "list": [
+          {
+            "id": "affiliate-and-referral-program",
+            "title": {
+              "title_en": "Do you have an affiliate or referral program?",
+              "title_zh": "你们有推荐奖励计划吗？"
+            },
+            "content": {
+              "content_en": "<div>Yes, you can earn a small bonus based on the total savings amount placed by users you refer. As an additional incentive, referred users will also enjoy a preferential interest rate for a limited time. <br /><br />Please visit the <a href='/affiliate'>Affiliate Program</a> page for more details.<br /><br /></div>",
+              "content_zh": "<div>是的，您可以通过用户推荐赢得一小笔奖励金，其数额是被推荐用户定存的总数额的一定比列。作为额外的奖励，被推荐用户也在一定期限内可以获得优享利率。<br /><br />请访问<a href='/affiliate'>推荐奖励</a>页面获取更多信息。<br /><br /></div>"
+            }
+          }
+        ]
+      }
+    ]
+  }

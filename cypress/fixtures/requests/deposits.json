@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 2044,
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "wkly": "0.01%",
+      "annly": "0.52%",
+      "amount": "10",
+      "creationTime": "26/12/2020 11:31:00",
+      "lockingTime": "26/12/2020 12:00:00",
+      "maturityTime": "27/12/2021 12:00:00",
+      "maturityPeriod": 7.0,
+      "status": 2,
+      "filledPercent": "99.06235573407739%",
+      "productType": 1,
+      "originWeeklyRate": 0.0006,
+      "collateralRate": 1.1,
+      "returnConverted": "6830.1578",
+      "returnNotConverted": "10.001",
+      "returnSymbol": "",
+      "autoRoll": 1,
+      "allowAutoRoll": false,
+      "userId": 46,
+      "convertSymbol": "TUSD",
+      "convertName": "TrueUSD",
+      "exchangeRate": 620.86
+    }
+  ],
+  "isSuccess": true,
+  "message": null,
+  "errorCode": 0,
+  "returnCode": 0
+}

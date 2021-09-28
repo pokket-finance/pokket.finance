@@ -1,0 +1,26 @@
+{
+  "data": {
+    "collateral": [
+      { "collateralName": "TUSD", "collateralAmount": "13,660.31" },
+      { "collateralName": "USDT", "collateralAmount": "6,827.27" },
+      { "collateralName": "USDC", "collateralAmount": "0.00" }
+    ],
+    "models": [
+      {
+        "id": 179,
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "balance": "170.18682502",
+        "contractId": 1,
+        "minimumOrder": 0.0062,
+        "operationalDecimals": 8.0,
+        "minimumWithdraw": 0.01,
+        "withdrawAddress": ""
+      }
+    ]
+  },
+  "isSuccess": true,
+  "message": null,
+  "errorCode": 0,
+  "returnCode": 0
+}

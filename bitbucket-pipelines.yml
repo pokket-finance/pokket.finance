@@ -1,0 +1,75 @@
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Build the next.js
+          image: node:lts
+          script:
+            - npm i --no-optional
+            - npm run build
+          artifacts:
+            - .next/**
+            - public/**
+            - package-lock.json
+      - step:
+          name: Deploy to QA environment
+          image: amazon/aws-cli:latest
+          deployment: staging
+          script:
+            # install the AWS CLI
+            - yum update -y && yum install -y gettext jq
+            - export PATH=/usr/bin:$PATH
+            - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+            - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+            - export AWS_DEFAULT_REGION=$AWS_REGION
+
+            # Build the docker image
+            - export IMAGE_NAME="$ECR_ADDRESS/$REPO_NAME:$Version.$BITBUCKET_BUILD_NUMBER"
+            - docker build -t "$IMAGE_NAME" -f Dockerfile .
+            - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_ADDRESS
+            - docker push "$IMAGE_NAME"
+            
+            # replace the container name in the task definition with the new image.
+            - export TASK_DEFINITION_FAMILY="$TASK_DEFINITION_FAMILY"
+            - export CONTAINER_NAME="$CONTAINER_NAME"
+            - export AWS_REGION="$AWS_REGION"
+            - envsubst < task-definition.json > task-definition-modified.json
+
+            # Update the task defition and capture the latest version
+            - export UPDATED_TASK_DEFINITION=$(aws ecs register-task-definition --cli-input-json file://task-definition-modified.json | jq '.taskDefinition.taskDefinitionArn' --raw-output)
+
+            # Update the service
+            - echo $UPDATED_TASK_DEFINITION
+            - aws ecs update-service --service $ECS_SERVICE_NAME --cluster $ECS_CLUSTER_NAME --task-definition $UPDATED_TASK_DEFINITION
+          services:
+            - docker
+    master:
+      - step:
+          name: Build the next.js
+          image: node:lts
+          script:
+            - npm i --no-optional
+            - npm run build
+          artifacts:
+            - .next/**
+            - public/**
+            - package-lock.json
+      - step:
+          name: Deploy to QA environment
+          image: amazon/aws-cli:latest
+          deployment: production
+          script:
+            # install the AWS CLI
+            - yum update -y && yum install -y gettext jq
+            - export PATH=/usr/bin:$PATH
+            - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+            - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+            - export AWS_DEFAULT_REGION=$AWS_REGION
+
+            # Build the docker image
+            - export IMAGE_NAME="$ECR_ADDRESS/$REPO_NAME:$Version.$BITBUCKET_BUILD_NUMBER"
+            - docker build -t "$IMAGE_NAME" -f Dockerfile .
+            - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_ADDRESS
+            - docker push "$IMAGE_NAME"
+          services:
+            - docker

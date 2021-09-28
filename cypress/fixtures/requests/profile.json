@@ -1,0 +1,33 @@
+{
+  "errorCode": 0,
+  "isSuccess": true,
+  "message": null,
+  "returnCode": 0,
+  "data": {
+    "affiliateCode": "http://pokket-public.baibaitesting.com:1025/signup/lp640i",
+    "collateralAmount": "{\"TUSD\":\"13660.3156\",\"USDT\":\"6827.2733\",\"USDC\":\"0\"}",
+    "darkModeEnabled": false,
+    "email": "test@example.com",
+    "id": 46,
+    "isUserTracked": false,
+    "language": "en-US",
+    "mfaKey": null,
+    "mfaManualCode": null,
+    "mfaType": 1,
+    "password": "300000000000+g==",
+    "passwordChangeTime": "2020-09-21T08:26:46",
+    "promotedUserCount": 0,
+    "promotedUserId": null,
+    "promotionLinkId": null,
+    "promotionOwnerEndTime": null,
+    "promotionReferralAmountTotal": 0,
+    "referralAmountToday": "[{\"ProductType\":3,\"CompanyId\":53,\"ReferralAmountToday\":\"0\"},{\"ProductType\":2,\"CompanyId\":3,\"ReferralAmountToday\":\"0\"},{\"ProductType\":1,\"CompanyId\":2,\"ReferralAmountToday\":\"0\"}]",
+    "referralAmountTotal": 0,
+    "referralDiscountEndTime": null,
+    "referralUserId": null,
+    "referredUserCount": 0,
+    "type": 1,
+    "verificationStatus": 2,
+    "version": 0
+  }
+}

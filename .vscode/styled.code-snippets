@@ -1,0 +1,10 @@
+{
+  "import styled-components": {
+    "prefix": "imsc",
+    "body": "import styled from 'styled-components';"
+  },
+  "Styled component": {
+    "prefix": "styled",
+    "body": "const $1 = styled``;"
+  }
+}

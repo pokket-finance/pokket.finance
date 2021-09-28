@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  /* background-color: rgb(17, 14, 34); */
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
+}
+
+.placeholder-medium::placeholder {
+  font-weight: 500;
+}
+
+.border-purple {
+  border-color: #4923f4;
+}
+
+.MuiInputLabel-root {
+  font-size: 16px !important;
+  color: #9287ca !important;
+}
+.MuiSelect-select.MuiSelect-select {
+  font-size: 22px !important;
+  color: black !important;
+  font-weight: 900 !important;
+}
+.MuiSelect-selectMenu {
+  min-height: auto !important;
+}
+.MuiFilledInput-underline:before {
+  font-size: 20px !important;
+  border-color: transparent !important;
+}
+.MuiInput-underline:before {
+  border-color: transparent !important;
+}
+.MuiInput-underline:after {
+  border-color: transparent !important;
+}
+.MuiSelect-icon {
+  fill: #9287ca !important;
+}
+
+
+.MuiPaper-root .MuiList-root {
+  background-color: #1f193e;
+  color: #9287ca;
+}
+
+.MuiPaper-root .MuiList-root li:hover {
+  color: #FFF;
+}
+
+@media only screen and (max-width: 768px) {
+  .MuiSelect-select.MuiSelect-select {
+    font-size: 16px !important;
+  }
+  /* .MuiContainer-root {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  } */
+}
