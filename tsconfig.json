@@ -38,6 +38,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/theme/dark.ts",
+    "src/theme/light.ts"
   ]
 }

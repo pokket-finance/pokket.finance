@@ -3,9 +3,10 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import TopPanel from '../components/layout/topPanel';
 
-
-function Home() {
+// eslint-disable-next-line react/prop-types
+function Home({ updateTheme }) {
   return (
     <div>
       <Head>
@@ -15,9 +16,8 @@ function Home() {
           content="POKKET is a new cryptocurrency savings account service to help you earn interest returns on your crypto assets. 6-8% APY on Bitcoin lending, +100 other assets!"
         />
       </Head>
-      <div>
-        123456
-      </div>
+      <TopPanel updateTheme={updateTheme} />
+      <div>123456</div>
     </div>
   );
 }
@@ -29,5 +29,3 @@ export const getStaticProps = async ({ locale }) => ({
     ...(await serverSideTranslations(locale, ['common'])),
   },
 });
-
-
