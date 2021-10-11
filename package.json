@@ -51,10 +51,7 @@
     "activity-detector-ssr": "^3.0.0",
     "auto-bind": "^4.0.0",
     "autoprefixer": "^10.3.1",
-    "broadcast-channel": "^4.0.0",
     "classnames": "^2.3.1",
-    "date-fns": "^2.23.0",
-    "decimal.js": "^10.3.1",
     "framer-motion": "^4.1.17",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
@@ -65,21 +62,13 @@
     "postcss": "^8.3.6",
     "react": "^17.0.2",
     "react-accessible-accordion": "^3.3.4",
-    "react-csv": "^2.0.3",
-    "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.12.1",
     "react-is": "^17.0.2",
     "react-notifications": "^1.7.2",
-    "react-select": "^4.3.1",
-    "react-slick": "^0.28.1",
     "react-svg": "^14.0.6",
     "react-switch": "^6.0.0",
-    "react-tabs": "^3.2.2",
-    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.0",
-    "swr": "^0.5.6",
-    "tailwindcss": "^2.2.7"
+    "swr": "^0.5.6"
   },
   "optionalDependencies": {
     "cypress": "^8.1.0"

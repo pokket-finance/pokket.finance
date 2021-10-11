@@ -1,14 +1,12 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
+import { DefaultTheme } from 'styled-components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import TopPanel from '../components/layout/topPanel';
+import Footer from '../components/layout/footer';
+import LandingPage from './landing';
 
-// eslint-disable-next-line react/prop-types
-function Home({ updateTheme }) {
+function Home({ updateTheme }: { updateTheme: (prop: DefaultTheme) => void }) {
   return (
-    <div>
+    <>
       <Head>
         <title>POKKET: A Smarter Way To Invest In Cryptocurrency</title>
         <meta
@@ -16,9 +14,9 @@ function Home({ updateTheme }) {
           content="POKKET is a new cryptocurrency savings account service to help you earn interest returns on your crypto assets. 6-8% APY on Bitcoin lending, +100 other assets!"
         />
       </Head>
-      <TopPanel updateTheme={updateTheme} />
-      <div>123456</div>
-    </div>
+      <LandingPage updateTheme={updateTheme} />
+      <Footer />
+    </>
   );
 }
 

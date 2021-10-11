@@ -8,7 +8,7 @@ import Head from 'next/head';
 import App from 'next/app';
 
 import PageLoader from '@/components/PageLoader';
-import lightTheme from '@/theme/light';
+import lightTheme from '@/theme/Light';
 
 class ReactApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -26,7 +26,6 @@ class ReactApp extends App {
   updateTheme = (dynamicTheme) => {
     const { dynamicPageThemes } = this.state;
     const { route } = this.props.router;
-
     const pageIndex = dynamicPageThemes.findIndex(
       (page) => page.route === route,
     );
@@ -37,7 +36,7 @@ class ReactApp extends App {
       dynamicPageThemes[pageIndex] = { route, dynamicTheme };
     }
 
-    this.setState({ dynamicPageThemes });
+    this.setState({ dynamicTheme });
   };
 
   getDynamicPageTheme = () => {

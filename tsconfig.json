@@ -39,7 +39,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/theme/dark.ts",
-    "src/theme/light.ts"
+    "src/theme/Dark.tss",
+    "src/theme/Light.ts"
   ]
 }
