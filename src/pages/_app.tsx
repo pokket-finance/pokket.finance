@@ -36,7 +36,7 @@ class ReactApp extends App {
       dynamicPageThemes[pageIndex] = { route, dynamicTheme };
     }
 
-    this.setState({ dynamicTheme });
+    this.setState({ dynamicPageThemes });
   };
 
   getDynamicPageTheme = () => {

@@ -6,7 +6,6 @@ import BottomPanel from '@/components/layout/bottomPanel';
 const FooterContainer = styled.div`
   with: 100%;
   display: flex;
-  margin-top: 10%;
   background: #18202b;
   padding: 64px 165px;
   user-select: none;

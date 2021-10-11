@@ -25,6 +25,7 @@ const PartnerContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 10%;
 `;
 
 const PartnerCard = styled.div`

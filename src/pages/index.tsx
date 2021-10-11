@@ -1,7 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import Footer from '../components/layout/footer';
 import LandingPage from './landing';
 
 function Home({ updateTheme }: { updateTheme: (prop: DefaultTheme) => void }) {
@@ -15,7 +14,6 @@ function Home({ updateTheme }: { updateTheme: (prop: DefaultTheme) => void }) {
         />
       </Head>
       <LandingPage updateTheme={updateTheme} />
-      <Footer />
     </>
   );
 }
