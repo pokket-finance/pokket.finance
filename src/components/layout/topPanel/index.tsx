@@ -3,7 +3,7 @@ import styled, { DefaultTheme } from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Switch from 'react-switch';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
-import DarkTheme from '@/theme/Dark';
+import DarkTheme from '@/theme/dark';
 import LightTheme from '@/theme/Light';
 
 const TopPanelContainer = styled.div`
