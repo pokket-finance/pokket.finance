@@ -37,16 +37,14 @@ const StepContent = styled.div<{ isLeft: boolean }>`
   text-align: ${(props) => (props.isLeft ? 'right' : 'left')};
   .title {
     line-height: 44px;
-    color: ${(props) =>
-      props.theme.name === 'Light' ? '#323232' : 'rgba(255, 255, 255, 0.87)'};
+    color: ${(props) => props.theme.color.bodyfontColorLevel1};
     font-weight: bold;
     font-size: 24px;
   }
   .content {
     font-weight: normal;
     font-size: 16px;
-    color: ${(props) =>
-      props.theme.name === 'Light' ? '#969696' : 'rgba(255, 255, 255, 0.6)'};
+    color: ${(props) => props.theme.color.bodyfontColorLevel2};
   }
 `;
 

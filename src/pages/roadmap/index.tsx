@@ -19,7 +19,7 @@ const TitleContainer = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
-  color: #323232;
+  color: ${(props) => props.theme.color.bodyfontColorLevel1};
   padding-bottom: 50px;
 `;
 

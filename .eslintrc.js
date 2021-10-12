@@ -8,6 +8,7 @@ config.rules = {
   'jsx-a11y/no-static-element-interactions': 'off',
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   '@next/next/no-img-element': 'off',
+  "@next/next/no-document-import-in-page": "off",
   "react/jsx-curly-brace-presence": 'off',
   'prettier/prettier': [
     'error',
