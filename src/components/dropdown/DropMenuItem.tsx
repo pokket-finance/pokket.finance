@@ -19,12 +19,28 @@ const DropMenuItemContainer = styled.div`
   background-color: ${(props) => props.theme.color.dropdownBackground};
   cursor: pointer;
   user-select: none;
-  white-space: nowrap;
   :hover {
     background-color: rgba(63, 109, 225, 0.1);
     font-weight: 800;
     color: #3f6de1;
     border-left: solid 3px #3f6de1;
+    white-space: nowrap;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #969696;
+    white-space: nowrap;
+  }
+  a:hover {
+    font-weight: 800;
+    color: #3f6de1;
     white-space: nowrap;
   }
 `;

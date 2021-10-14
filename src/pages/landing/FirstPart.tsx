@@ -7,21 +7,20 @@ const Container = styled.div`
   align-items: center;
 `;
 const LeftContainer = styled.div`
-  flex: 1;
-  width: 60%;
-  height: 620px;
-  background-size: 100%, 80%;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 25%center, 32%;
-  background-image: url(${'/assets/backgroundImage/chart.png'}),
-    url(${'/assets/backgroundImage/ring.png'});
+  width: 58%;
+  height: calc(100vw * 0.58 * 0.9);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: ${(props) =>
+    `url('/assets/BG/${props.theme.name}/Chart.png')`};
 `;
 const RightContainer = styled.div`
-  flex: 1;
-  width: 40%;
+  width: 36%;
+  padding: 0 3%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 `;
 
 const CustomTitle = styled.span`

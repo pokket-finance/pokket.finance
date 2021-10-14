@@ -5,21 +5,21 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5%;
   user-select: none;
+  margin-top: 128px;
 `;
 
 const DataContainer = styled.div`
   width: 100%;
-  height: 372px;
+  height: calc(100vw * (259 / 1280));
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 30px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(${'/assets/backgroundImage/SecondPart1.png'});
+  background-image: ${(props) =>
+    `url('/assets/BG/${props.theme.name}/Data.png')`};
 `;
 
 const DataItem = styled.div`
@@ -47,18 +47,18 @@ const DataItem = styled.div`
 
 const TitleContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: calc(90vw * 286 / 1025);
+  margin-top: 129px;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(${'/assets/backgroundImage/SecondPart2.png'});
+  background-image: url(${'/assets/BG/Mountain.png'});
   .title {
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-size: 36px;
     color: #3f6de1;
-    margin-top: 100px;
   }
   .subTitle {
     display: flex;
@@ -68,13 +68,14 @@ const TitleContainer = styled.div`
     font-weight: bold;
     font-size: 48px;
     color: ${(props) => props.theme.color.bodyfontColorLevel1};
-    margin-top: 5%;
+    margin-top: 48px;
   }
 `;
 
 const MessageContainer = styled.div`
   color: ${(props) => props.theme.color.bodyfontColorLevel2};
   width: 80%;
+  line-height: 150%;
   text-align: center;
 `;
 
@@ -101,9 +102,9 @@ const SecondPart = () => {
       <TitleContainer>
         <div className="title">What we stand for</div>
         <div className="subTitle">
-          Introducing
+          INTRODUCING
           <br />
-          Structured Vaults
+          STRUCTURED VAULTS
         </div>
       </TitleContainer>
       <MessageContainer>

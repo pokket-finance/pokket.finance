@@ -10,7 +10,7 @@ const TopPanelContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 160px);
+  width: 90%;
   height: 68px;
   opacity: 1;
   background-color: ${(props) => props.theme.color.topPanelBackground};

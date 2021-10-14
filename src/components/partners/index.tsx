@@ -4,10 +4,8 @@ import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const Container = styled.div`
   display: flex;
-  height: 550px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5%;
   flex-direction: column;
 `;
 
@@ -18,6 +16,7 @@ const Title = styled.div`
   color: ${(props) => props.theme.color.bodyfontColorLevel1};
   font-weight: bold;
   font-size: 36px;
+  margin-bottom: 5%;
 `;
 
 const PartnerContainer = styled.div`
@@ -25,7 +24,6 @@ const PartnerContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 10%;
 `;
 
 const PartnerCard = styled.div`
@@ -40,7 +38,8 @@ const PartnerCard = styled.div`
   margin: 2%;
 `;
 
-const Partners = () => {
+const Partners = (props: { title: string; className?: string }) => {
+  const { title, className } = props;
   const { Partner1, Partner2, Partner3, Partner4, Partner5, Partner6 } =
     useThemeSVGUrl([
       'Partner1',
@@ -61,8 +60,8 @@ const Partners = () => {
     Partner2,
   ];
   return (
-    <Container>
-      <Title>Our Partners</Title>
+    <Container className={className}>
+      {title && <Title>{title}</Title>}
       <PartnerContainer>
         {partnerUrlArray.map((item) => (
           <PartnerCard>

@@ -4,8 +4,6 @@ import CustomButton from '../customButton';
 
 const CardContainer = styled.div`
   user-select: none;
-  width: 500px;
-  height: 300px;
   display: flex;
   flex-direction: column;
 `;
@@ -18,6 +16,7 @@ const MessageContainer = styled.div`
   margin-top: 34px;
   font-size: 18px;
   font-weight: normal;
+  line-height: 130%;
   color: ${(props) => props.theme.color.bodyfontColorLevel2};
 `;
 
@@ -38,14 +37,14 @@ const Card = ({
   secondButtonTitle,
 }: {
   title: string | React.ReactNode;
-  message: string;
+  message?: string;
   firstButtonTitle: string;
   secondButtonTitle: string;
 }) => {
   return (
     <CardContainer>
       <TitleContainer>{title}</TitleContainer>
-      <MessageContainer>{message}</MessageContainer>
+      {message && <MessageContainer>{message}</MessageContainer>}
       <ButtonContainer>
         <CustomButton>{firstButtonTitle}</CustomButton>
         <CustomButton styleType="default">{secondButtonTitle}</CustomButton>

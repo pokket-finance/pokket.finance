@@ -10,7 +10,7 @@ const StepsContainer = styled.div`
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(${'/assets/backgroundImage/roadmap.png'});
+  background-image: url(${'/assets/BG/Roadmap.png'});
 `;
 
 const Line = styled.div`

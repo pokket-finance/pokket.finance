@@ -8,20 +8,22 @@ const AvatarCardContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
 const Avatar = styled.div`
   font-size: 42px;
   font-weight: bold;
   color: ${(props) => props.theme.color.bodyfontColorLevel1};
 `;
-const Message = styled.div`
+
+const CoreTeam = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px 0;
   margin-left: 24px;
-  .title {
+  .coreTeamTitle {
     font-weight: bold;
     font-size: 20px;
-    color: #323232;
+    color: ${(props) => props.theme.color.bodyfontColorLevel1};
   }
   .message {
     font-weight: normal;
@@ -32,39 +34,45 @@ const Message = styled.div`
   }
   .link {
     display: flex;
+    .space {
+      margin-left: 10px;
+    }
   }
 `;
 
-const Card = () => {
+const Card = (props: { className?: string }) => {
+  const { className } = props;
   return (
-    <AvatarCardContainer>
+    <AvatarCardContainer className={className}>
       <Avatar>
         <ReactSVG src={'/assets/Avatar.svg'} />
       </Avatar>
-      <Message>
-        <div className="title">Wade Warren</div>
+      <CoreTeam>
+        <div className="coreTeamTitle">Wade Warren</div>
         <div className="message">Amet minim mollit non deserunt </div>
         <div className="link">
           <ReactSVG
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Youtube.svg`}
+            src={`/assets/Discord.svg`}
           />
           <ReactSVG
+            className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Youtube.svg`}
+            src={`/assets/Git.svg`}
           />
           <ReactSVG
+            className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Youtube.svg`}
+            src={`/assets/Twitter.svg`}
           />
         </div>
-      </Message>
+      </CoreTeam>
     </AvatarCardContainer>
   );
 };

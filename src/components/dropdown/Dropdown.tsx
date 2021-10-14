@@ -30,6 +30,7 @@ const TitleContainer = styled.div<StyleProps>`
   display: flex;
   align-items: center;
   text-align: center;
+  cursor: pointer;
   font-weight: ${(props) => {
     return props.open ? 'bold' : 500;
   }};

@@ -5,32 +5,41 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5%;
 `;
 const LeftContainer = styled.div`
-  flex: 1;
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 5%;
 `;
 const RightContainer = styled.div`
-  flex: 1;
   width: 60%;
-  height: 620px;
-  background-size: 70%;
+  height: 50vw;
+  background-size: 80%;
+  background-position: 40% 20%;
   background-repeat: no-repeat;
-  background-position: 40%;
-  background-image: url(${'/assets/backgroundImage/fourth.png'});
+  background-image: ${(props) =>
+    `url('/assets/BG/${props.theme.name}/VOL.png')`};
 `;
 
-const FourthPart = () => {
+const VOLAlpha = ({
+  showMessage = true,
+  className,
+}: {
+  showMessage?: boolean;
+  className?: string;
+}) => {
   return (
-    <Container>
+    <Container className={className}>
       <LeftContainer>
         <Card
-          title="Pokket HODL Booster"
-          message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. "
+          title="Pokket VOL Alpha"
+          message={
+            showMessage
+              ? 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. '
+              : ''
+          }
           firstButtonTitle="Use App"
           secondButtonTitle="Learn More"
         />
@@ -40,4 +49,4 @@ const FourthPart = () => {
   );
 };
 
-export default FourthPart;
+export default VOLAlpha;

@@ -12,9 +12,10 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: calc(100% - 160px);
-  height: 94px;
+  height: 60px;
   padding: 0px 5%;
   background-color: RGBA(0, 0, 0, 0);
+  margin-top: 32px;
 `;
 
 const DropdownGroup = styled.div`
@@ -33,15 +34,14 @@ const Header = ({
       <HeaderContainer>
         <ReactSVG src={Pokket} />
         <DropdownGroup>
-          <Dropdown width={120} title="About">
-            <DropMenuItem>Lorem ipsum</DropMenuItem>
-            <DropMenuItem>Lorem ipsum123</DropMenuItem>
-            <DropMenuItem>Lorem ipsum234</DropMenuItem>
-          </Dropdown>
-          <Dropdown width={196} title="Pokket Vaults">
-            <DropMenuItem>Lorem ipsum</DropMenuItem>
-            <DropMenuItem>Lorem ipsum123</DropMenuItem>
-            <DropMenuItem>Lorem ipsum234</DropMenuItem>
+          <Dropdown width={100} title="About" />
+          <Dropdown width={100} title="Vaults">
+            <DropMenuItem>
+              <a href="/hodl">HODL Booster</a>
+            </DropMenuItem>
+            <DropMenuItem>
+              <a href="/vol">ALPHA VOL</a>
+            </DropMenuItem>
           </Dropdown>
           <Dropdown width={150} title="Tokenomics" />
           <Dropdown width={100} title="Docs" />
