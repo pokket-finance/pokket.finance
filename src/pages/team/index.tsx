@@ -10,7 +10,7 @@ const LandingContainer = styled.div`
 `;
 
 const BodyContainer = styled.div`
-  padding: 5% 0;
+  padding-top: 5%;
   user-select: none;
 `;
 
@@ -27,19 +27,19 @@ const TitleContainer = styled.div`
 const TeamContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  padding: 60px 80px 70px;
+  width: 90vw;
+  padding: 60px 5% 0;
   background: ${(props) =>
     props.theme.name === 'Light' ? ' #eceff8' : 'rgba(255, 255, 255, 0.07)'};
 
   .avatarContainer {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    padding: 60px 80px 70px;
+    padding: 60px 0 70px;
     flex-direction: row;
     flex-wrap: wrap;
     .avatarCard {
-      width: 33%;
       margin-top: 24px;
     }
   }
@@ -47,7 +47,7 @@ const TeamContainer = styled.div`
   .partnersContainer {
     display: flex;
     flex-direction: column;
-    padding: 60px 80px 0px;
+    padding: 60px 0;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -56,16 +56,16 @@ const TeamContainer = styled.div`
 const TransparentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  padding: 60px 80px 70px;
+  width: 90vw;
+  padding: 60px 5% 0;
   .avatarContainer {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    padding: 60px 80px 70px;
+    padding: 60px 0 70px;
     flex-direction: row;
     flex-wrap: wrap;
     .avatarCard {
-      width: 33%;
       margin-top: 24px;
     }
   }

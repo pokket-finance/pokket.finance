@@ -3,6 +3,7 @@ import { ReactSVG } from 'react-svg';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,18 +25,19 @@ const PartnerContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const PartnerCard = styled.div`
   width: 20%;
   height: 150px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background: ${(props) => props.theme.color.topPanelBackground};
   border-radius: 16px;
   border: 1px solid rgba(63, 109, 225, 0.2);
-  margin: 2%;
+  margin: 1% 0;
 `;
 
 const Partners = (props: { title: string; className?: string }) => {

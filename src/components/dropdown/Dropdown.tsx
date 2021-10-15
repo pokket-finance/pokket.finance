@@ -1,6 +1,7 @@
 import React, { useState, Children } from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 export type DropdownProps = {
   title: string;
@@ -43,6 +44,7 @@ const MenuContainer = styled.div<StyleProps>`
   position: relative;
   top: 10px;
   width: 200px;
+  padding: 8px 0;
   background-color: ${(props) => props.theme.color.dropdownBackground};
   box-shadow: 0px 4px 20px rgba(116, 116, 116, 0.03);
   border-radius: 8px;
@@ -50,12 +52,6 @@ const MenuContainer = styled.div<StyleProps>`
     return props.open ? 'block' : 'none';
   }};
   white-space: nowrap;
-  div:first-child {
-    border-radius: 8px 8px 0 0;
-  }
-  div:last-child {
-    border-radius: 0 0 8px 8px;
-  }
   :after {
     content: '';
     position: absolute;
@@ -69,6 +65,7 @@ const MenuContainer = styled.div<StyleProps>`
 `;
 
 const Dropdown = (props: DropdownProps): JSX.Element => {
+  const { Up, Down } = useThemeSVGUrl(['Up', 'Down']);
   const [open, setOpen] = useState(false);
   const { title, width, children } = props;
   return (
@@ -84,10 +81,7 @@ const Dropdown = (props: DropdownProps): JSX.Element => {
       <TitleContainer open={open}>
         {title}
         {Children.count(children) !== 0 ? (
-          <ReactSVG
-            style={{ marginLeft: '6px' }}
-            src={`/assets/${open ? 'Up' : 'Down'}.svg`}
-          />
+          <ReactSVG style={{ marginLeft: '6px' }} src={open ? Up : Down} />
         ) : (
           ''
         )}

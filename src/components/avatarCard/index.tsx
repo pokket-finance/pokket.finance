@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const AvatarCardContainer = styled.div`
   user-select: none;
-  width: 500px;
+  width: 30%;
   display: flex;
   flex-direction: row;
 `;
@@ -42,6 +43,15 @@ const CoreTeam = styled.div`
 
 const Card = (props: { className?: string }) => {
   const { className } = props;
+  const { Discord, Git, Twitter } = useThemeSVGUrl([
+    'Sun',
+    'Moon',
+    'Discord',
+    'Git',
+    'Medium',
+    'Twitter',
+    'Youtube',
+  ]);
   return (
     <AvatarCardContainer className={className}>
       <Avatar>
@@ -55,21 +65,21 @@ const Card = (props: { className?: string }) => {
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Discord.svg`}
+            src={Discord}
           />
           <ReactSVG
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Git.svg`}
+            src={Git}
           />
           <ReactSVG
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
-            src={`/assets/Twitter.svg`}
+            src={Twitter}
           />
         </div>
       </CoreTeam>
