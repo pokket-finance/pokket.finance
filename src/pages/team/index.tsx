@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -78,14 +78,10 @@ const Title = styled.div`
   text-align: center;
 `;
 
-const LandingPage = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
+const LandingPage = () => {
   return (
     <LandingContainer>
-      <Header updateTheme={updateTheme} />
+      <Header />
       <BodyContainer>
         <TitleContainer>Meet the Pokket team</TitleContainer>
         <TeamContainer>

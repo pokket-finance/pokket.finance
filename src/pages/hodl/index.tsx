@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import HODLBooster from '@/components/hodlBooster';
 import Introducing from '@/components/introducing';
@@ -15,6 +15,9 @@ const LandingContainer = styled.div`
 
 const Padding = styled.div`
   padding: 0 5% 80px;
+  .hodl {
+    margin-top: 80px;
+  }
 `;
 
 const BodyContainer = styled.div`
@@ -32,17 +35,13 @@ const Title = styled.div`
   font-size: 48px;
 `;
 
-const HODL = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
+const HODL = () => {
   return (
     <LandingContainer>
-      <Header updateTheme={updateTheme} />
+      <Header />
       <BodyContainer>
         <Padding>
-          <HODLBooster showMessage={false} />
+          <HODLBooster className="hodl" showMessage={false} />
           <Introducing
             title="Introducing Pokket HODL Booster"
             message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import useDarkMode from 'use-dark-mode';
 import Switch from 'react-switch';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
-import DarkTheme from '@/theme/Dark';
-import LightTheme from '@/theme/Light';
-
 const TopPanelContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 90vw;
   height: 68px;
   opacity: 1;
   background-color: ${(props) => props.theme.color.topPanelBackground};
@@ -26,8 +24,11 @@ const ThemeSwitchContainer = styled.div`
     margin: 0 14px 0 8px;
     font-weight: bold;
     font-size: 16px;
-    color: ${(props) =>
-      props.theme.name === 'Light' ? '#3f6de1' : 'rgba(255, 255, 255, 0.38);'};
+    color: ${(props) => {
+      return props.theme.name === 'Light'
+        ? '#3f6de1'
+        : 'rgba(255, 255, 255, 0.38);';
+    }};
   }
   .darkFont {
     margin: 0 8px 0 14px;
@@ -59,15 +60,20 @@ const LinkItem = styled.div`
   margin-left: 24px;
 `;
 
-const TopPanel = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
-  const { Sun, Moon } = useThemeSVGUrl(['Sun', 'Moon']);
-  const [checked, setChecked] = useState(false);
+const TopPanel = () => {
+  const { Sun, Moon, Discord, Git, Medium, Twitter, Youtube } = useThemeSVGUrl([
+    'Sun',
+    'Moon',
+    'Discord',
+    'Git',
+    'Medium',
+    'Twitter',
+    'Youtube',
+  ]);
+  const darkMode = useDarkMode();
+  const [checked, setChecked] = useState(!darkMode.value);
   const handleChange = (nextChecked) => {
-    updateTheme(nextChecked ? DarkTheme : LightTheme);
+    darkMode.toggle();
     setChecked(nextChecked);
   };
 
@@ -78,6 +84,8 @@ const TopPanel = ({
         <div className="lightFont">Light</div>
         <Switch
           onChange={handleChange}
+          width={40}
+          height={22}
           checked={checked}
           className="react-switch"
           offColor="#e2f5ea"
@@ -93,17 +101,17 @@ const TopPanel = ({
       <LinkGroup>
         <a href="" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Discord.svg`} />
+            <ReactSVG src={Discord} />
           </LinkItem>
         </a>
         <a href="" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Git.svg`} />
+            <ReactSVG src={Git} />
           </LinkItem>
         </a>
         <a href="https://twitter.com/PokketOfficial" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Twitter.svg`} />
+            <ReactSVG src={Twitter} />
           </LinkItem>
         </a>
         <a
@@ -111,12 +119,12 @@ const TopPanel = ({
           target="blank"
         >
           <LinkItem>
-            <ReactSVG src={`/assets/Youtube.svg`} />
+            <ReactSVG src={Youtube} />
           </LinkItem>
         </a>
         <a href="https://medium.com/pokketofficial" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Medium.svg`} />
+            <ReactSVG src={Medium} />
           </LinkItem>
         </a>
       </LinkGroup>

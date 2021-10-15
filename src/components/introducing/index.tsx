@@ -5,7 +5,7 @@ const IntroducingContainer = styled.div`
   height: 372px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding-top: 30px;
   background-size: 100%;
@@ -19,7 +19,6 @@ const Title = styled.div`
   color: #ffffff;
   font-weight: bold;
   font-size: 36px;
-  margin-top: 60px;
 `;
 
 const Message = styled.div`
@@ -27,7 +26,7 @@ const Message = styled.div`
   line-height: 150%;
   font-size: 16px;
   color: #ffffff;
-  padding: 20px 15% 0;
+  padding: 20px 18%;
 `;
 
 const Introducing = (props: {

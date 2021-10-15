@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
 import CustomButton from '@/components/customButton';
@@ -11,7 +11,7 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 160px);
+  width: 90vw;
   height: 60px;
   padding: 0px 5%;
   background-color: RGBA(0, 0, 0, 0);
@@ -22,15 +22,11 @@ const DropdownGroup = styled.div`
   display: flex;
 `;
 
-const Header = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
+const Header = () => {
   const { Pokket } = useThemeSVGUrl('Pokket');
   return (
     <>
-      <TopPanel updateTheme={updateTheme} />
+      <TopPanel />
       <HeaderContainer>
         <ReactSVG src={Pokket} />
         <DropdownGroup>

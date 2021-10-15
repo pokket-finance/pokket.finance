@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -23,14 +23,10 @@ const TitleContainer = styled.div`
   padding-bottom: 50px;
 `;
 
-const LandingPage = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
+const LandingPage = () => {
   return (
     <LandingContainer>
-      <Header updateTheme={updateTheme} />
+      <Header />
       <BodyContainer>
         <TitleContainer>Our Roadmap</TitleContainer>
         <Steps>

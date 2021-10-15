@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const BottomPanelContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: calc(100vw - 165 * 2);
   height: 68px;
   opacity: 1;
-  padding: 0 5%;
+  padding: 0 165px;
   background: #10141b;
 `;
 
@@ -40,22 +41,29 @@ const LinkItem = styled(SVGButton)`
 `;
 
 const BottomPanel = () => {
+  const { Discord, Git, Medium, Twitter, Youtube } = useThemeSVGUrl([
+    'Discord',
+    'Git',
+    'Medium',
+    'Twitter',
+    'Youtube',
+  ]);
   return (
     <BottomPanelContainer>
       <LinkGroup>
         <a href="" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Discord.svg`} />
+            <ReactSVG src={Discord} />
           </LinkItem>
         </a>
         <a href="" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Git.svg`} />
+            <ReactSVG src={Git} />
           </LinkItem>
         </a>
         <a href="https://twitter.com/PokketOfficial" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Twitter.svg`} />
+            <ReactSVG src={Twitter} />
           </LinkItem>
         </a>
         <a
@@ -63,12 +71,12 @@ const BottomPanel = () => {
           target="blank"
         >
           <LinkItem>
-            <ReactSVG src={`/assets/Youtube.svg`} />
+            <ReactSVG src={Youtube} />
           </LinkItem>
         </a>
         <a href="https://medium.com/pokketofficial" target="blank">
           <LinkItem>
-            <ReactSVG src={`/assets/Medium.svg`} />
+            <ReactSVG src={Medium} />
           </LinkItem>
         </a>
       </LinkGroup>

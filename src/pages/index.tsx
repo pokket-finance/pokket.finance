@@ -1,9 +1,8 @@
-import { DefaultTheme } from 'styled-components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import LandingPage from './landing';
 
-function Home({ updateTheme }: { updateTheme: (prop: DefaultTheme) => void }) {
+function Home() {
   return (
     <>
       <Head>
@@ -13,7 +12,7 @@ function Home({ updateTheme }: { updateTheme: (prop: DefaultTheme) => void }) {
           content="POKKET is a new cryptocurrency savings account service to help you earn interest returns on your crypto assets. 6-8% APY on Bitcoin lending, +100 other assets!"
         />
       </Head>
-      <LandingPage updateTheme={updateTheme} />
+      <LandingPage />
     </>
   );
 }

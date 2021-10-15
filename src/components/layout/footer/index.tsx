@@ -4,10 +4,10 @@ import { ReactSVG } from 'react-svg';
 import BottomPanel from '@/components/layout/bottomPanel';
 
 const FooterContainer = styled.div`
-  with: 100%;
+  with: calc(100% - 165px);
   display: flex;
   background: #18202b;
-  padding: 64px 165px;
+  padding: 64px 90px 64px 165px;
   user-select: none;
 `;
 
@@ -16,7 +16,7 @@ const LogoContainer = styled.div`
 `;
 
 const LinkContainer = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   white-space: nowrap;
 `;
@@ -33,7 +33,6 @@ const LinkItem = styled.div`
     padding-bottom: 12px;
   }
   .link {
-    width: 160px;
     padding: 12px 0;
     font-weight: normal;
     font-size: 14px;

@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import FirstPart from './FirstPart';
 import SecondPart from './SecondPart';
@@ -27,14 +27,10 @@ const BodyContainer = styled.div`
   }
 `;
 
-const LandingPage = ({
-  updateTheme,
-}: {
-  updateTheme: (prop: DefaultTheme) => void;
-}) => {
+const LandingPage = () => {
   return (
     <LandingContainer>
-      <Header updateTheme={updateTheme} />
+      <Header />
       <BodyContainer>
         <FirstPart />
         <SecondPart />
