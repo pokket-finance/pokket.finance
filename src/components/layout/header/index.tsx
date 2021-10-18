@@ -31,13 +31,13 @@ const Header = () => {
       <HeaderContainer>
         <ReactSVG src={Pokket} />
         <DropdownGroup>
-          <Dropdown width={100} title="About" />
+          <Dropdown href="/team" width={100} title="About" />
           <Dropdown width={100} title="Vaults">
             <DropMenuItem>
               <Link href="/hodl">HODL Booster</Link>
             </DropMenuItem>
             <DropMenuItem>
-              <Link href="/vol">ALPHA VOL</Link>
+              <Link href="/alpha_vol">ALPHA VOL</Link>
             </DropMenuItem>
           </Dropdown>
           <Dropdown width={150} title="Tokenomics" />

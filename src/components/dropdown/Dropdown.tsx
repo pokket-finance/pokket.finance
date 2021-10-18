@@ -1,10 +1,12 @@
 import React, { useState, Children } from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import Link from 'next/link';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 export type DropdownProps = {
   title: string;
+  href?: string;
   width: number;
   children?: React.ReactNode;
 };
@@ -38,6 +40,23 @@ const TitleContainer = styled.div<StyleProps>`
   color: ${(props) => {
     return props.open ? '#3f6de1' : '#646464';
   }};
+  a {
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 130%;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-weight: ${(props) => {
+      return props.open ? 'bold' : 500;
+    }};
+    color: ${(props) => {
+      return props.open ? '#3f6de1' : '#646464';
+    }};
+  }
 `;
 
 const MenuContainer = styled.div<StyleProps>`
@@ -67,7 +86,8 @@ const MenuContainer = styled.div<StyleProps>`
 const Dropdown = (props: DropdownProps): JSX.Element => {
   const { Up, Down } = useThemeSVGUrl(['Up', 'Down']);
   const [open, setOpen] = useState(false);
-  const { title, width, children } = props;
+  const { title, href = '', width, children } = props;
+  const childrenCount = Children.count(children);
   return (
     <DropdownContainer
       width={width}
@@ -79,14 +99,14 @@ const Dropdown = (props: DropdownProps): JSX.Element => {
       }}
     >
       <TitleContainer open={open}>
-        {title}
-        {Children.count(children) !== 0 ? (
+        {childrenCount !== 0 ? title : <Link href={href}>{title}</Link>}
+        {childrenCount !== 0 ? (
           <ReactSVG style={{ marginLeft: '6px' }} src={open ? Up : Down} />
         ) : (
           ''
         )}
       </TitleContainer>
-      {Children.count(children) !== 0 ? (
+      {childrenCount !== 0 ? (
         <MenuContainer open={open}>{children}</MenuContainer>
       ) : (
         ''
