@@ -4,10 +4,10 @@ import { ReactSVG } from 'react-svg';
 import BottomPanel from '@/components/layout/bottomPanel';
 
 const FooterContainer = styled.div`
-  with: calc(100% - 165px);
+  max-width: 1280px;
+  padding: 64px calc((100% - 1280px) * 0.35) 40px calc((100% - 1280px) * 0.65);
   display: flex;
   background: #18202b;
-  padding: 64px 90px 64px 165px;
   user-select: none;
 `;
 

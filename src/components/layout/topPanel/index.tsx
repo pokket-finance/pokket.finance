@@ -4,15 +4,16 @@ import { ReactSVG } from 'react-svg';
 import useDarkMode from 'use-dark-mode';
 import Switch from 'react-switch';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
+
 const TopPanelContainer = styled.div`
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90vw;
   height: 68px;
   opacity: 1;
   background-color: ${(props) => props.theme.color.topPanelBackground};
-  padding: 0 5%;
 `;
 
 const ThemeSwitchContainer = styled.div`

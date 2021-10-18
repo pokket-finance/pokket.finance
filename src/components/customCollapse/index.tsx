@@ -7,8 +7,8 @@ const { Panel } = Collapse;
 
 const CustomCollapseContainer = styled.div`
   user-select: none;
-  width: 70vw;
-  padding: 80px 15vw;
+  max-width: 1280px;
+  padding: 80px calc((100% - 1440px) / 2 + 80px);
   background: ${(props) =>
     props.theme.name === 'Light' ? 'rgba(233, 238, 248, 0.5)' : '#161D35'};
   .collapse {
@@ -56,6 +56,7 @@ const Title = styled.div`
 `;
 
 type MessageType = {
+  id: number;
   header: string;
   content: string;
 };
@@ -96,6 +97,7 @@ function CustomCollapse(props: CustomCollapseType) {
         {array.map((item) => {
           return (
             <Panel
+              key={item.id}
               className="customPanel"
               header={<HeaderContainer>{item.header}</HeaderContainer>}
             >

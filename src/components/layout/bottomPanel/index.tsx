@@ -3,17 +3,18 @@ import { ReactSVG } from 'react-svg';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const BottomPanelContainer = styled.div`
+  max-width: 1280px;
+  padding: 0 calc((100% - 1280px) * 0.35) 0 calc((100% - 1280px) * 0.65);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100vw - 165 * 2);
   height: 68px;
   opacity: 1;
-  padding: 0 165px;
   background: #10141b;
 `;
 
 const Copyright = styled.div`
+  width: calc(60% / 3);
   font-weight: normal;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);

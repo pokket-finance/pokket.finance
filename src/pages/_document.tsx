@@ -34,11 +34,6 @@ export default class MyDocument extends Document {
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <meta name="robots" content="index, follow" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-550XNQN0H7"
-          />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{

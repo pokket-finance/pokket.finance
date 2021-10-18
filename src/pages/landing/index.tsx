@@ -14,16 +14,17 @@ const LandingContainer = styled.div`
 `;
 
 const BodyContainer = styled.div`
-  padding: 0 5%;
+  width: 1440px;
+  padding: 0 calc((100% - 1440px) / 2);
   user-select: none;
   .partners {
     margin: 200px 0 140px;
   }
   .hodlMargin {
-    margin-top: 120px;
+    margin-top: 150px;
   }
   .volMargin {
-    margin-top: 84px;
+    margin-top: 80px;
   }
 `;
 

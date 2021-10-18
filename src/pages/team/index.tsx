@@ -5,7 +5,7 @@ import Footer from '@/components/layout/footer';
 import Partners from '@/components/partners';
 import AvatarCard from '@/components/avatarCard';
 
-const LandingContainer = styled.div`
+const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
 `;
 
@@ -25,10 +25,10 @@ const TitleContainer = styled.div`
 `;
 
 const TeamContainer = styled.div`
+  max-width: 1280px;
+  padding: 60px calc((100% - 1440px) / 2 + 80px) 0;
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  padding: 60px 5% 0;
   background: ${(props) =>
     props.theme.name === 'Light' ? ' #eceff8' : 'rgba(255, 255, 255, 0.07)'};
 
@@ -54,10 +54,10 @@ const TeamContainer = styled.div`
 `;
 
 const TransparentContainer = styled.div`
+  max-width: 1280px;
+  padding: 60px calc((100% - 1440px) / 2 + 80px) 0;
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  padding: 60px 5% 0;
   .avatarContainer {
     display: flex;
     justify-content: space-between;
@@ -78,9 +78,9 @@ const Title = styled.div`
   text-align: center;
 `;
 
-const LandingPage = () => {
+const TeamPage = () => {
   return (
-    <LandingContainer>
+    <Container>
       <Header />
       <BodyContainer>
         <TitleContainer>Meet the Pokket team</TitleContainer>
@@ -119,8 +119,8 @@ const LandingPage = () => {
         </TransparentContainer>
       </BodyContainer>
       <Footer />
-    </LandingContainer>
+    </Container>
   );
 };
 
-export default LandingPage;
+export default TeamPage;

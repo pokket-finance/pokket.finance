@@ -3,7 +3,8 @@ import { ReactSVG } from 'react-svg';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const Container = styled.div`
-  width: 100%;
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
   display: flex;
   justify-content: space-between;
   align-items: center;

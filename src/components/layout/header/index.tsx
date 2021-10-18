@@ -8,13 +8,13 @@ import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 import TopPanel from '../topPanel';
 
 const HeaderContainer = styled.div`
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90vw;
   height: 60px;
-  padding: 0px 5%;
   background-color: RGBA(0, 0, 0, 0);
   margin-top: 32px;
 `;

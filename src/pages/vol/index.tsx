@@ -9,18 +9,19 @@ import CustomCollapse from '@/components/customCollapse';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
-const LandingContainer = styled.div`
+const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
 `;
 
 const Padding = styled.div`
-  padding: 0 5% 80px;
   .vol {
     margin-top: 80px;
   }
 `;
 
 const BodyContainer = styled.div`
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
   user-select: none;
   .introducing {
     margin-top: 5%;
@@ -37,7 +38,7 @@ const Title = styled.div`
 
 const VOL = () => {
   return (
-    <LandingContainer>
+    <Container>
       <Header />
       <BodyContainer>
         <Padding>
@@ -57,29 +58,32 @@ const VOL = () => {
             message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
           />
         </Padding>
-        <CustomCollapse
-          title="Frequently Asked Questions"
-          array={[
-            {
-              header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
-              content:
-                'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-            {
-              header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
-              content:
-                'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-            {
-              header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
-              content:
-                'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-          ]}
-        />
       </BodyContainer>
+      <CustomCollapse
+        title="Frequently Asked Questions"
+        array={[
+          {
+            id: 1,
+            header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
+            content:
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+          },
+          {
+            id: 2,
+            header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
+            content:
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+          },
+          {
+            id: 3,
+            header: 'Lorem ipsum Lorem ipsum Lorem ipsum',
+            content:
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+          },
+        ]}
+      />
       <Footer />
-    </LandingContainer>
+    </Container>
   );
 };
 

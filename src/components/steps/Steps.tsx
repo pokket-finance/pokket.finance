@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StepsContainer = styled.div`
+  padding: 45px 0;
   display: flex;
-  padding: 100px 0 200px 0;
   border-radius: 16px;
   align-items: center;
   justify-content: center;

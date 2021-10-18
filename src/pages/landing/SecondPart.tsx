@@ -6,7 +6,9 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  margin-top: 128px;
+  margin-top: 68px;
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
 `;
 
 const DataContainer = styled.div`
@@ -47,8 +49,8 @@ const DataItem = styled.div`
 
 const TitleContainer = styled.div`
   width: 100%;
-  height: calc(90vw * 286 / 1025);
-  margin-top: 129px;
+  height: 360px;
+  margin-top: 150px;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;

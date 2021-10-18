@@ -5,12 +5,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1280px;
+  padding: 0 calc((100% - 1440px) / 2 + 80px);
 `;
 const LeftContainer = styled.div`
   width: 60%;
-  height: 50vw;
-  background-size: 80%;
-  background-position: 40% 20%;
+  height: 710px;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-image: ${(props) =>
     `url('/assets/BG/${props.theme.name}/HODL.png')`};

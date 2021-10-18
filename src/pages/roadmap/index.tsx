@@ -9,7 +9,9 @@ const LandingContainer = styled.div`
 `;
 
 const BodyContainer = styled.div`
-  padding: 5% 5%;
+  max-width: 1280px;
+  padding: 110px calc((100% - 1440px) / 2 + 80px) 0px;
+  margin-bottom: 150px;
   user-select: none;
 `;
 
