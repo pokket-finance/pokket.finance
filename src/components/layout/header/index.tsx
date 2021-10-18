@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
 import CustomButton from '@/components/customButton';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
@@ -33,10 +34,10 @@ const Header = () => {
           <Dropdown width={100} title="About" />
           <Dropdown width={100} title="Vaults">
             <DropMenuItem>
-              <a href="/hodl">HODL Booster</a>
+              <Link href="/hodl">HODL Booster</Link>
             </DropMenuItem>
             <DropMenuItem>
-              <a href="/vol">ALPHA VOL</a>
+              <Link href="/vol">ALPHA VOL</Link>
             </DropMenuItem>
           </Dropdown>
           <Dropdown width={150} title="Tokenomics" />
