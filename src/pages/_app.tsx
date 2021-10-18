@@ -27,4 +27,6 @@ class ReactApp extends App {
   }
 }
 
-export default appWithTranslation(ReactApp);
+const myApp = appWithTranslation(ReactApp);
+
+export default myApp;

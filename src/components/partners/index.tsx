@@ -52,22 +52,22 @@ const Partners = (props: { title: string; className?: string }) => {
       'Partner6',
     ]);
   const partnerUrlArray = [
-    Partner1,
-    Partner2,
-    Partner3,
-    Partner4,
-    Partner5,
-    Partner6,
-    Partner1,
-    Partner2,
+    { key: 'Partner1', value: Partner1 },
+    { key: 'Partner2', value: Partner2 },
+    { key: 'Partner3', value: Partner3 },
+    { key: 'Partner4', value: Partner4 },
+    { key: 'Partner5', value: Partner5 },
+    { key: 'Partner6', value: Partner6 },
+    { key: 'Partner7', value: Partner1 },
+    { key: 'Partner8', value: Partner2 },
   ];
   return (
     <Container className={className}>
       {title && <Title>{title}</Title>}
       <PartnerContainer>
         {partnerUrlArray.map((item) => (
-          <PartnerCard>
-            <ReactSVG src={item} />
+          <PartnerCard key={item.key}>
+            <ReactSVG src={item.value} />
           </PartnerCard>
         ))}
       </PartnerContainer>
