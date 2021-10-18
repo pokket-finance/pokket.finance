@@ -110,7 +110,7 @@ const TeamPage = () => {
           </div>
         </TeamContainer>
         <TransparentContainer>
-          <Title>Liquidity Partners</Title>
+          <Title>Advisors</Title>
           <div className="avatarContainer">
             <AvatarCard className="avatarCard" />
             <AvatarCard className="avatarCard" />

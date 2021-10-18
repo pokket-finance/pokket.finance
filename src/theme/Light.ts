@@ -3,7 +3,7 @@ export type ThemeType = typeof LightTheme;
 const LightTheme = {
   name: 'Light',
   color: {
-    bodyBG: '#F4F4F4',
+    bodyBG: '#F6F7FA',
     bodyfontColorLevel1: '#323232',
     bodyfontColorLevel2: '#969696',
     // TopPanel
