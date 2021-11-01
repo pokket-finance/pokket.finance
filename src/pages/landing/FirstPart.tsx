@@ -8,44 +8,40 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const LeftContainer = styled.div`
+
+const RightContainer = styled.div`
   width: 60%;
-  height: 694px;
+  height: 700px;
+  margin-top: 40px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: ${(props) =>
-    `url('/assets/BG/${props.theme.name}/Chart.png')`};
+  background-image: ${(props) => `url('/assets/tempboxes.png')`};
 `;
-const RightContainer = styled.div`
+const LeftContainer = styled.div`
   width: 40%;
-  padding: 0 3%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10%;
 `;
 
 const CustomTitle = styled.span`
   color: #3f6de1;
+  font-weight: 900;
 `;
 
 const FirstPart = () => {
   return (
     <Container>
-      <LeftContainer />
-      <RightContainer>
+      <LeftContainer>
         <Card
           title={
             <span>
-              Tenable <CustomTitle>Yield</CustomTitle> Protocol
+              Pokket <CustomTitle>DEFI</CustomTitle>
             </span>
           }
-          message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis"
-          firstButtonTitle="Documentation"
-          secondButtonTitle="Earn Yield"
+          message="Take advantage of token volatility and start earning
+          yield on your HODLs"
         />
-      </RightContainer>
+      </LeftContainer>
+      <RightContainer />
     </Container>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import CustomButton from '../customButton';
+import { ReactSVG } from 'react-svg';
+import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const CardContainer = styled.div`
   user-select: none;
@@ -8,12 +9,13 @@ const CardContainer = styled.div`
   flex-direction: column;
 `;
 const TitleContainer = styled.div`
-  font-size: 42px;
-  font-weight: bold;
+  font-size: 64px;
+  font-weight: 700;
   color: ${(props) => props.theme.color.bodyfontColorLevel1};
 `;
 const MessageContainer = styled.div`
-  margin-top: 34px;
+  width: 450px;
+  margin-top: 14px;
   font-size: 18px;
   font-weight: normal;
   line-height: 130%;
@@ -21,7 +23,7 @@ const MessageContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 53px;
+  margin-top: 32px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -33,21 +35,30 @@ const ButtonContainer = styled.div`
 const Card = ({
   title,
   message,
-  firstButtonTitle,
-  secondButtonTitle,
 }: {
   title: string | React.ReactNode;
   message?: string;
-  firstButtonTitle: string;
-  secondButtonTitle: string;
 }) => {
+  const { Discord, Git, Twitter } = useThemeSVGUrl([
+    'Discord',
+    'Git',
+    'Twitter',
+  ]);
+
   return (
     <CardContainer>
       <TitleContainer>{title}</TitleContainer>
       {message && <MessageContainer>{message}</MessageContainer>}
       <ButtonContainer>
-        <CustomButton>{firstButtonTitle}</CustomButton>
-        <CustomButton styleType="default">{secondButtonTitle}</CustomButton>
+        <a href="" target="blank">
+          <ReactSVG src={Discord} style={{ marginRight: '16px' }} />
+        </a>
+        <a href="" target="blank">
+          <ReactSVG src={Git} style={{ marginRight: '16px' }} />
+        </a>
+        <a href="https://twitter.com/PokketOfficial" target="blank">
+          <ReactSVG src={Twitter} />
+        </a>
       </ButtonContainer>
     </CardContainer>
   );
