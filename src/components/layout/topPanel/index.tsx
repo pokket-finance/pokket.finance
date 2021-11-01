@@ -32,8 +32,9 @@ const ThemeSwitchContainer = styled.div`
     }};
   }
   .darkFont {
-    margin: 0 8px 0 14px;
+    margin: 0 8px 0 6px;
     font-style: normal;
+    /* font-weight: bold; */
     font-weight: normal;
     font-size: 14px;
     color: ${(props) =>
@@ -52,7 +53,7 @@ const LinkGroup = styled.div`
 `;
 
 const LinkItem = styled.div`
-  width: 24px;
+  width: 16px;
   height: 24px;
   display: flex;
   border-radius: 4px;
@@ -97,8 +98,8 @@ const TopPanel = () => {
           checkedIcon={false}
           uncheckedIcon={false}
         />
+        <ReactSVG src={Moon} style={{ marginTop: '5px', marginLeft: '16px' }} />
         <div className="darkFont">Dark</div>
-        <ReactSVG src={Moon} style={{ marginTop: '5px' }} />
       </ThemeSwitchContainer>
       <LinkGroup>
         <a href="" target="blank">
