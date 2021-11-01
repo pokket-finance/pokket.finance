@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import FirstPart from './FirstPart';
 import SecondPart from './SecondPart';
+import ThirdPart from './ThirdPart';
+import FourthPart from './FourthPart';
 // import VOLAlpha from '@/components/volAlpha';
 // import HODLBooster from '@/components/hodlBooster';
 // import Partners from '@/components/partners';
@@ -19,6 +21,8 @@ const LandingPage = () => {
       <Header />
       <FirstPart />
       <SecondPart />
+      <ThirdPart />
+      <FourthPart />
       <Footer />
     </LandingContainer>
   );
