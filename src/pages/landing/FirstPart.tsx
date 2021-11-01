@@ -4,15 +4,18 @@ import Card from '@/components/card';
 const Container = styled.div`
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
+  /* padding: 0 calc((100% - 1440px) / 2); */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  margin-bottom: 0;
 `;
 
 const RightContainer = styled.div`
   width: 60%;
-  height: 700px;
+  height: 680px;
   margin-top: 40px;
+  margin-bottom: 0;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: ${(props) => `url('/assets/tempboxes.png')`};
@@ -20,6 +23,7 @@ const RightContainer = styled.div`
 const LeftContainer = styled.div`
   width: 40%;
   display: flex;
+  margin-bottom: 0;
 `;
 
 const CustomTitle = styled.span`

@@ -6,22 +6,20 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  margin-top: 68px;
+  margin-top: 0;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
 `;
 
 const DataContainer = styled.div`
-  width: 100%;
-  height: calc(100vw * (259 / 1280));
+  z-index: 1;
+  width: 1040px;
+  height: 240px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: ${(props) =>
-    `url('/assets/BG/${props.theme.name}/Data.png')`};
+  background-color: white;
+  border-radius: 12px;
 `;
 
 const DataItem = styled.div`
@@ -29,94 +27,147 @@ const DataItem = styled.div`
   flex-direction: column;
   justify-content: space-around;
   .data {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  .divider {
-    width: 50%;
-    height: 5px;
-    background-color: #ffffff;
-    margin: 14px 0px 22px;
-  }
-  .title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    color: #ffffff;
-  }
-`;
-
-const TitleContainer = styled.div`
-  width: 100%;
-  height: 360px;
-  margin-top: 150px;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(${'/assets/BG/Mountain.png'});
-  .title {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 36px;
+    font-size: 56px;
+    font-weight: 700;
     color: #3f6de1;
   }
-  .subTitle {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  .title {
     font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    color: ${(props) => props.theme.color.bodyfontColorLevel1};
-    margin-top: 48px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #969696;
   }
 `;
 
-const MessageContainer = styled.div`
-  color: ${(props) => props.theme.color.bodyfontColorLevel2};
-  width: 80%;
-  line-height: 150%;
-  text-align: center;
+const BlueContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 260px calc((100% - 1440px) / 2 + 80px);
+  padding-bottom: 120px;
+  margin-top: -120px;
+  background-color: #3f6de1;
+  .grid-right {
+    grid-area: right;
+  }
+`;
+
+const VaultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  color: white;
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .subtitle {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+`;
+
+const GraphicBox = styled.div`
+  float: right;
+  /* margin-right: 160px; */
+  background: #2249ad;
+  border-radius: 12px;
+  width: 520px;
+  height: 200px;
+  .title {
+    padding: 50px 0 0 50px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+`;
+
+const BarsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 35px 50px 0 50px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+`;
+
+const Bars = styled.div`
+  .bartitle {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .purple {
+    background-color: #9979fc;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+  .blue {
+    background-color: #3c97ec;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+  .cyan {
+    background-color: #79e1f9;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
 `;
 
 const SecondPart = () => {
   return (
-    <Container>
-      <DataContainer>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Protocol Volume</div>
-        </DataItem>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Value Locked</div>
-        </DataItem>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Interest Earned</div>
-        </DataItem>
-      </DataContainer>
-      <TitleContainer>
-        <div className="title">What we stand for</div>
-        <div className="subTitle">
-          INTRODUCING
-          <br />
-          STRUCTURED VAULTS
+    <>
+      <Container>
+        <DataContainer>
+          <DataItem>
+            <div className="data">$94M+</div>
+            <div className="title">Savings</div>
+          </DataItem>
+          <DataItem>
+            <div className="data">67.3K+</div>
+            <div className="title">Users</div>
+          </DataItem>
+          <DataItem>
+            <div className="data">243K+</div>
+            <div className="title">Deposits</div>
+          </DataItem>
+        </DataContainer>
+      </Container>
+      <BlueContainer>
+        <VaultsContainer>
+          <div className="title">STRUCTURED VAULTS</div>
+          <div className="subtitle">
+            New smart allocation feature allows for better management of
+            knock-outs. Don't fret about esoteric moved ruining your balance no
+            longer.
+          </div>
+        </VaultsContainer>
+        <div>
+          <GraphicBox>
+            <div className="title">3-month blend-vault</div>
+            <BarsContainer>
+              <Bars>
+                <div className="bartitle">50% ETH</div>
+                <div className="purple" />
+              </Bars>
+              <Bars>
+                <div className="bartitle">25% UNI</div>
+                <div className="blue" />
+              </Bars>
+              <Bars>
+                <div className="bartitle">25% MATIC</div>
+                <div className="cyan" />
+              </Bars>
+            </BarsContainer>
+          </GraphicBox>
         </div>
-      </TitleContainer>
-      <MessageContainer>
-        {`Pokket uses financial engineering to creat structured products that
-        deliver sustainable yiel. Pokket's first product focuses on yield
-        through automated options strategies. The protocol also allows
-        developers to create arbitrary structured products through combining
-        various DeFi derivatives`}
-      </MessageContainer>
-    </Container>
+      </BlueContainer>
+    </>
   );
 };
 
