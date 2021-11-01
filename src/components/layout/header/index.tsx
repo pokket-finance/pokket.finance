@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
@@ -16,12 +16,33 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   height: 60px;
   background-color: RGBA(0, 0, 0, 0);
-  margin-top: 32px;
+  margin-top: 16px;
 `;
 
-const DropdownGroup = styled.div`
+const LinkContainer = styled.div`
   display: flex;
+  align-items: center;
+  position: left;
 `;
+
+const Typography = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 40px;
+  color: #646464;
+  cursor: pointer;
+
+  ${(props) =>
+    props.developers &&
+    css`
+      font-weight: 700;
+      color: #3f6de1;
+    `}
+`;
+
+// const DropdownGroup = styled.div`
+//   display: flex;
+// `;
 
 const Header = () => {
   const { Pokket } = useThemeSVGUrl('Pokket');
@@ -30,7 +51,7 @@ const Header = () => {
       <TopPanel />
       <HeaderContainer>
         <ReactSVG src={Pokket} />
-        <DropdownGroup>
+        {/* <DropdownGroup>
           <Dropdown href="/team" width={100} title="About" />
           <Dropdown width={100} title="Vaults">
             <DropMenuItem>
@@ -42,8 +63,13 @@ const Header = () => {
           </Dropdown>
           <Dropdown width={150} title="Tokenomics" />
           <Dropdown width={100} title="Docs" />
-        </DropdownGroup>
-        <CustomButton>Launch App</CustomButton>
+        </DropdownGroup> */}
+        <LinkContainer>
+          <Typography developers>Developers</Typography>
+          <Typography>Governance</Typography>
+          <Typography>Community</Typography>
+          <CustomButton>Launch App</CustomButton>
+        </LinkContainer>
       </HeaderContainer>
     </>
   );

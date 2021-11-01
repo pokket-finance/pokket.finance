@@ -48,6 +48,7 @@ const ThemeSwitchContainer = styled.div`
 const LinkGroup = styled.div`
   /* height: 40px; */
   display: flex;
+  margin-top: 3px;
   /* background-color: red; */
   /* margin: 14px 0; */
 `;
