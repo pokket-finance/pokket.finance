@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const DataContainer = styled.div`
   z-index: 1;
-  width: 1040px;
+  width: 1200px;
   height: 240px;
   display: flex;
   justify-content: space-around;
@@ -23,6 +23,7 @@ const DataContainer = styled.div`
 `;
 
 const DataItem = styled.div`
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,12 +40,23 @@ const DataItem = styled.div`
   }
 `;
 
+const Decoration = styled.div`
+  height: 180px;
+  width: 1280px;
+  background-color: red;
+  z-index: 0;
+  margin-top: -210px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(64px);
+  border-radius: 12px;
+`;
+
 const BlueContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 260px calc((100% - 1440px) / 2 + 80px);
   padding-bottom: 120px;
-  margin-top: -120px;
+  margin-top: -90px;
   background-color: #3f6de1;
   .grid-right {
     grid-area: right;
@@ -137,6 +149,7 @@ const SecondPart = () => {
             <div className="title">Deposits</div>
           </DataItem>
         </DataContainer>
+        <Decoration />
       </Container>
       <BlueContainer>
         <VaultsContainer>

@@ -4,7 +4,7 @@ import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const BottomPanelContainer = styled.div`
   max-width: 1280px;
-  padding: 0 calc((100% - 1280px) * 0.35) 0 calc((100% - 1280px) * 0.65);
+  padding: 0 calc((100% - 1280px) * 0.5) 0 calc((100% - 1280px) * 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +14,8 @@ const BottomPanelContainer = styled.div`
 `;
 
 const Copyright = styled.div`
-  width: calc(60% / 3);
+  text-align: right;
+  width: calc(40% / 3);
   font-weight: normal;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
@@ -33,12 +34,13 @@ const SVGButton = styled.div`
 const LinkGroup = styled.div`
   height: 40px;
   display: flex;
-  backgroup-color: red;
-  margin: 14px 56px 14px 0;
+  /* backgroup-color: red; */
+  margin: 14px 0 14px 0;
+  opacity: 0.5;
 `;
 
 const LinkItem = styled(SVGButton)`
-  margin-right: 24px;
+  margin-right: 10px;
 `;
 
 const BottomPanel = () => {
