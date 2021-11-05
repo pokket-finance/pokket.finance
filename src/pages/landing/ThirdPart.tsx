@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Dummy from '../../../public/assets/map.png';
+import { LeftPoolCard, RightPoolCard } from '../../components/poolCard';
 
 const Container = styled.div`
   max-width: 1280px;
@@ -17,7 +18,6 @@ const InfoCardContainer = styled.div`
 
 const InfoCard = styled.div`
   width: 490px;
-  height: 140px;
   background-color: white;
   border-radius: 12px;
   padding: 60px;
@@ -30,7 +30,9 @@ const InfoCard = styled.div`
     font-size: 18px;
     font-weight: 400;
     color: #646464;
-    margin-top: 32px;
+    margin: 32px 0 40px 0;
+    padding: 0 0 32px 0;
+    border-bottom: 1px solid #0000001a;
   }
 `;
 
@@ -102,6 +104,7 @@ const ThirdPart = () => {
             return. Risk-management is optimized for scalping just a bit more
             alpha.
           </div>
+          <LeftPoolCard />
         </InfoCard>
         <InfoCard>
           <div className="cardTitle">VOL Alpha.</div>
@@ -110,6 +113,7 @@ const ThirdPart = () => {
             fit for periods of uncertainty, when FUD runs rampant and most go
             paper-hands.
           </div>
+          <RightPoolCard />
         </InfoCard>
       </InfoCardContainer>
 

@@ -4,9 +4,7 @@ import Card from '@/components/card';
 const Container = styled.div`
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
-  /* padding: 0 calc((100% - 1440px) / 2); */
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 0;
 `;
@@ -16,9 +14,6 @@ const RightContainer = styled.div`
   height: 680px;
   margin-top: 40px;
   margin-bottom: 0;
-  /* background-size: 100%; */
-  /* background-repeat: no-repeat; */
-  /* background-image: ${(props) => `url('/assets/tempboxes.png')`}; */
 `;
 const LeftContainer = styled.div`
   width: 50%;
