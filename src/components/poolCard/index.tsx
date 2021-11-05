@@ -6,8 +6,14 @@ interface StyleProps {
 }
 
 const GraphicBox = styled.div<StyleProps>`
-  background: white;
-  border: 1px solid #3f6de14d;
+  background: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#1D1F2B';
+  }};
+  border: ${(props) => {
+    return props.theme.name === 'Light'
+      ? `1px solid #3f6de14d`
+      : `1px solid #FFFFFF`;
+  }};
   border-radius: 4px;
   height: 350px;
   width: 423px;
@@ -47,7 +53,9 @@ const GreyPill = styled.div<StyleProps>`
     return `${props.width}px` || `150px`;
   }};
   height: 28px;
-  background-color: #f4f4f4;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#F4F4F4' : '#FFFFFF4D';
+  }};
   border-radius: 24px;
 `;
 
@@ -91,7 +99,9 @@ const Typography = styled.div`
   align-items: center;
   font-size: 12px;
   font-weight: 700;
-  color: #646464;
+  color: ${(props) => {
+    return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
+  }};
   ${(props) =>
     props.sizeFourteen &&
     css`
@@ -102,6 +112,7 @@ const Typography = styled.div`
     css`
       font-size: 10px;
       font-weight: 400;
+      color: #c8c8c8;
     `}
 `;
 

@@ -23,7 +23,9 @@ const LeftContainer = styled.div`
 `;
 
 const CustomTitle = styled.span`
-  color: #3f6de1;
+  color: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFF';
+  }};
   font-weight: 900;
 `;
 

@@ -21,7 +21,9 @@ const DataContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#292B37';
+  }};
   border-radius: 12px;
 `;
 
@@ -33,13 +35,17 @@ const DataItem = styled.div`
   .data {
     font-size: 56px;
     font-weight: 700;
-    color: #3f6de1;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3F6DE1' : '#FFFFFFDE';
+    }};
   }
   .title {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    color: #969696;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#969696' : '#FFFFFFDE';
+    }};
   }
 `;
 
@@ -48,8 +54,14 @@ const Decoration = styled.div`
   width: 1280px;
   z-index: 0;
   margin-top: -210px;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(64px);
+  background: ${(props) => {
+    return props.theme.name === 'Light'
+      ? 'rgb(255, 255, 255, 0.35)'
+      : 'transparent';
+  }};
+  backdrop-filter: ${(props) => {
+    return props.theme.name === 'Light' ? 'blur(64px)' : 'none';
+  }};
   border-radius: 12px;
 `;
 
@@ -59,7 +71,9 @@ const BlueContainer = styled.div`
   padding: 200px calc((100% - 1440px) / 2 + 80px);
   padding-bottom: 120px;
   margin-top: -90px;
-  background-color: #3f6de1;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
+  }};
   .grid-right {
     grid-area: right;
   }
@@ -84,7 +98,9 @@ const VaultsContainer = styled.div`
 
 const GraphicBox = styled.div<StyleProps>`
   float: right;
-  background: #3f6de1;
+  background: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
+  }};
   border: 1px solid white;
   border-radius: 4px;
   width: 520px;

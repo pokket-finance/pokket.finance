@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: #13307e;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#13307e' : '#1D1F2B';
+  }};
   padding: 100px calc((100% - 1440px) / 2 + 80px);
   display: flex;
   flex-direction: column;

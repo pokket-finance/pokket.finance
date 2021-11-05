@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Dummy from '../../../public/assets/map.png';
+import DummyDark from '../../../public/assets/mapdark.png';
 import { LeftPoolCard, RightPoolCard } from '../../components/poolCard';
 
 const Container = styled.div`
@@ -18,21 +19,31 @@ const InfoCardContainer = styled.div`
 
 const InfoCard = styled.div`
   width: 490px;
-  background-color: white;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#1D1F2B';
+  }};
   border-radius: 12px;
   padding: 60px;
   .cardTitle {
     font-size: 36px;
     font-weight: 700;
-    color: #3f6de1;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFF';
+    }};
   }
   .cardContent {
     font-size: 18px;
     font-weight: 400;
-    color: #646464;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
+    }};
     margin: 32px 0 40px 0;
     padding: 0 0 32px 0;
-    border-bottom: 1px solid #0000001a;
+    border-bottom: ${(props) => {
+      return props.theme.name === 'Light'
+        ? `1px solid #0000001a`
+        : '1px solid #FFFFFF1A ';
+    }};
   }
 `;
 
@@ -45,13 +56,17 @@ const CommunityCard = styled.div`
   .communityTitle {
     font-size: 36px;
     font-weight: 700;
-    color: #3f6de1;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3f6de1' : '#ffffff';
+    }};
     margin-bottom: 32px;
   }
   .communityContent {
     font-size: 18px;
     font-weight: 400;
-    color: #646464;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
+    }};
   }
 `;
 
@@ -75,13 +90,17 @@ const CopyWriteContainer = styled.div`
   .copyTitle {
     font-size: 36px;
     font-weight: 700;
-    color: #3f6de1;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3f6de1' : '#ffffff';
+    }};
     margin-bottom: 32px;
   }
   .copyContent {
     font-size: 18px;
     font-weight: 400;
-    color: #646464;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
+    }};
   }
   .copyLink {
     font-size: 18px;
@@ -93,7 +112,9 @@ const CopyWriteContainer = styled.div`
   }
 `;
 
-const ThirdPart = () => {
+const ThirdPart = (props) => {
+  const { theme } = props;
+
   return (
     <Container>
       <InfoCardContainer>
@@ -118,7 +139,11 @@ const ThirdPart = () => {
       </InfoCardContainer>
 
       <SecondHalf>
-        <Image src={Dummy.src} />
+        {theme === 'Light' ? (
+          <Image src={Dummy.src} />
+        ) : (
+          <Image src={DummyDark.src} />
+        )}
         <CommunityCard>
           <div className="communityTitle">GOVERNED BY THE COMMUNITY.</div>
           <div className="communityContent">
