@@ -122,8 +122,8 @@ const Bars = styled.div`
     border-radius: 12px;
     margin-top: 8px;
   }
-  .blue {
-    background-color: #3c97ec;
+  .yellow {
+    background-color: #fffac9;
     height: 16px;
     width: 85%;
     border-radius: 12px;
@@ -179,11 +179,11 @@ const SecondPart = () => {
               </Bars>
               <Bars>
                 <div className="bartitle">25% UNI</div>
-                <div className="blue" />
+                <div className="cyan" />
               </Bars>
               <Bars>
                 <div className="bartitle">25% MATIC</div>
-                <div className="cyan" />
+                <div className="yellow" />
               </Bars>
             </BarsContainer>
           </GraphicBox>

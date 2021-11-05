@@ -49,7 +49,7 @@ const Card = ({
     <CardContainer>
       <TitleContainer>{title}</TitleContainer>
       {message && <MessageContainer>{message}</MessageContainer>}
-      <ButtonContainer>
+      {/* <ButtonContainer>
         <a href="" target="blank">
           <ReactSVG src={Discord} style={{ marginRight: '16px' }} />
         </a>
@@ -59,7 +59,7 @@ const Card = ({
         <a href="https://twitter.com/PokketOfficial" target="blank">
           <ReactSVG src={Twitter} />
         </a>
-      </ButtonContainer>
+      </ButtonContainer> */}
     </CardContainer>
   );
 };

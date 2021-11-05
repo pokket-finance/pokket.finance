@@ -21,9 +21,10 @@ const RightContainer = styled.div`
   /* background-image: ${(props) => `url('/assets/tempboxes.png')`}; */
 `;
 const LeftContainer = styled.div`
-  width: 40%;
+  width: 50%;
   display: flex;
   margin-bottom: 0;
+  padding: 160px 0 0 0;
 `;
 
 const CustomTitle = styled.span`
@@ -38,7 +39,7 @@ const FirstPart = () => {
         <Card
           title={
             <span>
-              Pokket <CustomTitle>DEFI</CustomTitle>
+              Pokket <CustomTitle>FINANCE</CustomTitle>
             </span>
           }
           message="Take advantage of token volatility and start earning

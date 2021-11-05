@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Dummy from '../../../public/assets/map.png';
 
 const Container = styled.div`
   max-width: 1280px;
-  height: 800px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
   margin-bottom: 0;
   margin-top: 85px;
@@ -38,8 +38,8 @@ const CommunityCard = styled.div`
   float: right;
   display: column;
   flex-direction: column;
-  width: 600px;
-  margin-top: 180px;
+  width: 500px;
+  margin: auto 0 auto 0;
   .communityTitle {
     font-size: 36px;
     font-weight: 700;
@@ -50,6 +50,44 @@ const CommunityCard = styled.div`
     font-size: 18px;
     font-weight: 400;
     color: #646464;
+  }
+`;
+
+const SecondHalf = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  padding: 0 0 120px 0;
+`;
+
+const Image = styled.img`
+  justify-content: center;
+  width: 675px;
+`;
+
+const CopyWriteContainer = styled.div`
+  display: column;
+  flex-direction: column;
+  padding: 0 0 120px 0;
+
+  .copyTitle {
+    font-size: 36px;
+    font-weight: 700;
+    color: #3f6de1;
+    margin-bottom: 32px;
+  }
+  .copyContent {
+    font-size: 18px;
+    font-weight: 400;
+    color: #646464;
+  }
+  .copyLink {
+    font-size: 18px;
+    color: #3f6de1;
+    font-weight: 700;
+    text-decoration: 2px underline;
+    margin: 5px 0 0 0;
+    cursor: pointer;
   }
 `;
 
@@ -74,17 +112,29 @@ const ThirdPart = () => {
           </div>
         </InfoCard>
       </InfoCardContainer>
-      <CommunityCard>
-        <div className="communityTitle">GOVERNED BY THE COMMUNITY.</div>
-        <div className="communityContent">
-          The Pokket Protocol is overseen by a decentralised <br />
-          community of passionate PKKT token holders.
-          <br />
-          <br /> Holders and their delegates propose and vote on upgrades to{' '}
-          <br />
-          the protocol.
+
+      <SecondHalf>
+        <Image src={Dummy.src} />
+        <CommunityCard>
+          <div className="communityTitle">GOVERNED BY THE COMMUNITY.</div>
+          <div className="communityContent">
+            The Pokket Protocol is overseen by a decentralised <br />
+            community of passionate PKKT token holders.
+            <br />
+            <br /> Holders and their delegates propose and vote on upgrades to{' '}
+            the protocol.
+          </div>
+        </CommunityCard>
+      </SecondHalf>
+
+      <CopyWriteContainer>
+        <div className="copyTitle">THERE'S NO OTHER.</div>
+        <div className="copyContent">
+          The best rates, best risk-management, low-fees and attentive staff.
+          Collect yield with confidence.
         </div>
-      </CommunityCard>
+        <div className="copyLink">See for yourself.</div>
+      </CopyWriteContainer>
     </Container>
   );
 };
