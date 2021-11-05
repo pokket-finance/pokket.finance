@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
@@ -24,21 +24,6 @@ const LinkContainer = styled.div`
   align-items: center;
   position: left;
 `;
-
-// const Typography = styled.p`
-//   font-size: 16px;
-//   font-weight: 500;
-//   margin-right: 40px;
-//   color: #646464;
-//   cursor: pointer;
-
-//   ${(props) =>
-//     props.developers &&
-//     css`
-//       font-weight: 700;
-//       color: #3f6de1;
-//     `}
-// `;
 
 const DropdownGroup = styled.div`
   display: flex;
@@ -72,13 +57,9 @@ const Header = () => {
               <Link href="/alpha_vol">ALPHA VOL</Link>
             </DropMenuItem>
           </Dropdown>
-          {/* <Dropdown width={150} title="Tokenomics" /> */}
           <Dropdown width={100} title="Docs" />
         </DropdownGroup>
         <LinkContainer>
-          {/* <Typography developers>Developers</Typography> */}
-          {/* <Typography>Governance</Typography> */}
-          {/* <Typography>Community</Typography> */}
           <CustomButton>Launch App</CustomButton>
         </LinkContainer>
       </HeaderContainer>

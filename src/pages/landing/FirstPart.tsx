@@ -16,7 +16,7 @@ const RightContainer = styled.div`
   height: 680px;
   margin-top: 40px;
   margin-bottom: 0;
-  background-size: 100%;
+  /* background-size: 100%; */
   /* background-repeat: no-repeat; */
   /* background-image: ${(props) => `url('/assets/tempboxes.png')`}; */
 `;

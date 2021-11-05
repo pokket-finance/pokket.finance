@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface StyleProps {
+  margin?: string;
+}
 
 const Container = styled.div`
   display: flex;
@@ -6,7 +10,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  margin-top: 0;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
 `;
@@ -43,7 +46,6 @@ const DataItem = styled.div`
 const Decoration = styled.div`
   height: 180px;
   width: 1280px;
-  background-color: red;
   z-index: 0;
   margin-top: -210px;
   background: rgba(255, 255, 255, 0.35);
@@ -54,7 +56,7 @@ const Decoration = styled.div`
 const BlueContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 260px calc((100% - 1440px) / 2 + 80px);
+  padding: 200px calc((100% - 1440px) / 2 + 80px);
   padding-bottom: 120px;
   margin-top: -90px;
   background-color: #3f6de1;
@@ -66,6 +68,7 @@ const BlueContainer = styled.div`
 const VaultsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 520px;
   color: white;
   .title {
@@ -79,12 +82,17 @@ const VaultsContainer = styled.div`
   }
 `;
 
-const GraphicBox = styled.div`
+const GraphicBox = styled.div<StyleProps>`
   float: right;
-  background: #2249ad;
-  border-radius: 12px;
+  background: #3f6de1;
+  border: 1px solid white;
+  border-radius: 4px;
   width: 520px;
   height: 200px;
+  z-index: 0;
+  margin: ${(props) => {
+    return `${props.margin}` || `0px`;
+  }};
   .title {
     padding: 50px 0 0 50px;
     font-size: 24px;
@@ -140,7 +148,7 @@ const SecondPart = () => {
             <div className="title">Savings</div>
           </DataItem>
           <DataItem>
-            <div className="data">67.3K+</div>
+            <div className="data">5K+</div>
             <div className="title">Users</div>
           </DataItem>
           <DataItem>
@@ -155,12 +163,14 @@ const SecondPart = () => {
           <div className="title">STRUCTURED VAULTS</div>
           <div className="subtitle">
             New smart allocation feature allows for better management of
-            knock-outs. Don't fret about esoteric moved ruining your balance no
+            knock-outs. Don't fret about esoteric moves ruining your balance no
             longer.
           </div>
         </VaultsContainer>
         <div>
-          <GraphicBox>
+          <GraphicBox margin={`0`} />
+          <GraphicBox margin={`-180px 25px 0 0`} />
+          <GraphicBox margin={`-180px 50px 0 0`}>
             <div className="title">3-month blend-vault</div>
             <BarsContainer>
               <Bars>
