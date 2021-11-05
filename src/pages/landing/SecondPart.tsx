@@ -81,7 +81,6 @@ const VaultsContainer = styled.div`
 
 const GraphicBox = styled.div`
   float: right;
-  /* margin-right: 160px; */
   background: #2249ad;
   border-radius: 12px;
   width: 520px;

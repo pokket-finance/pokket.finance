@@ -35,7 +35,7 @@ const TitleContainer = styled.div<StyleProps>`
   text-align: center;
   cursor: pointer;
   font-weight: ${(props) => {
-    return props.open ? 'bold' : 500;
+    return props.open ? '600' : '600';
   }};
   color: ${(props) => {
     return props.open ? '#3f6de1' : '#646464';
@@ -51,7 +51,7 @@ const TitleContainer = styled.div<StyleProps>`
     text-align: center;
     cursor: pointer;
     font-weight: ${(props) => {
-      return props.open ? 'bold' : 500;
+      return props.open ? '600' : '600';
     }};
     color: ${(props) => {
       return props.open ? '#3f6de1' : '#646464';

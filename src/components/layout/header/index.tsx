@@ -25,24 +25,25 @@ const LinkContainer = styled.div`
   position: left;
 `;
 
-const Typography = styled.p`
-  font-size: 16px;
-  font-weight: 500;
-  margin-right: 40px;
-  color: #646464;
-  cursor: pointer;
+// const Typography = styled.p`
+//   font-size: 16px;
+//   font-weight: 500;
+//   margin-right: 40px;
+//   color: #646464;
+//   cursor: pointer;
 
-  ${(props) =>
-    props.developers &&
-    css`
-      font-weight: 700;
-      color: #3f6de1;
-    `}
-`;
-
-// const DropdownGroup = styled.div`
-//   display: flex;
+//   ${(props) =>
+//     props.developers &&
+//     css`
+//       font-weight: 700;
+//       color: #3f6de1;
+//     `}
 // `;
+
+const DropdownGroup = styled.div`
+  display: flex;
+  margin-left: auto;
+`;
 
 const Header = () => {
   const { Pokket } = useThemeSVGUrl('Pokket');
@@ -50,9 +51,19 @@ const Header = () => {
     <>
       <TopPanel />
       <HeaderContainer>
-        <ReactSVG src={Pokket} />
-        {/* <DropdownGroup>
-          <Dropdown href="/team" width={100} title="About" />
+        <Link href="/">
+          <ReactSVG src={Pokket} style={{ cursor: 'pointer' }} />
+        </Link>
+        <DropdownGroup>
+          <Dropdown width={100} title="About">
+            <DropMenuItem>
+              <Link href="/team">Team</Link>
+            </DropMenuItem>
+            <DropMenuItem>
+              <Link href="/roadmap">Roadmap</Link>
+            </DropMenuItem>
+          </Dropdown>
+
           <Dropdown width={100} title="Vaults">
             <DropMenuItem>
               <Link href="/hodl">HODL Booster</Link>
@@ -61,13 +72,13 @@ const Header = () => {
               <Link href="/alpha_vol">ALPHA VOL</Link>
             </DropMenuItem>
           </Dropdown>
-          <Dropdown width={150} title="Tokenomics" />
+          {/* <Dropdown width={150} title="Tokenomics" /> */}
           <Dropdown width={100} title="Docs" />
-        </DropdownGroup> */}
+        </DropdownGroup>
         <LinkContainer>
-          <Typography developers>Developers</Typography>
-          <Typography>Governance</Typography>
-          <Typography>Community</Typography>
+          {/* <Typography developers>Developers</Typography> */}
+          {/* <Typography>Governance</Typography> */}
+          {/* <Typography>Community</Typography> */}
           <CustomButton>Launch App</CustomButton>
         </LinkContainer>
       </HeaderContainer>

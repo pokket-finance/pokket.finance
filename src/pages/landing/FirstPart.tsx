@@ -17,8 +17,8 @@ const RightContainer = styled.div`
   margin-top: 40px;
   margin-bottom: 0;
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: ${(props) => `url('/assets/tempboxes.png')`};
+  /* background-repeat: no-repeat; */
+  /* background-image: ${(props) => `url('/assets/tempboxes.png')`}; */
 `;
 const LeftContainer = styled.div`
   width: 40%;
