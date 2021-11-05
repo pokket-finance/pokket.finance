@@ -74,12 +74,24 @@ const SecondHalf = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
-  padding: 0 0 120px 0;
+  padding: 0 0 60px 0;
 `;
 
-const Image = styled.img`
-  justify-content: center;
-  width: 675px;
+const Image = styled.div`
+  width: 52%;
+  height: 400px;
+  /* height: 680px; */
+  /* margin-top: 40px; */
+  /* margin-bottom: 0; */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: ${(props) => {
+    return props.theme.name === 'Light'
+      ? `url('/assets/map.png')`
+      : `url('/assets/mapdark.png')`;
+  }};
+  /* justify-content: center; */
+  /* width: 675px; */
 `;
 
 const CopyWriteContainer = styled.div`
@@ -114,6 +126,7 @@ const CopyWriteContainer = styled.div`
 
 const ThirdPart = (props) => {
   const { theme } = props;
+  console.log(props);
 
   return (
     <Container>
@@ -139,11 +152,7 @@ const ThirdPart = (props) => {
       </InfoCardContainer>
 
       <SecondHalf>
-        {theme === 'Light' ? (
-          <Image src={Dummy.src} />
-        ) : (
-          <Image src={DummyDark.src} />
-        )}
+        <Image />
         <CommunityCard>
           <div className="communityTitle">GOVERNED BY THE COMMUNITY.</div>
           <div className="communityContent">
