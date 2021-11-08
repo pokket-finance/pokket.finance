@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   height: 60px;
   background-color: RGBA(0, 0, 0, 0);
-  margin-top: 16px;
+  margin-top: 10px;
 `;
 
 const LinkContainer = styled.div`

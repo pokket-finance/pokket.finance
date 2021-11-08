@@ -14,7 +14,7 @@ const DarkTheme: DefaultTheme = {
     defaultButtonBackground: '#121421',
     defaultButtonFontColor: '#3F6DE1',
     // Dropdown
-    dropdownBackground: '#161B30',
+    dropdownBackground: '#1D1F2B',
   },
 };
 
