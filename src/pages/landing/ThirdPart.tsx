@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Dummy from '../../../public/assets/map.png';
-import DummyDark from '../../../public/assets/mapdark.png';
 import { LeftPoolCard, RightPoolCard } from '../../components/poolCard';
 
 const Container = styled.div`
@@ -124,10 +122,7 @@ const CopyWriteContainer = styled.div`
   }
 `;
 
-const ThirdPart = (props) => {
-  const { theme } = props;
-  console.log(props);
-
+const ThirdPart = () => {
   return (
     <Container>
       <InfoCardContainer>

@@ -36,7 +36,7 @@ const Header = () => {
     <>
       <TopPanel />
       <HeaderContainer>
-        <Link href="/">
+        <Link href="/" passHref>
           <ReactSVG src={Pokket} style={{ cursor: 'pointer' }} />
         </Link>
         <DropdownGroup>

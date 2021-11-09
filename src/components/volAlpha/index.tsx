@@ -42,8 +42,8 @@ const VOLAlpha = ({
               ? 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. '
               : ''
           }
-          firstButtonTitle="Use App"
-          secondButtonTitle="Learn More"
+          // firstButtonTitle="Use App"
+          // secondButtonTitle="Learn More"
         />
       </LeftContainer>
       <RightContainer />
