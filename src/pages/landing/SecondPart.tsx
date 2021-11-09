@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface StyleProps {
+  margin?: string;
+}
 
 const Container = styled.div`
   display: flex;
@@ -6,117 +10,202 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  margin-top: 68px;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
 `;
 
 const DataContainer = styled.div`
-  width: 100%;
-  height: calc(100vw * (259 / 1280));
+  z-index: 1;
+  width: 1200px;
+  height: 240px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: ${(props) =>
-    `url('/assets/BG/${props.theme.name}/Data.png')`};
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#292B37';
+  }};
+  border-radius: 12px;
 `;
 
 const DataItem = styled.div`
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   .data {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  .divider {
-    width: 50%;
-    height: 5px;
-    background-color: #ffffff;
-    margin: 14px 0px 22px;
+    font-size: 56px;
+    font-weight: 700;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3F6DE1' : '#FFFFFFDE';
+    }};
   }
   .title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
-    color: #ffffff;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#969696' : '#FFFFFFDE';
+    }};
   }
 `;
 
-const TitleContainer = styled.div`
-  width: 100%;
-  height: 360px;
-  margin-top: 150px;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(${'/assets/BG/Mountain.png'});
+const Decoration = styled.div`
+  height: 180px;
+  width: 1280px;
+  z-index: 0;
+  margin-top: -210px;
+  background: ${(props) => {
+    return props.theme.name === 'Light'
+      ? 'rgb(255, 255, 255, 0.35)'
+      : 'transparent';
+  }};
+  backdrop-filter: ${(props) => {
+    return props.theme.name === 'Light' ? 'blur(64px)' : 'none';
+  }};
+  border-radius: 12px;
+`;
+
+const BlueContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 200px calc((100% - 1440px) / 2 + 80px);
+  padding-bottom: 120px;
+  margin-top: -90px;
+  background-color: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
+  }};
+  .grid-right {
+    grid-area: right;
+  }
+`;
+
+const VaultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 520px;
+  color: white;
   .title {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
     font-size: 36px;
-    color: #3f6de1;
+    font-weight: 700;
   }
-  .subTitle {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    color: ${(props) => props.theme.color.bodyfontColorLevel1};
-    margin-top: 48px;
+  .subtitle {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
   }
 `;
 
-const MessageContainer = styled.div`
-  color: ${(props) => props.theme.color.bodyfontColorLevel2};
-  width: 80%;
-  line-height: 150%;
-  text-align: center;
+const GraphicBox = styled.div<StyleProps>`
+  float: right;
+  background: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
+  }};
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 520px;
+  height: 200px;
+  z-index: 0;
+  margin: ${(props) => {
+    return `${props.margin}` || `0px`;
+  }};
+  .title {
+    padding: 50px 0 0 50px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+`;
+
+const BarsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 35px 50px 0 50px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+`;
+
+const Bars = styled.div`
+  .bartitle {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .purple {
+    background-color: #9979fc;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+  .yellow {
+    background-color: #fffac9;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+  .cyan {
+    background-color: #79e1f9;
+    height: 16px;
+    width: 85%;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
 `;
 
 const SecondPart = () => {
   return (
-    <Container>
-      <DataContainer>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Protocol Volume</div>
-        </DataItem>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Value Locked</div>
-        </DataItem>
-        <DataItem>
-          <div className="data">$100,000,000</div>
-          <div className="divider" />
-          <div className="title">Total Interest Earned</div>
-        </DataItem>
-      </DataContainer>
-      <TitleContainer>
-        <div className="title">What we stand for</div>
-        <div className="subTitle">
-          INTRODUCING
-          <br />
-          STRUCTURED VAULTS
+    <>
+      <Container>
+        <DataContainer>
+          <DataItem>
+            <div className="data">$94M+</div>
+            <div className="title">Savings</div>
+          </DataItem>
+          <DataItem>
+            <div className="data">5K+</div>
+            <div className="title">Users</div>
+          </DataItem>
+          <DataItem>
+            <div className="data">243K+</div>
+            <div className="title">Deposits</div>
+          </DataItem>
+        </DataContainer>
+        <Decoration />
+      </Container>
+      <BlueContainer>
+        <VaultsContainer>
+          <div className="title">STRUCTURED VAULTS</div>
+          <div className="subtitle">
+            New smart allocation feature allows for better management of
+            knock-outs. Don't fret about esoteric moves ruining your balance no
+            longer.
+          </div>
+        </VaultsContainer>
+        <div>
+          <GraphicBox margin={`0`} />
+          <GraphicBox margin={`-180px 25px 0 0`} />
+          <GraphicBox margin={`-180px 50px 0 0`}>
+            <div className="title">3-month blend-vault</div>
+            <BarsContainer>
+              <Bars>
+                <div className="bartitle">50% ETH</div>
+                <div className="purple" />
+              </Bars>
+              <Bars>
+                <div className="bartitle">25% UNI</div>
+                <div className="cyan" />
+              </Bars>
+              <Bars>
+                <div className="bartitle">25% MATIC</div>
+                <div className="yellow" />
+              </Bars>
+            </BarsContainer>
+          </GraphicBox>
         </div>
-      </TitleContainer>
-      <MessageContainer>
-        {`Pokket uses financial engineering to creat structured products that
-        deliver sustainable yiel. Pokket's first product focuses on yield
-        through automated options strategies. The protocol also allows
-        developers to create arbitrary structured products through combining
-        various DeFi derivatives`}
-      </MessageContainer>
-    </Container>
+      </BlueContainer>
+    </>
   );
 };
 

@@ -5,14 +5,14 @@ import BottomPanel from '@/components/layout/bottomPanel';
 
 const FooterContainer = styled.div`
   max-width: 1280px;
-  padding: 64px calc((100% - 1280px) * 0.35) 40px calc((100% - 1280px) * 0.65);
+  padding: 64px calc((100% - 1280px) * 0.5) 40px calc((100% - 1280px) * 0.5);
   display: flex;
   background: #18202b;
   user-select: none;
 `;
 
 const LogoContainer = styled.div`
-  width: 40%;
+  width: 50%;
 `;
 
 const LinkContainer = styled.div`
@@ -25,6 +25,7 @@ const LinkItem = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-left: 30px;
   .title {
     font-style: normal;
     font-weight: bold;
@@ -53,6 +54,7 @@ const Footer = () => {
             <div className="title">About</div>
             <div className="link">Team</div>
             <div className="link">Blog</div>
+            <div className="link">Roadmap</div>
             <div className="link">Whitepaper</div>
           </LinkItem>
           <LinkItem>

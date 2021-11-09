@@ -6,6 +6,7 @@ export type ButtonType = {
 
 const Button = styled.button<ButtonType>`
   display: flex;
+  max-height: 40px;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
@@ -16,7 +17,7 @@ const Button = styled.button<ButtonType>`
   font-weight: bold;
   user-select: none;
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 16px;
   border: ${(props) =>
     props.styleType === 'default'
       ? `1px solid ${props.theme.color.buttonBorder}`

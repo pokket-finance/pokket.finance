@@ -5,47 +5,45 @@ const Container = styled.div`
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-bottom: 0;
+`;
+
+const RightContainer = styled.div`
+  width: 60%;
+  height: 680px;
+  margin-top: 40px;
+  margin-bottom: 0;
 `;
 const LeftContainer = styled.div`
-  width: 60%;
-  height: 694px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: ${(props) =>
-    `url('/assets/BG/${props.theme.name}/Chart.png')`};
-`;
-const RightContainer = styled.div`
-  width: 40%;
-  padding: 0 3%;
+  width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 0;
+  padding: 160px 0 0 0;
 `;
 
 const CustomTitle = styled.span`
-  color: #3f6de1;
+  color: ${(props) => {
+    return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFF';
+  }};
+  font-weight: 900;
 `;
 
 const FirstPart = () => {
   return (
     <Container>
-      <LeftContainer />
-      <RightContainer>
+      <LeftContainer>
         <Card
           title={
             <span>
-              Tenable <CustomTitle>Yield</CustomTitle> Protocol
+              Pokket <CustomTitle>FINANCE</CustomTitle>
             </span>
           }
-          message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis"
-          firstButtonTitle="Documentation"
-          secondButtonTitle="Earn Yield"
+          message="Take advantage of token volatility and start earning
+          yield on your HODLs"
         />
-      </RightContainer>
+      </LeftContainer>
+      <RightContainer />
     </Container>
   );
 };

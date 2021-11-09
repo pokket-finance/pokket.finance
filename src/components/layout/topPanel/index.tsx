@@ -11,7 +11,7 @@ const TopPanelContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 40px;
   opacity: 1;
   background-color: ${(props) => props.theme.color.topPanelBackground};
 `;
@@ -24,7 +24,7 @@ const ThemeSwitchContainer = styled.div`
   .lightFont {
     margin: 0 14px 0 8px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     color: ${(props) => {
       return props.theme.name === 'Light'
         ? '#3f6de1'
@@ -32,9 +32,11 @@ const ThemeSwitchContainer = styled.div`
     }};
   }
   .darkFont {
-    margin: 0 8px 0 14px;
+    margin: 0 8px 0 6px;
     font-style: normal;
+    /* font-weight: bold; */
     font-weight: normal;
+    font-size: 14px;
     color: ${(props) =>
       props.theme.name === 'Light'
         ? 'rgba(63, 109, 225, 0.38)'
@@ -44,15 +46,16 @@ const ThemeSwitchContainer = styled.div`
 `;
 
 const LinkGroup = styled.div`
-  height: 40px;
+  /* height: 40px; */
   display: flex;
-  backgroup-color: red;
-  margin: 14px 0;
+  margin-top: 3px;
+  /* background-color: red; */
+  /* margin: 14px 0; */
 `;
 
 const LinkItem = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 16px;
+  height: 24px;
   display: flex;
   border-radius: 4px;
   align-items: center;
@@ -81,7 +84,7 @@ const TopPanel = () => {
   return (
     <TopPanelContainer>
       <ThemeSwitchContainer>
-        <ReactSVG src={Sun} />
+        <ReactSVG src={Sun} style={{ marginTop: '5px' }} />
         <div className="lightFont">Light</div>
         <Switch
           onChange={handleChange}
@@ -96,8 +99,8 @@ const TopPanel = () => {
           checkedIcon={false}
           uncheckedIcon={false}
         />
+        <ReactSVG src={Moon} style={{ marginTop: '5px', marginLeft: '16px' }} />
         <div className="darkFont">Dark</div>
-        <ReactSVG src={Moon} />
       </ThemeSwitchContainer>
       <LinkGroup>
         <a href="" target="blank">

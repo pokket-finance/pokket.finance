@@ -16,11 +16,18 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   height: 60px;
   background-color: RGBA(0, 0, 0, 0);
-  margin-top: 32px;
+  margin-top: 10px;
+`;
+
+const LinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+  position: left;
 `;
 
 const DropdownGroup = styled.div`
   display: flex;
+  margin-left: auto;
 `;
 
 const Header = () => {
@@ -29,9 +36,19 @@ const Header = () => {
     <>
       <TopPanel />
       <HeaderContainer>
-        <ReactSVG src={Pokket} />
+        <Link href="/">
+          <ReactSVG src={Pokket} style={{ cursor: 'pointer' }} />
+        </Link>
         <DropdownGroup>
-          <Dropdown href="/team" width={100} title="About" />
+          <Dropdown width={100} title="About">
+            <DropMenuItem>
+              <Link href="/team">Team</Link>
+            </DropMenuItem>
+            <DropMenuItem>
+              <Link href="/roadmap">Roadmap</Link>
+            </DropMenuItem>
+          </Dropdown>
+
           <Dropdown width={100} title="Vaults">
             <DropMenuItem>
               <Link href="/hodl">HODL Booster</Link>
@@ -40,10 +57,11 @@ const Header = () => {
               <Link href="/alpha_vol">ALPHA VOL</Link>
             </DropMenuItem>
           </Dropdown>
-          <Dropdown width={150} title="Tokenomics" />
           <Dropdown width={100} title="Docs" />
         </DropdownGroup>
-        <CustomButton>Launch App</CustomButton>
+        <LinkContainer>
+          <CustomButton>Launch App</CustomButton>
+        </LinkContainer>
       </HeaderContainer>
     </>
   );
