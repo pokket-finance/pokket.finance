@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface StyleProps {
   margin?: string;
@@ -179,8 +179,8 @@ const SecondPart = () => {
           <div className="title">STRUCTURED VAULTS</div>
           <div className="subtitle">
             New smart allocation feature allows for better management of
-            knock-outs. Don't fret about esoteric moves ruining your balance no
-            longer.
+            knock-outs. Don&#39;t fret about esoteric moves ruining your balance
+            no longer.
           </div>
         </VaultsContainer>
         <div>
