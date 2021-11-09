@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface StyleProps {
   margin?: string;
@@ -49,7 +49,6 @@ const GreyPill = styled.div<StyleProps>`
   align-items: center;
   margin-top: auto;
   width: ${(props) => {
-    console.log(props.width);
     return `${props.width}px` || `150px`;
   }};
   height: 28px;
@@ -102,18 +101,22 @@ const Typography = styled.div`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
   }};
-  ${(props) =>
-    props.sizeFourteen &&
-    css`
-      font-size: 14px;
-    `}
-  ${(props) =>
-    props.lighter &&
-    css`
-      font-size: 10px;
-      font-weight: 400;
-      color: #c8c8c8;
-    `}
+`;
+
+const TypographyFourteen = styled.div`
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: ${(props) => {
+    return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
+  }};
+`;
+
+const TypographyLighter = styled.div`
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+  color: #c8c8c8;
 `;
 
 const Arrow = styled.div`
@@ -153,8 +156,10 @@ export const LeftPoolCard = () => {
               <Typography>2% Pr - 2 week - 15% OTM Call</Typography>
             </GreyPill>
             <PurpleSpotContainer>
-              <Typography sizeFourteen>100 WBTC</Typography>
-              <Typography lighter>WBTC spot price: 50000 (+0%)</Typography>
+              <TypographyFourteen>100 WBTC</TypographyFourteen>
+              <TypographyLighter>
+                WBTC spot price: 50000 (+0%)
+              </TypographyLighter>
             </PurpleSpotContainer>
           </PurpleBoxContainer>
         </PurpleBox>
@@ -172,10 +177,10 @@ export const LeftPoolCard = () => {
 
         <CyanBox>
           <CyanBoxContent>
-            <Typography lighter>WBTC spot price: 55000 (+10%)</Typography>
-            <Typography sizeFourteen style={{ marginTop: '14px' }}>
+            <TypographyLighter>WBTC spot price: 55000 (+10%)</TypographyLighter>
+            <TypographyFourteen style={{ marginTop: '14px' }}>
               2 WBTC Interest Earned
-            </Typography>
+            </TypographyFourteen>
           </CyanBoxContent>
         </CyanBox>
         <Arrow>
@@ -200,15 +205,17 @@ export const RightPoolCard = () => {
           <PurpleBoxContainer>
             <PurpleSpotContainer style={{ margin: '0' }}>
               <Typography>Funds Pool</Typography>
-              <Typography sizeFourteen>500,000 USDC</Typography>
+              <TypographyFourteen>500,000 USDC</TypographyFourteen>
             </PurpleSpotContainer>
 
             <GreyPill>
               <Typography>2% Pr - 2 week - 15% Call</Typography>
             </GreyPill>
             <PurpleSpotContainer>
-              <Typography sizeFourteen>500,000 USDC</Typography>
-              <Typography lighter>WBTC spot price: 50000 (+0%)</Typography>
+              <TypographyFourteen>500,000 USDC</TypographyFourteen>
+              <TypographyLighter>
+                WBTC spot price: 50000 (+0%)
+              </TypographyLighter>
             </PurpleSpotContainer>
             <GreyPill>
               <Typography>2% Pr - 2 week - 15% Puts</Typography>
@@ -229,10 +236,10 @@ export const RightPoolCard = () => {
 
         <CyanBox>
           <CyanBoxContent>
-            <Typography lighter>WBTC spot price: 55000 (+10%)</Typography>
-            <Typography sizeFourteen style={{ marginTop: '14px' }}>
+            <TypographyLighter>WBTC spot price: 55000 (+10%)</TypographyLighter>
+            <TypographyFourteen style={{ marginTop: '14px' }}>
               20,000 USDC Interest Earned
-            </Typography>
+            </TypographyFourteen>
           </CyanBoxContent>
         </CyanBox>
         <Arrow>

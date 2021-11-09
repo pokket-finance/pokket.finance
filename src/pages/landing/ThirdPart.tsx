@@ -134,7 +134,7 @@ const ThirdPart = (props) => {
         <InfoCard>
           <div className="cardTitle">HODL Booster.</div>
           <div className="cardContent">
-            When you're comfortable with a bit more risk for a shot at more
+            When you&#39;re comfortable with a bit more risk for a shot at more
             return. Risk-management is optimized for scalping just a bit more
             alpha.
           </div>
@@ -166,7 +166,7 @@ const ThirdPart = (props) => {
       </SecondHalf>
 
       <CopyWriteContainer>
-        <div className="copyTitle">THERE'S NO OTHER.</div>
+        <div className="copyTitle">THERE&#39;S NO OTHER.</div>
         <div className="copyContent">
           The best rates, best risk-management, low-fees and attentive staff.
           Collect yield with confidence.
