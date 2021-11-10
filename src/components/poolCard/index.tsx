@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 interface StyleProps {
-  margin?: string;
   width?: number;
 }
 
@@ -17,13 +16,44 @@ const GraphicBox = styled.div<StyleProps>`
   border-radius: 4px;
   height: 350px;
   width: 423px;
-  margin: ${(props) => {
-    return `${props.margin}` || `0px`;
-  }};
+  margin: 0 0 0 50px;
 
   @media only screen and (max-width: 1280px) {
-    width: 300px;
-    height: 280px;
+    width: 270px;
+    height: 240px;
+    margin: 0 0 0 0;
+  }
+`;
+
+const GraphicBoxTwo = styled(GraphicBox)`
+  margin: -325px 0 0 25px;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -230px 0 0 15px;
+  }
+`;
+
+const GraphicBoxThree = styled(GraphicBox)`
+  margin: -325px 20px 0 0;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -230px 0 0 30px;
+  }
+`;
+
+const GraphicBoxTwoRight = styled(GraphicBox)`
+  margin: -325px 0 0 25px;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -225px 0 0 0;
+  }
+`;
+
+const GraphicBoxThreeRight = styled(GraphicBox)`
+  margin: -325px 20px 0 0;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -250px 20px 0 0;
   }
 `;
 
@@ -193,8 +223,8 @@ export const LeftPoolCard = () => {
   return (
     <>
       <GraphicBox />
-      <GraphicBox margin={`-325px 0 0 25px`} />
-      <GraphicBox margin={`-325px 25px 0 50px`}>
+      <GraphicBoxTwo />
+      <GraphicBoxThree>
         <PurpleBox>
           <PurpleBoxContainer>
             <Typography>Funds Pool</Typography>
@@ -236,7 +266,7 @@ export const LeftPoolCard = () => {
         <GreenBox>
           <Typography>NAV 102 WBTC (+2%)</Typography>
         </GreenBox>
-      </GraphicBox>
+      </GraphicBoxThree>
     </>
   );
 };
@@ -244,9 +274,9 @@ export const LeftPoolCard = () => {
 export const RightPoolCard = () => {
   return (
     <>
-      <GraphicBox margin={`0 0 0 50px`} />
-      <GraphicBox margin={`-325px 0 0 25px`} />
-      <GraphicBox margin={`-325px 25px 0 0`}>
+      <GraphicBox />
+      <GraphicBoxTwoRight />
+      <GraphicBoxThreeRight>
         <PurpleBox>
           <PurpleBoxContainer>
             <PurpleSpotContainer style={{ margin: '0' }}>
@@ -295,7 +325,7 @@ export const RightPoolCard = () => {
         <GreenBox>
           <Typography>NAV 1,020,000 USDC (+2%)</Typography>
         </GreenBox>
-      </GraphicBox>
+      </GraphicBoxThreeRight>
     </>
   );
 };

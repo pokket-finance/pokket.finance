@@ -34,7 +34,7 @@ const SponsorsContainer = styled.div`
     color: white;
 
     @media only screen and (max-width: 1280px) {
-      width: 100vw;
+      width: 100%;
       font-size: 24px;
       padding: 48px 0 48px 0;
     }
@@ -56,7 +56,8 @@ const SponsorLogo = styled.div`
 
   @media only screen and (max-width: 1280px) {
     margin: 0;
-    width: 340px;
+    /* width: 340px; */
+    width: 90%;
     height: 110px;
   }
 `;

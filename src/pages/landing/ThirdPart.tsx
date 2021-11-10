@@ -9,6 +9,10 @@ const Container = styled.div`
   margin-top: 85px;
 
   @media only screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 100%;
   }
@@ -21,6 +25,7 @@ const InfoCardContainer = styled.div`
 
   @media only screen and (max-width: 1280px) {
     flex-direction: column;
+    width: 90%;
   }
 `;
 
@@ -33,9 +38,9 @@ const InfoCard = styled.div`
   padding: 60px;
 
   @media only screen and (max-width: 1280px) {
-    padding: 18px;
-    /* width: calc(100vw -36px); */
-    width: 300px;
+    padding: 30px 16px;
+    /* margin: 0 16px 0 16px; */
+    width: 90%;
   }
 
   .cardTitle {
@@ -44,12 +49,16 @@ const InfoCard = styled.div`
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFF';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
   }
   .cardContent {
     font-size: 18px;
     font-weight: 400;
     color: ${(props) => {
-      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
     }};
     margin: 32px 0 40px 0;
     padding: 0 0 32px 0;
@@ -58,6 +67,10 @@ const InfoCard = styled.div`
         ? `1px solid #0000001a`
         : '1px solid #FFFFFF1A ';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -107,7 +120,6 @@ const SecondHalf = styled.div`
 
   @media only screen and (max-width: 1280px) {
     flex-direction: column;
-    /* padding: 0 18px 0 18px; */
     width: 100vw;
   }
 `;
