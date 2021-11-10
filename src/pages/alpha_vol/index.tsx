@@ -11,6 +11,7 @@ import Footer from '@/components/layout/footer';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
+  width: 100vw;
 `;
 
 const Padding = styled.div`
