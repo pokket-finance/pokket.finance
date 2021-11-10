@@ -21,6 +21,10 @@ const HeaderContainer = styled.div`
   @media only screen and (max-width: 1280px) {
     background-color: #252632;
     padding: 0;
+    justify-content: right;
+    align-items: none;
+    margin: 0;
+    padding: 0 16px 0 16px;
   }
 `;
 
