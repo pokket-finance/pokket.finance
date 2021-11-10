@@ -32,6 +32,9 @@ const TeamContainer = styled.div`
   background: ${(props) =>
     props.theme.name === 'Light' ? ' #eceff8' : 'rgba(255, 255, 255, 0.07)'};
 
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
   .avatarContainer {
     display: flex;
     justify-content: space-between;
@@ -58,6 +61,11 @@ const TransparentContainer = styled.div`
   padding: 60px calc((100% - 1440px) / 2 + 80px) 0;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
+
   .avatarContainer {
     display: flex;
     justify-content: space-between;

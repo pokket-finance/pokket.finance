@@ -7,6 +7,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -14,12 +18,20 @@ const RightContainer = styled.div`
   height: 680px;
   margin-top: 40px;
   margin-bottom: 0;
+
+  @media only screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 const LeftContainer = styled.div`
   width: 50%;
   display: flex;
   margin-bottom: 0;
   padding: 160px 0 0 0;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 200px 0 250px 0;
+  }
 `;
 
 const CustomTitle = styled.span`

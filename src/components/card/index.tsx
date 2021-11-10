@@ -18,6 +18,10 @@ const MessageContainer = styled.div`
   font-weight: normal;
   line-height: 130%;
   color: ${(props) => props.theme.color.bodyfontColorLevel2};
+
+  @media only screen and (max-width: 1280px) {
+    width: 100vw;
+  }
 `;
 
 const Card = ({

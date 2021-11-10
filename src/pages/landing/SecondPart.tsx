@@ -12,6 +12,10 @@ const Container = styled.div`
   user-select: none;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
 `;
 
 const DataContainer = styled.div`
@@ -25,6 +29,10 @@ const DataContainer = styled.div`
     return props.theme.name === 'Light' ? '#FFFFFF' : '#292B37';
   }};
   border-radius: 12px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 100vw;
+  }
 `;
 
 const DataItem = styled.div`
@@ -38,6 +46,10 @@ const DataItem = styled.div`
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#3F6DE1' : '#FFFFFFDE';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
   }
   .title {
     font-style: normal;
@@ -63,6 +75,10 @@ const Decoration = styled.div`
     return props.theme.name === 'Light' ? 'blur(64px)' : 'none';
   }};
   border-radius: 12px;
+
+  @media only screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 const BlueContainer = styled.div`
@@ -74,6 +90,12 @@ const BlueContainer = styled.div`
   background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
   }};
+
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
   .grid-right {
     grid-area: right;
   }
@@ -85,14 +107,27 @@ const VaultsContainer = styled.div`
   justify-content: center;
   width: 520px;
   color: white;
+
+  @media only screen and (max-width: 1280px) {
+    width: 300px;
+  }
+
   .title {
     font-size: 36px;
     font-weight: 700;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
   }
   .subtitle {
     margin-top: 32px;
     font-size: 18px;
     font-weight: 400;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -114,6 +149,10 @@ const GraphicBox = styled.div<StyleProps>`
     font-size: 24px;
     font-weight: 700;
     color: white;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    width: 300px;
   }
 `;
 

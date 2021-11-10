@@ -11,6 +11,10 @@ const CustomCollapseContainer = styled.div`
   padding: 80px calc((100% - 1440px) / 2 + 80px);
   background: ${(props) =>
     props.theme.name === 'Light' ? 'rgba(233, 238, 248, 0.5)' : '#161D35'};
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
   .collapse {
     border: none;
     background-color: rgba(0, 0, 0, 0);

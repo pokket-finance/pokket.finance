@@ -14,6 +14,11 @@ const TopPanelContainer = styled.div`
   height: 40px;
   opacity: 1;
   background-color: ${(props) => props.theme.color.topPanelBackground};
+
+  @media only screen and (max-width: 1280px) {
+    display: none;
+    padding: 0;
+  }
 `;
 
 const ThemeSwitchContainer = styled.div`
@@ -34,7 +39,6 @@ const ThemeSwitchContainer = styled.div`
   .darkFont {
     margin: 0 8px 0 6px;
     font-style: normal;
-    /* font-weight: bold; */
     font-weight: normal;
     font-size: 14px;
     color: ${(props) =>
@@ -46,11 +50,8 @@ const ThemeSwitchContainer = styled.div`
 `;
 
 const LinkGroup = styled.div`
-  /* height: 40px; */
   display: flex;
   margin-top: 3px;
-  /* background-color: red; */
-  /* margin: 14px 0; */
 `;
 
 const LinkItem = styled.div`

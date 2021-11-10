@@ -9,11 +9,22 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 1280px) {
+    width: 100vw;
+    /* padding: 18px; */
+  }
 `;
 
 const BottomContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 
 const SponsorsContainer = styled.div`
@@ -21,11 +32,17 @@ const SponsorsContainer = styled.div`
     font-size: 36px;
     font-weight: 700;
     color: white;
+
+    @media only screen and (max-width: 1280px) {
+      width: 100vw;
+      font-size: 24px;
+      padding: 48px 0 48px 0;
+    }
   }
 `;
 
 const SponsorLogo = styled.div`
-  margin-top: 56px;
+  margin: 56px 250px 0 0;
   width: 370px;
   height: 120px;
   background: #ffffff33;
@@ -36,6 +53,12 @@ const SponsorLogo = styled.div`
   font-size: 26px;
   font-weight: 400;
   color: white;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 0;
+    width: 340px;
+    height: 110px;
+  }
 `;
 
 const SponsorDeetContainer = styled.div`
@@ -43,6 +66,12 @@ const SponsorDeetContainer = styled.div`
   margin-top: 100px;
   font-size: 18px;
   color: white;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 60px 0;
+    font-size: 14px;
+    padding: 0 10px 0 0;
+  }
 `;
 
 const FourthPart = () => {

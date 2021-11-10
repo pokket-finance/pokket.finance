@@ -9,6 +9,12 @@ const FooterContainer = styled.div`
   display: flex;
   background: #18202b;
   user-select: none;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+    width: 375px;
+    flex-direction: column;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -19,6 +25,15 @@ const LinkContainer = styled.div`
   width: 60%;
   display: flex;
   white-space: nowrap;
+`;
+
+const LinkContainerSplit = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const LinkItem = styled.div`
@@ -50,30 +65,34 @@ const Footer = () => {
           <ReactSVG src={`/assets/FooterLogo.svg`} />
         </LogoContainer>
         <LinkContainer>
-          <LinkItem>
-            <div className="title">About</div>
-            <div className="link">Team</div>
-            <div className="link">Blog</div>
-            <div className="link">Roadmap</div>
-            <div className="link">Whitepaper</div>
-          </LinkItem>
-          <LinkItem>
-            <div className="title">Legal</div>
-            <div className="link">Term of service</div>
-            <div className="link">Privacy policy</div>
-          </LinkItem>
-          <LinkItem>
-            <div className="title">Pokket Vaults</div>
-            <div className="link">Lorem ipsum</div>
-            <div className="link">Lorem ipsum</div>
-            <div className="link">Lorem ipsum</div>
-          </LinkItem>
-          <LinkItem>
-            <div className="title">Institutions</div>
-            <div className="link">Lorem ipsum</div>
-            <div className="link">Lorem ipsum</div>
-            <div className="link">Lorem ipsum</div>
-          </LinkItem>
+          <LinkContainerSplit>
+            <LinkItem>
+              <div className="title">About</div>
+              <div className="link">Team</div>
+              <div className="link">Blog</div>
+              <div className="link">Roadmap</div>
+              <div className="link">Whitepaper</div>
+            </LinkItem>
+            <LinkItem>
+              <div className="title">Legal</div>
+              <div className="link">Term of service</div>
+              <div className="link">Privacy policy</div>
+            </LinkItem>
+          </LinkContainerSplit>
+          <LinkContainerSplit>
+            <LinkItem>
+              <div className="title">Pokket Vaults</div>
+              <div className="link">Lorem ipsum</div>
+              <div className="link">Lorem ipsum</div>
+              <div className="link">Lorem ipsum</div>
+            </LinkItem>
+            <LinkItem>
+              <div className="title">Institutions</div>
+              <div className="link">Lorem ipsum</div>
+              <div className="link">Lorem ipsum</div>
+              <div className="link">Lorem ipsum</div>
+            </LinkItem>
+          </LinkContainerSplit>
         </LinkContainer>
       </FooterContainer>
       <BottomPanel />

@@ -7,6 +7,10 @@ const Container = styled.div`
   align-items: center;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
 `;
 const LeftContainer = styled.div`
   width: 60%;

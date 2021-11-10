@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  display: flex;
   background-color: #121421;
   overflow-x: hidden;
   font-family: Inter;

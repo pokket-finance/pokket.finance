@@ -20,6 +20,11 @@ const GraphicBox = styled.div<StyleProps>`
   margin: ${(props) => {
     return `${props.margin}` || `0px`;
   }};
+
+  @media only screen and (max-width: 1280px) {
+    width: 300px;
+    height: 280px;
+  }
 `;
 
 const PurpleBox = styled.div`
@@ -28,12 +33,21 @@ const PurpleBox = styled.div`
   width: 390px;
   height: 115px;
   margin: 16px 16px 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 80px;
+  }
 `;
 
 const PurpleBoxContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 16px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 10px;
+  }
 `;
 
 const PurpleSpotContainer = styled.div`
@@ -56,6 +70,11 @@ const GreyPill = styled.div<StyleProps>`
     return props.theme.name === 'Light' ? '#F4F4F4' : '#FFFFFF4D';
   }};
   border-radius: 24px;
+
+  @media only screen and (max-width: 1280px) {
+    height: 20px;
+    width: 130px;
+  }
 `;
 
 const GreyBox = styled.div`
@@ -67,6 +86,11 @@ const GreyBox = styled.div`
   width: 390px;
   height: 36px;
   margin: 0 0 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 24px;
+  }
 `;
 
 const CyanBox = styled.div`
@@ -76,10 +100,19 @@ const CyanBox = styled.div`
   border-radius: 4px;
   border: 1px solid #79e1f9;
   margin: -3px 0 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 60px;
+  }
 `;
 
 const CyanBoxContent = styled.div`
   padding: 16px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 10px;
+  }
 `;
 
 const GreenBox = styled.div`
@@ -91,6 +124,11 @@ const GreenBox = styled.div`
   margin: -3px 0 0 16px;
   border-radius: 4px;
   border: 1px solid #5fcf99;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 24px;
+  }
 `;
 
 const Typography = styled.div`
@@ -101,6 +139,10 @@ const Typography = styled.div`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
   }};
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 8px;
+  }
 `;
 
 const TypographyFourteen = styled.div`
@@ -110,6 +152,10 @@ const TypographyFourteen = styled.div`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
   }};
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 10px;
+  }
 `;
 
 const TypographyLighter = styled.div`

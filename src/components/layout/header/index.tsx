@@ -17,17 +17,38 @@ const HeaderContainer = styled.div`
   height: 60px;
   background-color: RGBA(0, 0, 0, 0);
   margin-top: 10px;
+
+  @media only screen and (max-width: 1280px) {
+    background-color: #252632;
+    padding: 0;
+  }
+`;
+
+const LogoContainer = styled.div`
+  @media only screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   position: left;
+
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    align-items: right;
+    position: right;
+  }
 `;
 
 const DropdownGroup = styled.div`
   display: flex;
   margin-left: auto;
+
+  @media only screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 const Header = () => {
@@ -36,9 +57,11 @@ const Header = () => {
     <>
       <TopPanel />
       <HeaderContainer>
-        <Link href="/" passHref>
-          <ReactSVG src={Pokket} style={{ cursor: 'pointer' }} />
-        </Link>
+        <LogoContainer>
+          <Link href="/" passHref>
+            <ReactSVG src={Pokket} style={{ cursor: 'pointer' }} />
+          </Link>
+        </LogoContainer>
         <DropdownGroup>
           <Dropdown width={100} title="About">
             <DropMenuItem>
