@@ -1,7 +1,6 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 import styled from 'styled-components';
-import Image from 'next/image';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const Container = styled.div`

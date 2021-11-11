@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Card from '@/components/card';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
-import LightWebImage from '../../../public/assets/Light/WebImage.svg';
 
 const Container = styled.div`
   width: 100%;
@@ -10,11 +9,12 @@ const Container = styled.div`
   padding: 0 calc((100% - 1440px) / 2 + 80px);
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    68.78deg,
-    rgba(43, 93, 219, 0.22) 28.31%,
-    rgba(99, 141, 248, 0) 100%
-  );
+  background: props.theme.name === 'Light' ?
+    linear-gradient(
+      68.78deg,
+      rgba(43, 93, 219, 0.22) 28.31%,
+      rgba(99, 141, 248, 0) 100%
+    );
   margin: -80px 200px 0 0;
 
   @media only screen and (max-width: 1280px) {
@@ -22,18 +22,19 @@ const Container = styled.div`
   }
 `;
 
-const RightContainer = styled.div`
-  position: relative;
-  overflow: visible;
-  /* width: 1200px; */
-  height: 700px;
-  margin: 100px 0 0 0;
-  padding: 0 250px 0 0;
+// const RightContainer = styled.div`
+//   position: relative;
+//   overflow: visible;
+//   width: 1200px;
+//   height: 700px;
+//   margin: 100px 0 0 0;
+//   padding: 0 250px 0 0;
 
-  @media only screen and (max-width: 1280px) {
-    display: none;
-  }
-`;
+//   @media only screen and (max-width: 1280px) {
+//     display: none;
+//   }
+// `;
+
 const LeftContainer = styled.div`
   width: 300px;
   display: flex;
