@@ -11,6 +11,7 @@ import Footer from '@/components/layout/footer';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
+  width: 100vw;
 `;
 
 const Padding = styled.div`
@@ -25,6 +26,10 @@ const BodyContainer = styled.div`
   user-select: none;
   .introducing {
     margin-top: 5%;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
   }
 `;
 

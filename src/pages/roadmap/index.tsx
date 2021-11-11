@@ -6,6 +6,7 @@ import Steps, { Step } from '@/components/steps';
 
 const LandingContainer = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
+  width: 100vw;
 `;
 
 const BodyContainer = styled.div`
@@ -13,6 +14,10 @@ const BodyContainer = styled.div`
   padding: 110px calc((100% - 1440px) / 2 + 80px) 0px;
   margin-bottom: 150px;
   user-select: none;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+  }
 `;
 
 const TitleContainer = styled.div`

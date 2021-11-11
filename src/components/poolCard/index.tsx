@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 interface StyleProps {
-  margin?: string;
   width?: number;
 }
 
@@ -17,9 +16,66 @@ const GraphicBox = styled.div<StyleProps>`
   border-radius: 4px;
   height: 350px;
   width: 423px;
-  margin: ${(props) => {
-    return `${props.margin}` || `0px`;
+  margin: 0 0 0 0px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 270px;
+    height: 240px;
+    margin: 0 0 0 0;
+  }
+`;
+
+const GraphicBoxTwo = styled(GraphicBox)`
+  margin: -325px 0 0 25px;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -230px 0 0 15px;
+  }
+`;
+
+const GraphicBoxThree = styled(GraphicBox)`
+  margin: -325px 20px 0 50px;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -230px 0 0 30px;
+  }
+`;
+
+const GraphicBoxRight = styled.div<StyleProps>`
+  background: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#1D1F2B';
   }};
+  border: ${(props) => {
+    return props.theme.name === 'Light'
+      ? `1px solid #3f6de14d`
+      : `1px solid #FFFFFF`;
+  }};
+  border-radius: 4px;
+  height: 350px;
+  width: 423px;
+  margin: 0 0 0 50px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 270px;
+    height: 240px;
+    margin: 0 0 0 0;
+  }
+`;
+
+const GraphicBoxTwoRight = styled(GraphicBox)`
+  margin: -325px 0 0 25px;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -225px 0 0 0;
+  }
+`;
+
+const GraphicBoxThreeRight = styled(GraphicBox)`
+  margin: -325px 20px 0 0;
+
+  @media only screen and (max-width: 1280px) {
+    margin: -250px 20px 0 0;
+  }
 `;
 
 const PurpleBox = styled.div`
@@ -28,12 +84,21 @@ const PurpleBox = styled.div`
   width: 390px;
   height: 115px;
   margin: 16px 16px 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 237px;
+    height: 80px;
+  }
 `;
 
 const PurpleBoxContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 16px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 8px;
+  }
 `;
 
 const PurpleSpotContainer = styled.div`
@@ -41,6 +106,10 @@ const PurpleSpotContainer = styled.div`
   flex-direction: column;
   margin: 20px 0 0 0;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 10px 0;
+  }
 `;
 
 const GreyPill = styled.div<StyleProps>`
@@ -56,6 +125,11 @@ const GreyPill = styled.div<StyleProps>`
     return props.theme.name === 'Light' ? '#F4F4F4' : '#FFFFFF4D';
   }};
   border-radius: 24px;
+
+  @media only screen and (max-width: 1280px) {
+    height: 20px;
+    width: 130px;
+  }
 `;
 
 const GreyBox = styled.div`
@@ -67,6 +141,11 @@ const GreyBox = styled.div`
   width: 390px;
   height: 36px;
   margin: 0 0 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 24px;
+  }
 `;
 
 const CyanBox = styled.div`
@@ -76,10 +155,19 @@ const CyanBox = styled.div`
   border-radius: 4px;
   border: 1px solid #79e1f9;
   margin: -3px 0 0 16px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 60px;
+  }
 `;
 
 const CyanBoxContent = styled.div`
   padding: 16px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 10px;
+  }
 `;
 
 const GreenBox = styled.div`
@@ -91,6 +179,11 @@ const GreenBox = styled.div`
   margin: -3px 0 0 16px;
   border-radius: 4px;
   border: 1px solid #5fcf99;
+
+  @media only screen and (max-width: 1280px) {
+    width: 265px;
+    height: 24px;
+  }
 `;
 
 const Typography = styled.div`
@@ -101,6 +194,10 @@ const Typography = styled.div`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
   }};
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 8px;
+  }
 `;
 
 const TypographyFourteen = styled.div`
@@ -110,6 +207,10 @@ const TypographyFourteen = styled.div`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
   }};
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 10px;
+  }
 `;
 
 const TypographyLighter = styled.div`
@@ -147,8 +248,8 @@ export const LeftPoolCard = () => {
   return (
     <>
       <GraphicBox />
-      <GraphicBox margin={`-325px 0 0 25px`} />
-      <GraphicBox margin={`-325px 25px 0 50px`}>
+      <GraphicBoxTwo />
+      <GraphicBoxThree>
         <PurpleBox>
           <PurpleBoxContainer>
             <Typography>Funds Pool</Typography>
@@ -190,7 +291,7 @@ export const LeftPoolCard = () => {
         <GreenBox>
           <Typography>NAV 102 WBTC (+2%)</Typography>
         </GreenBox>
-      </GraphicBox>
+      </GraphicBoxThree>
     </>
   );
 };
@@ -198,9 +299,9 @@ export const LeftPoolCard = () => {
 export const RightPoolCard = () => {
   return (
     <>
-      <GraphicBox margin={`0 0 0 50px`} />
-      <GraphicBox margin={`-325px 0 0 25px`} />
-      <GraphicBox margin={`-325px 25px 0 0`}>
+      <GraphicBoxRight />
+      <GraphicBoxTwoRight />
+      <GraphicBoxThreeRight>
         <PurpleBox>
           <PurpleBoxContainer>
             <PurpleSpotContainer style={{ margin: '0' }}>
@@ -249,7 +350,7 @@ export const RightPoolCard = () => {
         <GreenBox>
           <Typography>NAV 1,020,000 USDC (+2%)</Typography>
         </GreenBox>
-      </GraphicBox>
+      </GraphicBoxThreeRight>
     </>
   );
 };

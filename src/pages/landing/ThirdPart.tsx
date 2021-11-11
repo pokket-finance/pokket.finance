@@ -7,12 +7,28 @@ const Container = styled.div`
   padding: 0 calc((100% - 1440px) / 2 + 80px);
   margin-bottom: 0;
   margin-top: 85px;
+
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+  }
 `;
 
 const InfoCardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 85px;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+    margin: 26px 0 0 0;
+    width: 90%;
+  }
 `;
 
 const InfoCard = styled.div`
@@ -22,18 +38,29 @@ const InfoCard = styled.div`
   }};
   border-radius: 12px;
   padding: 60px;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 30px 16px;
+    margin: 24px 0 0 0;
+    width: 90%;
+  }
+
   .cardTitle {
     font-size: 36px;
     font-weight: 700;
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFF';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
   }
   .cardContent {
     font-size: 18px;
     font-weight: 400;
     color: ${(props) => {
-      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF';
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
     }};
     margin: 32px 0 40px 0;
     padding: 0 0 32px 0;
@@ -42,6 +69,10 @@ const InfoCard = styled.div`
         ? `1px solid #0000001a`
         : '1px solid #FFFFFF1A ';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -51,6 +82,11 @@ const CommunityCard = styled.div`
   flex-direction: column;
   width: 500px;
   margin: auto 0 auto 0;
+
+  @media only screen and (max-width: 1280px) {
+    width: 300px;
+  }
+
   .communityTitle {
     font-size: 36px;
     font-weight: 700;
@@ -58,6 +94,11 @@ const CommunityCard = styled.div`
       return props.theme.name === 'Light' ? '#3f6de1' : '#ffffff';
     }};
     margin-bottom: 32px;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+      width: 100vw;
+    }
   }
   .communityContent {
     font-size: 18px;
@@ -65,6 +106,11 @@ const CommunityCard = styled.div`
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+      width: 100vw;
+    }
   }
 `;
 
@@ -73,14 +119,16 @@ const SecondHalf = styled.div`
   justify-content: space-between;
   margin-top: 100px;
   padding: 0 0 60px 0;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 
 const Image = styled.div`
   width: 52%;
   height: 400px;
-  /* height: 680px; */
-  /* margin-top: 40px; */
-  /* margin-bottom: 0; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: ${(props) => {
@@ -88,8 +136,11 @@ const Image = styled.div`
       ? `url('/assets/map.png')`
       : `url('/assets/mapdark.png')`;
   }};
-  /* justify-content: center; */
-  /* width: 675px; */
+
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
+    height: 250px;
+  }
 `;
 
 const CopyWriteContainer = styled.div`
@@ -97,13 +148,21 @@ const CopyWriteContainer = styled.div`
   flex-direction: column;
   padding: 0 0 120px 0;
 
+  @media only screen and (max-width: 1280px) {
+    padding: 100px 18px 100px 18px;
+  }
+
   .copyTitle {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 800;
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#3f6de1' : '#ffffff';
     }};
     margin-bottom: 32px;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
   }
   .copyContent {
     font-size: 18px;
@@ -111,6 +170,10 @@ const CopyWriteContainer = styled.div`
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
     }};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
   }
   .copyLink {
     font-size: 18px;
@@ -119,6 +182,10 @@ const CopyWriteContainer = styled.div`
     text-decoration: 2px underline;
     margin: 5px 0 0 0;
     cursor: pointer;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+    }
   }
 `;
 

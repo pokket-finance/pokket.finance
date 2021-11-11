@@ -11,6 +11,11 @@ const BottomPanelContainer = styled.div`
   height: 68px;
   opacity: 1;
   background: #10141b;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
+    width: 100vw;
+  }
 `;
 
 const Copyright = styled.div`
@@ -19,6 +24,10 @@ const Copyright = styled.div`
   font-weight: normal;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 8px;
+  }
 `;
 
 const SVGButton = styled.div`
@@ -34,13 +43,13 @@ const SVGButton = styled.div`
 const LinkGroup = styled.div`
   height: 40px;
   display: flex;
-  /* backgroup-color: red; */
   margin: 14px 0 14px 0;
   opacity: 0.5;
 `;
 
 const LinkItem = styled(SVGButton)`
   margin-right: 10px;
+  color: #d8d8d8;
 `;
 
 const BottomPanel = () => {

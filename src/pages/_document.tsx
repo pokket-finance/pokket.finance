@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <meta name="robots" content="index, follow" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
