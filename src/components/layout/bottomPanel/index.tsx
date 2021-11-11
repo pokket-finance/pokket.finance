@@ -43,13 +43,13 @@ const SVGButton = styled.div`
 const LinkGroup = styled.div`
   height: 40px;
   display: flex;
-  /* backgroup-color: red; */
   margin: 14px 0 14px 0;
   opacity: 0.5;
 `;
 
 const LinkItem = styled(SVGButton)`
   margin-right: 10px;
+  color: #d8d8d8;
 `;
 
 const BottomPanel = () => {

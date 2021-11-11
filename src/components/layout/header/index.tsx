@@ -9,14 +9,14 @@ import TopPanel from '../topPanel';
 
 const HeaderContainer = styled.div`
   max-width: 1280px;
-  padding: 0 calc((100% - 1440px) / 2 + 80px);
-  z-index: 2;
+  padding: 10px calc((100% - 1440px) / 2 + 80px);
+  z-index: 5;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  background-color: RGBA(0, 0, 0, 0);
-  margin-top: 10px;
+  background-color: transparent;
 
   @media only screen and (max-width: 1280px) {
     background-color: #252632;
@@ -76,14 +76,14 @@ const Header = () => {
             </DropMenuItem>
           </Dropdown>
 
-          <Dropdown width={100} title="Vaults">
+          {/* <Dropdown width={100} title="Vaults">
             <DropMenuItem>
               <Link href="/hodl">HODL Booster</Link>
             </DropMenuItem>
             <DropMenuItem>
               <Link href="/alpha_vol">ALPHA VOL</Link>
             </DropMenuItem>
-          </Dropdown>
+          </Dropdown> */}
           <Dropdown width={100} title="Docs" />
         </DropdownGroup>
         <LinkContainer>

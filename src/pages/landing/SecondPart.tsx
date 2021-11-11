@@ -9,6 +9,7 @@ const Container = styled.div`
   user-select: none;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
+  margin: -125px 0;
 
   @media only screen and (max-width: 1280px) {
     padding: 0;
@@ -64,10 +65,10 @@ const DataItem = styled.div`
 `;
 
 const Decoration = styled.div`
-  height: 180px;
-  width: 1280px;
+  height: 210px;
+  width: 1180px;
   z-index: 0;
-  margin-top: -210px;
+  margin: -175px 0 0 90px;
   background: ${(props) => {
     return props.theme.name === 'Light'
       ? 'rgb(255, 255, 255, 0.35)'
@@ -87,11 +88,12 @@ const BlueContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 200px calc((100% - 1440px) / 2 + 80px);
-  padding-bottom: 120px;
-  margin-top: -90px;
+  padding-bottom: 30px;
+  margin-top: -150px;
   background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
   }};
+  background: linear-gradient(89.61deg, #295ad7 0.34%, #638df8 99.69%);
 
   @media only screen and (max-width: 1280px) {
     padding: 150px 16px 0 16px;
@@ -131,7 +133,7 @@ const VaultsContainer = styled.div`
     font-size: 18px;
     font-weight: 400;
     color: ${(props) => {
-      return props.theme.name === 'Light' ? '#969696' : '#FFFFFF99';
+      return props.theme.name === 'Light' ? '#' : '#FFFFFF99';
     }};
 
     @media only screen and (max-width: 1280px) {
@@ -142,6 +144,7 @@ const VaultsContainer = styled.div`
 `;
 
 const GraphicBoxContainer = styled.div`
+  padding: 70px 0;
   @media only screen and (max-width: 1280px) {
     padding: 70px 16px 0 16px;
     padding: 70px calc((100% - 335px) / 2);
@@ -170,7 +173,7 @@ const SecondPart = () => {
       </Container>
       <BlueContainer>
         <VaultsContainer>
-          <div className="title">STRUCTURED VAULTS</div>
+          <div className="title">STRUCTURED VAULTS.</div>
           <div className="subtitle">
             New smart allocation feature allows for better management of
             knock-outs. Don&#39;t fret about esoteric moves ruining your balance

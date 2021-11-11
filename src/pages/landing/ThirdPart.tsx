@@ -15,6 +15,7 @@ const Container = styled.div`
     align-items: center;
     padding: 0;
     width: 100%;
+    margin-top: 0;
   }
 `;
 
@@ -25,6 +26,7 @@ const InfoCardContainer = styled.div`
 
   @media only screen and (max-width: 1280px) {
     flex-direction: column;
+    margin: 26px 0 0 0;
     width: 90%;
   }
 `;
@@ -39,7 +41,7 @@ const InfoCard = styled.div`
 
   @media only screen and (max-width: 1280px) {
     padding: 30px 16px;
-    /* margin: 0 16px 0 16px; */
+    margin: 24px 0 0 0;
     width: 90%;
   }
 
@@ -151,8 +153,8 @@ const CopyWriteContainer = styled.div`
   }
 
   .copyTitle {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 800;
     color: ${(props) => {
       return props.theme.name === 'Light' ? '#3f6de1' : '#ffffff';
     }};

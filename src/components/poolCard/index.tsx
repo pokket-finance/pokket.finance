@@ -16,7 +16,7 @@ const GraphicBox = styled.div<StyleProps>`
   border-radius: 4px;
   height: 350px;
   width: 423px;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 0px;
 
   @media only screen and (max-width: 1280px) {
     width: 270px;
@@ -34,10 +34,31 @@ const GraphicBoxTwo = styled(GraphicBox)`
 `;
 
 const GraphicBoxThree = styled(GraphicBox)`
-  margin: -325px 20px 0 0;
+  margin: -325px 20px 0 50px;
 
   @media only screen and (max-width: 1280px) {
     margin: -230px 0 0 30px;
+  }
+`;
+
+const GraphicBoxRight = styled.div<StyleProps>`
+  background: ${(props) => {
+    return props.theme.name === 'Light' ? '#FFFFFF' : '#1D1F2B';
+  }};
+  border: ${(props) => {
+    return props.theme.name === 'Light'
+      ? `1px solid #3f6de14d`
+      : `1px solid #FFFFFF`;
+  }};
+  border-radius: 4px;
+  height: 350px;
+  width: 423px;
+  margin: 0 0 0 50px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 270px;
+    height: 240px;
+    margin: 0 0 0 0;
   }
 `;
 
@@ -65,7 +86,7 @@ const PurpleBox = styled.div`
   margin: 16px 16px 0 16px;
 
   @media only screen and (max-width: 1280px) {
-    width: 265px;
+    width: 237px;
     height: 80px;
   }
 `;
@@ -76,7 +97,7 @@ const PurpleBoxContainer = styled.div`
   padding: 16px;
 
   @media only screen and (max-width: 1280px) {
-    padding: 10px;
+    padding: 8px;
   }
 `;
 
@@ -85,6 +106,10 @@ const PurpleSpotContainer = styled.div`
   flex-direction: column;
   margin: 20px 0 0 0;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 10px 0;
+  }
 `;
 
 const GreyPill = styled.div<StyleProps>`
@@ -274,7 +299,7 @@ export const LeftPoolCard = () => {
 export const RightPoolCard = () => {
   return (
     <>
-      <GraphicBox />
+      <GraphicBoxRight />
       <GraphicBoxTwoRight />
       <GraphicBoxThreeRight>
         <PurpleBox>

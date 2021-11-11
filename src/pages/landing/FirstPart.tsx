@@ -2,13 +2,20 @@ import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Card from '@/components/card';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
+import LightWebImage from '../../../public/assets/Light/WebImage.svg';
 
 const Container = styled.div`
+  width: 100%;
   max-width: 1280px;
   padding: 0 calc((100% - 1440px) / 2 + 80px);
   display: flex;
   align-items: center;
-  margin-bottom: 0;
+  background: linear-gradient(
+    68.78deg,
+    rgba(43, 93, 219, 0.22) 28.31%,
+    rgba(99, 141, 248, 0) 100%
+  );
+  margin: -80px 200px 0 0;
 
   @media only screen and (max-width: 1280px) {
     padding: 0;
@@ -16,20 +23,23 @@ const Container = styled.div`
 `;
 
 const RightContainer = styled.div`
-  width: 60%;
-  height: 680px;
-  margin-top: 40px;
-  margin-bottom: 0;
+  position: relative;
+  overflow: visible;
+  /* width: 1200px; */
+  height: 700px;
+  margin: 100px 0 0 0;
+  padding: 0 250px 0 0;
 
   @media only screen and (max-width: 1280px) {
     display: none;
   }
 `;
 const LeftContainer = styled.div`
-  width: 50%;
+  width: 300px;
   display: flex;
+  flex-direction: column;
   margin-bottom: 0;
-  padding: 160px 0 0 0;
+  padding: 100px 0 0 0;
 
   @media only screen and (max-width: 1280px) {
     flex-direction: column;
@@ -46,7 +56,7 @@ const CustomTitle = styled.span`
 `;
 
 const SocialContainer = styled.div`
-  display: none;
+  display: flex;
 
   @media only screen and (max-width: 1280px) {
     padding: 0 0 0 16px;
@@ -56,32 +66,42 @@ const SocialContainer = styled.div`
 `;
 
 const SVGButton = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   display: flex;
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+
+  @media only screen and (max-width: 1280px) {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 `;
 
 const LinkItem = styled(SVGButton)`
+  width: 32px;
+  height: 32px;
   margin: 0 12px 0 0;
   padding: 35px 0 0 0;
+  color: white;
 `;
 
 const FirstPart = () => {
-  const { Discord, Git, Twitter } = useThemeSVGUrl([
+  const { Discord, Git, Twitter, WebImage } = useThemeSVGUrl([
     'Discord',
     'Git',
     'Twitter',
+    'WebImage',
   ]);
   return (
     <Container>
       <LeftContainer>
         <Card
           title={
-            <span>
+            <span style={{ whiteSpace: 'nowrap' }}>
               Pokket <CustomTitle>FINANCE</CustomTitle>
             </span>
           }
@@ -91,26 +111,28 @@ const FirstPart = () => {
         <SocialContainer>
           <a href="" target="blank">
             <LinkItem>
-              <ReactSVG src={Discord} />
+              <ReactSVG src={Discord} style={{ color: 'white' }} />
             </LinkItem>
           </a>
           <a href="" target="blank">
             <LinkItem>
-              <ReactSVG src={Git} />
+              <ReactSVG src={Git} style={{ color: 'white' }} />
             </LinkItem>
           </a>
           <a href="https://twitter.com/PokketOfficial" target="blank">
             <LinkItem>
-              <ReactSVG src={Twitter} />
+              <ReactSVG src={Twitter} style={{ color: 'white' }} />
             </LinkItem>
           </a>
-          <a
-            href="https://www.youtube.com/channel/UC7gH6n5CuxlcBeDdd4sddMA"
-            target="blank"
-          />
         </SocialContainer>
       </LeftContainer>
-      <RightContainer />
+      <ReactSVG
+        src={WebImage}
+        style={{
+          marginTop: '100px',
+          marginLeft: 'calc((100vw/2) - 475px)',
+        }}
+      />
     </Container>
   );
 };

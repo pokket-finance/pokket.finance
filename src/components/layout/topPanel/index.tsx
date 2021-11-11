@@ -55,6 +55,7 @@ const LinkGroup = styled.div`
 `;
 
 const LinkItem = styled.div`
+  color: #d8d8d8;
   width: 16px;
   height: 24px;
   display: flex;

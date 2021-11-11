@@ -40,7 +40,7 @@ const LinkItem = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-left: 30px;
+  margin-left: 60px;
   .title {
     font-style: normal;
     font-weight: bold;
@@ -82,15 +82,15 @@ const Footer = () => {
           <LinkContainerSplit>
             <LinkItem>
               <div className="title">Pokket Vaults</div>
-              <div className="link">Lorem ipsum</div>
-              <div className="link">Lorem ipsum</div>
-              <div className="link">Lorem ipsum</div>
+              <div className="link">Coming soon.</div>
+              {/* <div className="link">Lorem ipsum</div> */}
+              {/* <div className="link">Lorem ipsum</div> */}
             </LinkItem>
             <LinkItem>
               <div className="title">Institutions</div>
-              <div className="link">Lorem ipsum</div>
-              <div className="link">Lorem ipsum</div>
-              <div className="link">Lorem ipsum</div>
+              <div className="link">Pokket.com</div>
+              <div className="link">Lend Assets</div>
+              {/* <div className="link">Lorem ipsum</div> */}
             </LinkItem>
           </LinkContainerSplit>
         </LinkContainer>

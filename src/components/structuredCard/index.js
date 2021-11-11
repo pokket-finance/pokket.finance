@@ -48,14 +48,14 @@ const GraphicBoxThree = styled(GraphicBox)`
 
 const BarsContainer = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  padding: 35px 50px 0 50px;
+  grid-template-columns: 1fr 1fr;
+  padding: 35px 0 0 50px;
   color: white;
   font-size: 13px;
   font-weight: 500;
 
   @media only screen and (max-width: 1280px) {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 40px 8px 0 24px;
   }
 `;
@@ -115,20 +115,20 @@ const StructuredCard = () => {
           <GraphicBox margin={`-180px 50px 0 0`}>
   */}
 
-        <div className="title">3-month blend-vault</div>
+        <div className="title">Pokket Blend-Vault</div>
         <BarsContainer>
           <Bars>
             <div className="bartitle">50% ETH</div>
             <div className="purple" />
           </Bars>
           <Bars>
-            <div className="bartitle">25% UNI</div>
+            <div className="bartitle">50% UNI</div>
             <div className="cyan" />
           </Bars>
-          <Bars>
+          {/* <Bars>
             <div className="bartitle">25% MATIC</div>
             <div className="yellow" />
-          </Bars>
+          </Bars> */}
         </BarsContainer>
       </GraphicBoxThree>
     </>
