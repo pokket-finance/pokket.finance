@@ -90,9 +90,9 @@ const BlueContainer = styled.div`
   padding: 200px calc((100% - 1440px) / 2 + 80px);
   padding-bottom: 30px;
   margin-top: -150px;
-  background-color: ${(props) => {
+  /* background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
-  }};
+  }}; */
   background: linear-gradient(89.61deg, #295ad7 0.34%, #638df8 99.69%);
 
   @media only screen and (max-width: 1280px) {
