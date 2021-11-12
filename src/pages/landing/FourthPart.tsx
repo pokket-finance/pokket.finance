@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const Container = styled.div`
-  /* background-color: ${(props) => {
+  background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#13307e' : '#1D1F2B';
-  }}; */
+  }};
 
-  background: linear-gradient(96.39deg, #13307e 0%, #355fca 100%);
+  /* background: linear-gradient(96.39deg, #13307e 0%, #355fca 100%); */
 
   padding: 100px calc((100% - 1440px) / 2 + 80px);
   display: flex;
