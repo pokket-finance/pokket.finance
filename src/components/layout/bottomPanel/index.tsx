@@ -63,7 +63,7 @@ const BottomPanel = () => {
   return (
     <BottomPanelContainer>
       <LinkGroup>
-        <a href="" target="blank">
+        <a href="https://discord.gg/ajYhWTFR" target="blank">
           <LinkItem>
             <ReactSVG src={Discord} />
           </LinkItem>

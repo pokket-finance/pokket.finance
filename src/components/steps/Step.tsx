@@ -11,7 +11,7 @@ const StepContainer = styled.div<{ isLeft: boolean }>`
   width: 600px;
   height: 44px;
   right: ${(props) => (props.isLeft ? '575px' : '15px')};
-  margin-top: 140px;
+  margin-top: 80px;
   border-radius: 4px;
 `;
 
