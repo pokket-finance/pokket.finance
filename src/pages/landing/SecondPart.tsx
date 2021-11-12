@@ -89,7 +89,7 @@ const BlueContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   padding: 200px calc((100% - 1440px) / 2 + 80px);
   padding-bottom: 30px;
-  margin-top: -150px;
+  margin-top: -155px;
   background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#3f6de1' : '#1D1F2B';
   }};
@@ -165,7 +165,7 @@ const SecondPart = () => {
             <div className="title">Users</div>
           </DataItem>
           <DataItem>
-            <div className="data">243K+</div>
+            <div className="data">4.3K+</div>
             <div className="title">Deposits</div>
           </DataItem>
         </DataContainer>
