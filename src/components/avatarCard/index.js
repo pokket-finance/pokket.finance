@@ -51,6 +51,10 @@ const ImageDiv = styled.div`
   height: 150px;
 `;
 
+const ImageTest = styled.img`
+  border-radius: 12px;
+`
+
 const Card = (props) => {
   const { className, member } = props;
   // const { Discord, Git, Twitter } = useThemeSVGUrl([
