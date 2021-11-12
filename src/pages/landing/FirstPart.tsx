@@ -3,6 +3,12 @@ import { ReactSVG } from 'react-svg';
 import Card from '@/components/card';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
+const LinearGradient = `linear-gradient(
+    68.78deg,
+    rgba(43, 93, 219, 0.22) 28.31%,
+    rgba(99, 141, 248, 0) 100%
+  )`;
+
 const Container = styled.div`
   width: 100%;
   max-width: 1280px;
@@ -15,6 +21,7 @@ const Container = styled.div`
     rgba(43, 93, 219, 0.22) 28.31%,
     rgba(99, 141, 248, 0) 100%
   );
+  /* background: LinearGradient; */
   margin: -80px 200px 0 0;
 
   @media only screen and (max-width: 1280px) {

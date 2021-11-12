@@ -168,7 +168,7 @@ const CopyWriteContainer = styled.div`
     font-size: 18px;
     font-weight: 400;
     color: ${(props) => {
-      return props.theme.name === 'Light' ? '#646464' : '#FFFFFF99';
+      return props.theme.name === 'Light' ? '#646464' : '#FFFFFFDE';
     }};
 
     @media only screen and (max-width: 1280px) {
@@ -177,7 +177,9 @@ const CopyWriteContainer = styled.div`
   }
   .copyLink {
     font-size: 18px;
-    color: #3f6de1;
+    color: ${(props) => {
+      return props.theme.name === 'Light' ? '#3f6de1' : '#FFFFFFDE';
+    }};
     font-weight: 700;
     text-decoration: 2px underline;
     margin: 5px 0 0 0;
@@ -230,8 +232,8 @@ const ThirdPart = () => {
       <CopyWriteContainer>
         <div className="copyTitle">THERE&#39;S NO OTHER.</div>
         <div className="copyContent">
-          The best rates, best risk-management, low-fees and attentive staff.
-          Collect yield with confidence.
+          The best rates, risk-management, and low-fees. Collect yield with
+          confidence.
         </div>
         <div className="copyLink">See for yourself.</div>
       </CopyWriteContainer>

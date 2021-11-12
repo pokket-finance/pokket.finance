@@ -41,8 +41,8 @@ const CoreTeam = styled.div`
   }
 `;
 
-const Card = (props: { className?: string }) => {
-  const { className } = props;
+const Card = (props: { className?: string; member?: object }) => {
+  const { className, member } = props;
   const { Discord, Git, Twitter } = useThemeSVGUrl([
     'Sun',
     'Moon',
@@ -52,13 +52,15 @@ const Card = (props: { className?: string }) => {
     'Twitter',
     'Youtube',
   ]);
+
+  console.log('member', member);
   return (
     <AvatarCardContainer className={className}>
       <Avatar>
         <ReactSVG src={'/assets/Avatar.svg'} />
       </Avatar>
       <CoreTeam>
-        <div className="coreTeamTitle">Wade Warren</div>
+        <div className="coreTeamTitle">Steph Curry</div>
         <div className="message">Amet minim mollit non deserunt </div>
         <div className="link">
           <ReactSVG
