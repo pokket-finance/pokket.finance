@@ -55,6 +55,11 @@ const ImageTest = styled.img`
   border-radius: 12px;
 `
 
+const StyledReactSVG = styled(ReactSVG)`
+  width: '150px';
+  height: '150px';
+`
+
 const Card = (props) => {
   const { className, member } = props;
   // const { Discord, Git, Twitter } = useThemeSVGUrl([
@@ -68,9 +73,9 @@ const Card = (props) => {
   return (
     <AvatarCardContainer className={className}>
       <Avatar>
-        {/* <ReactSVG src={'/assets/Avatar.svg'} /> */}
         <ImageDiv>
-          <ImageStyle src={member.pic} width="150" height="150" />
+          {/* <ImageStyle src={member.pic} width="150" height="150" /> */}
+          <ReactSVG src={`/assets/Team/${member.pic}.svg`} />
         </ImageDiv>
       </Avatar>
       <CoreTeam>
