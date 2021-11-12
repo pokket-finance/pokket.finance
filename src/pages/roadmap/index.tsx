@@ -39,30 +39,20 @@ const LandingPage = () => {
         <Steps>
           <Step
             isLeft={false}
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            title="Community Building Phase"
+            content="Q3 2021"
           />
-          <Step
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          />
-          <Step
-            isLeft={false}
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          />
-          <Step
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          />
+          <Step title="Pokket Finance Launch" content="Q4 2021" />
+          <Step isLeft={false} title="DApp Launch" content="Q4 2021" />
+          <Step title="Treasury Management" content="Q1 2022" />
+          <Step isLeft={false} title="Pokket IDO" content="Q1 2022" />
+          <Step title="PKKT Farming" content="Q1 2022" />
+          <Step isLeft={false} title="sPKKT Launch" content="Q1 2022" />
+          <Step title="PKKT DAO Launch" content="Q1 2022" />
           <Step
             isLeft={false}
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          />
-          <Step
-            title="Lorem Ipsum"
-            content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            title="Protocol Collaborations"
+            content="Q1 2022"
           />
         </Steps>
       </BodyContainer>
