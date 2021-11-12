@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-// import Partners from '@/components/partners';
+import Partners from '@/components/partners';
 import AvatarCard from '@/components/avatarCard';
-// import TeamData from '../../data/team';
+import TeamData from '../../data/team';
+import AdvisorData from '../../data/advisors';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
@@ -61,6 +62,7 @@ const TeamContainer = styled.div`
 const TransparentContainer = styled.div`
   max-width: 1280px;
   padding: 60px calc((100% - 1440px) / 2 + 80px) 0;
+  margin: 0 0 70px 0;
   display: flex;
   flex-direction: column;
 
@@ -97,37 +99,20 @@ const TeamPage = () => {
         <TeamContainer>
           <Title>Core Team</Title>
           <div className="avatarContainer">
-            {/* {TeamData.map((member, index) => (
-              <AvatarCard className="avatarCard" member={member} key={index} />
-            ))} */}
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
+            {TeamData.map((member) => (
+              <AvatarCard className="avatarCard" member={member} />
+            ))}
           </div>
         </TeamContainer>
         <TransparentContainer>
-          <Title>Liquidity Partners</Title>
-          <div className="avatarContainer">
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-          </div>
+          <Partners title="Liquidity Partners" />
         </TransparentContainer>
-        <TeamContainer>
-          {/* <Title>Development Partners</Title>
-          <div className="partnersContainer">
-            <Partners title="" />
-          </div> */}
-        </TeamContainer>
         <TeamContainer>
           <Title>Advisors</Title>
           <div className="avatarContainer">
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
-            <AvatarCard className="avatarCard" />
+            {AdvisorData.map((member) => (
+              <AvatarCard className="avatarCard" member={member} />
+            ))}
           </div>
         </TeamContainer>
       </BodyContainer>

@@ -19,9 +19,10 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  color: ${(props) => props.theme.color.bodyfontColorLevel1};
+  /* color: ${(props) => props.theme.color.bodyfontColorLevel1}; */
+  color: #3f6de1;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 5%;
 `;
 
@@ -30,7 +31,7 @@ const PartnerContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const PartnerCard = styled.div`
@@ -47,24 +48,22 @@ const PartnerCard = styled.div`
 
 const Partners = (props: { title: string; className?: string }) => {
   const { title, className } = props;
-  const { Partner1, Partner2, Partner3, Partner4, Partner5, Partner6 } =
-    useThemeSVGUrl([
-      'Partner1',
-      'Partner2',
-      'Partner3',
-      'Partner4',
-      'Partner5',
-      'Partner6',
-    ]);
+  const { Partner1 } = useThemeSVGUrl([
+    'Partner1',
+    // 'Partner3',
+    // 'Partner4',
+    // 'Partner5',
+    // 'Partner6',
+  ]);
   const partnerUrlArray = [
     { key: 'Partner1', value: Partner1 },
-    { key: 'Partner2', value: Partner2 },
-    { key: 'Partner3', value: Partner3 },
-    { key: 'Partner4', value: Partner4 },
-    { key: 'Partner5', value: Partner5 },
-    { key: 'Partner6', value: Partner6 },
-    { key: 'Partner7', value: Partner1 },
-    { key: 'Partner8', value: Partner2 },
+    // { key: 'Partner2', value: Partner2 },
+    // { key: 'Partner3', value: Partner3 },
+    // { key: 'Partner4', value: Partner4 },
+    // { key: 'Partner5', value: Partner5 },
+    // { key: 'Partner6', value: Partner6 },
+    // { key: 'Partner7', value: Partner1 },
+    // { key: 'Partner8', value: Partner2 },
   ];
   return (
     <Container className={className}>

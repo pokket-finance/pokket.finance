@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import Image from 'next/image';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const AvatarCardContainer = styled.div`
@@ -41,28 +42,38 @@ const CoreTeam = styled.div`
   }
 `;
 
-const Card = (props: { className?: string }) => {
-  const { className } = props;
-  const { Discord, Git, Twitter } = useThemeSVGUrl([
-    'Sun',
-    'Moon',
-    'Discord',
-    'Git',
-    'Medium',
-    'Twitter',
-    'Youtube',
-  ]);
+const ImageStyle = styled(Image)`
+  border-radius: 12px;
+`;
+
+const ImageDiv = styled.div`
+  width: 150px;
+  height: 150px;
+`;
+
+const Card = (props) => {
+  const { className, member } = props;
+  // const { Discord, Git, Twitter } = useThemeSVGUrl([
+  //   'Discord',
+  //   'Git',
+  //   'Twitter',
+  // ]);
+
+  console.log('member', member);
 
   return (
     <AvatarCardContainer className={className}>
       <Avatar>
-        <ReactSVG src={'/assets/Avatar.svg'} />
+        {/* <ReactSVG src={'/assets/Avatar.svg'} /> */}
+        <ImageDiv>
+          <ImageStyle src={member.pic} width="150" height="150" />
+        </ImageDiv>
       </Avatar>
       <CoreTeam>
-        <div className="coreTeamTitle">Steph Curry</div>
-        <div className="message">Amet minim mollit non deserunt </div>
+        <div className="coreTeamTitle">{member.name}</div>
+        <div className="message">{member.position} </div>
         <div className="link">
-          <ReactSVG
+          {/* <ReactSVG
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
@@ -81,7 +92,7 @@ const Card = (props: { className?: string }) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
             src={Twitter}
-          />
+          /> */}
         </div>
       </CoreTeam>
     </AvatarCardContainer>
