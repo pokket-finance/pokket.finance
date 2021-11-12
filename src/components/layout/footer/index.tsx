@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
+import Link from 'next/link';
 
 import BottomPanel from '@/components/layout/bottomPanel';
 
@@ -57,6 +58,18 @@ const LinkItem = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  padding: 12px 0;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+`;
+
+const StyledExternalLink = styled.a`
+  text-decoration: none;
+`;
+
 const Footer = () => {
   return (
     <>
@@ -68,9 +81,15 @@ const Footer = () => {
           <LinkContainerSplit>
             <LinkItem>
               <div className="title">About</div>
-              <div className="link">Team</div>
-              <div className="link">Blog</div>
-              <div className="link">Roadmap</div>
+              <StyledLink href="/team">
+                <div className="link">Team</div>
+              </StyledLink>
+              <StyledExternalLink href="https://medium.com/pokketofficial">
+                <div className="link">Blog</div>
+              </StyledExternalLink>
+              <StyledLink href="/roadmap">
+                <div className="link">Roadmap</div>
+              </StyledLink>
               <div className="link">Whitepaper</div>
             </LinkItem>
             <LinkItem>
@@ -83,14 +102,15 @@ const Footer = () => {
             <LinkItem>
               <div className="title">Pokket Vaults</div>
               <div className="link">Coming soon.</div>
-              {/* <div className="link">Lorem ipsum</div> */}
-              {/* <div className="link">Lorem ipsum</div> */}
             </LinkItem>
             <LinkItem>
               <div className="title">Institutions</div>
-              <div className="link">Pokket.com</div>
-              <div className="link">Lend Assets</div>
-              {/* <div className="link">Lorem ipsum</div> */}
+              <StyledExternalLink href="https://pokket.com/">
+                <div className="link">Pokket.com</div>
+              </StyledExternalLink>
+              <StyledExternalLink href="https://pokket.com/crypto-savings-account">
+                <div className="link">Lend Assets</div>
+              </StyledExternalLink>
             </LinkItem>
           </LinkContainerSplit>
         </LinkContainer>

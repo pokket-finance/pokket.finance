@@ -105,7 +105,7 @@ const TopPanel = () => {
         <div className="darkFont">Dark</div>
       </ThemeSwitchContainer>
       <LinkGroup>
-        <a href="" target="blank">
+        <a href="https://discord.gg/ajYhWTFR" target="blank">
           <LinkItem>
             <ReactSVG src={Discord} />
           </LinkItem>

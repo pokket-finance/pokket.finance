@@ -111,7 +111,7 @@ const FirstPart = () => {
           yield on your HODLs"
         />
         <SocialContainer>
-          <a href="" target="blank">
+          <a href="https://discord.gg/ajYhWTFR" target="blank">
             <LinkItem>
               <ReactSVG src={Discord} style={{ color: 'white' }} />
             </LinkItem>
