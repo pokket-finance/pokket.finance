@@ -41,8 +41,8 @@ const CoreTeam = styled.div`
   }
 `;
 
-const Card = (props: { className?: string; member?: object }) => {
-  const { className, member } = props;
+const Card = (props: { className?: string }) => {
+  const { className } = props;
   const { Discord, Git, Twitter } = useThemeSVGUrl([
     'Sun',
     'Moon',
@@ -53,7 +53,6 @@ const Card = (props: { className?: string; member?: object }) => {
     'Youtube',
   ]);
 
-  console.log('member', member);
   return (
     <AvatarCardContainer className={className}>
       <Avatar>

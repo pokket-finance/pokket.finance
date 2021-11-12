@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import Partners from '@/components/partners';
+// import Partners from '@/components/partners';
 import AvatarCard from '@/components/avatarCard';
-import TeamData from '../../data/team';
+// import TeamData from '../../data/team';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
@@ -100,12 +100,12 @@ const TeamPage = () => {
             {/* {TeamData.map((member, index) => (
               <AvatarCard className="avatarCard" member={member} key={index} />
             ))} */}
-            <AvatarCard className="avatarCard" data={TeamData} />
-            <AvatarCard className="avatarCard" data={TeamData} />
-            <AvatarCard className="avatarCard" data={TeamData} />
-            <AvatarCard className="avatarCard" data={TeamData} />
-            <AvatarCard className="avatarCard" data={TeamData} />
-            <AvatarCard className="avatarCard" data={TeamData} />
+            <AvatarCard className="avatarCard" />
+            <AvatarCard className="avatarCard" />
+            <AvatarCard className="avatarCard" />
+            <AvatarCard className="avatarCard" />
+            <AvatarCard className="avatarCard" />
+            <AvatarCard className="avatarCard" />
           </div>
         </TeamContainer>
         <TransparentContainer>
