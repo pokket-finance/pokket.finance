@@ -16,8 +16,8 @@ const Container = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 1280px) {
-    width: 100vw;
-    /* padding: 18px; */
+    width: 100%;
+    padding: 0 0 80px 0;
   }
 `;
 
@@ -39,9 +39,8 @@ const SponsorsContainer = styled.div`
     color: white;
 
     @media only screen and (max-width: 1280px) {
-      width: 100%;
       font-size: 24px;
-      padding: 48px 0 48px 0;
+      padding: 48px 0 48px 18px;
     }
   }
 `;
@@ -50,7 +49,6 @@ const SponsorLogo = styled.div`
   margin: 70px 250px 0 0;
   width: 370px;
   height: 120px;
-  /* background: #ffffff33; */
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -58,8 +56,8 @@ const SponsorLogo = styled.div`
 
   @media only screen and (max-width: 1280px) {
     margin: 0;
-    /* width: 340px; */
-    width: 90%;
+    width: 100%;
+    max-width: 370px;
     height: 110px;
   }
 `;
@@ -73,8 +71,13 @@ const SponsorDeetContainer = styled.div`
   @media only screen and (max-width: 1280px) {
     margin: 60px 0;
     font-size: 14px;
-    padding: 0 10px 0 0;
+    padding: 0 0 0 18px;
+    width: 80%;
   }
+`;
+
+const ReactSVGStyled = styled(ReactSVG)`
+  width: 90%;
 `;
 
 const FourthPart = () => {
@@ -86,7 +89,7 @@ const FourthPart = () => {
         <SponsorsContainer>
           <div className="test">OUR BACKERS.</div>
           <SponsorLogo>
-            <ReactSVG src={BastionBanner} />
+            <ReactSVGStyled src={BastionBanner} />
           </SponsorLogo>
         </SponsorsContainer>
         <SponsorDeetContainer>

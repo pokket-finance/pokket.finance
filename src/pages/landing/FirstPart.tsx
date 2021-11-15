@@ -125,6 +125,7 @@ const FirstPart = () => {
   };
 
   useEffect(() => (window.onresize = updateSize), []);
+  console.log('screensize', size);
 
   const { Discord, Git, Twitter, WebImage, WebImageMobile } = useThemeSVGUrl([
     'Discord',
