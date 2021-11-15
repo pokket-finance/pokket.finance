@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Card from '@/components/card';
@@ -15,7 +16,6 @@ const Container = styled.div`
     rgba(43, 93, 219, 0.22) 28.31%,
     rgba(99, 141, 248, 0) 100%
   );
-  /* background: LinearGradient; */
   margin: -80px 200px 0 0;
 
   @media only screen and (max-width: 1280px) {
@@ -91,12 +91,47 @@ const LinkItem = styled(SVGButton)`
   color: white;
 `;
 
+const SVGStyle = {
+  color: 'white',
+};
+
+// const SVGWebStyle = {
+//   marginTop: '100px',
+//   marginLeft: 'calc((100vw/2) - 475px)',
+// };
+
+const ReactSVGStyled = styled(ReactSVG)`
+  margin-left: calc((100vw / 2) - 475px);
+  margin-top: 100px;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: -270px;
+    margin-right: 0px;
+    display: flex;
+  }
+`;
+
 const FirstPart = () => {
-  const { Discord, Git, Twitter, WebImage } = useThemeSVGUrl([
+  const [size, setSize] = useState({
+    x: window.innerWidth,
+    y: window.innerHeight,
+  });
+
+  const updateSize = () => {
+    setSize({
+      x: window.innerWidth,
+      y: window.innerHeight,
+    });
+  };
+
+  useEffect(() => (window.onresize = updateSize), []);
+
+  const { Discord, Git, Twitter, WebImage, WebImageMobile } = useThemeSVGUrl([
     'Discord',
     'Git',
     'Twitter',
     'WebImage',
+    'WebImageMobile',
   ]);
   return (
     <Container>
@@ -113,28 +148,26 @@ const FirstPart = () => {
         <SocialContainer>
           <a href="https://discord.gg/ajYhWTFR" target="blank">
             <LinkItem>
-              <ReactSVG src={Discord} style={{ color: 'white' }} />
+              <ReactSVG src={Discord} style={SVGStyle} />
             </LinkItem>
           </a>
           <a href="" target="blank">
             <LinkItem>
-              <ReactSVG src={Git} style={{ color: 'white' }} />
+              <ReactSVG src={Git} style={SVGStyle} />
             </LinkItem>
           </a>
           <a href="https://twitter.com/PokketOfficial" target="blank">
             <LinkItem>
-              <ReactSVG src={Twitter} style={{ color: 'white' }} />
+              <ReactSVG src={Twitter} style={SVGStyle} />
             </LinkItem>
           </a>
         </SocialContainer>
       </LeftContainer>
-      <ReactSVG
-        src={WebImage}
-        style={{
-          marginTop: '100px',
-          marginLeft: 'calc((100vw/2) - 475px)',
-        }}
-      />
+      {size.x < 1280 ? (
+        <ReactSVGStyled src={WebImageMobile} />
+      ) : (
+        <ReactSVGStyled src={WebImage} />
+      )}
     </Container>
   );
 };
