@@ -34,6 +34,10 @@ const PartnerContainer = styled.div`
   justify-content: center;
 `;
 
+const ReactSVGStyled = styled(ReactSVG)`
+  width: 300px;
+`;
+
 // const PartnerCard = styled.div`
 //   width: 20%;
 //   height: 150px;
@@ -71,7 +75,7 @@ const Partners = (props: { title: string; className?: string }) => {
       <PartnerContainer>
         {partnerUrlArray.map((item) => (
           // <PartnerCard key={item.key}>
-          <ReactSVG src={item.value} />
+          <ReactSVGStyled src={item.value} />
           // </PartnerCard>
         ))}
       </PartnerContainer>

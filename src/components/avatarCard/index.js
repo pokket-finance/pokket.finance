@@ -42,22 +42,20 @@ const CoreTeam = styled.div`
   }
 `;
 
-const ImageStyle = styled(Image)`
-  border-radius: 12px;
-`;
-
 const ImageDiv = styled.div`
   width: 150px;
   height: 150px;
+  border: 3px solid ${(props) => {
+    return props.theme.name === 'Light' ? '#eceff8' : 'rgba(255,255,255,0)'
+
+  }};
+  border-radius: 10px;
+  overflow: hidden;
 `;
 
-const ImageTest = styled.img`
-  border-radius: 12px;
-`
-
-const StyledReactSVG = styled(ReactSVG)`
-  width: '150px';
-  height: '150px';
+const ReactSVGStyled = styled(ReactSVG)`
+  filter: grayscale(100%);
+  border-radius: 5px;
 `
 
 const Card = (props) => {
@@ -75,7 +73,7 @@ const Card = (props) => {
       <Avatar>
         <ImageDiv>
           {/* <ImageStyle src={member.pic} width="150" height="150" /> */}
-          <ReactSVG src={`/assets/Team/${member.pic}.svg`} />
+          <ReactSVGStyled src={`/assets/Team/${member.pic}.svg`} />
         </ImageDiv>
       </Avatar>
       <CoreTeam>
