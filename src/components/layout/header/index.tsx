@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
-import CustomButton from '@/components/customButton';
+import { CustomButton, ComingSoonButton } from '@/components/customButton';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 import TopPanel from '../topPanel';
@@ -19,7 +19,9 @@ const HeaderContainer = styled.div`
   background-color: transparent;
 
   @media only screen and (max-width: 1280px) {
-    background-color: #252632;
+    background-color: ${(props) => {
+      return props.theme.name === 'Light' ? '#FFFFFF' : '#252632';
+    }};
     padding: 0;
     justify-content: right;
     align-items: none;
@@ -87,7 +89,8 @@ const Header = () => {
           <Dropdown width={100} title="Docs" />
         </DropdownGroup>
         <LinkContainer>
-          <CustomButton>Launch App</CustomButton>
+          {/* <CustomButton>Launch App</CustomButton> */}
+          <ComingSoonButton>Coming Soon</ComingSoonButton>
         </LinkContainer>
       </HeaderContainer>
     </>

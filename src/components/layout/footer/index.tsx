@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
   background: #18202b;
   user-select: none;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 500px) {
     padding: 0;
     width: 100%;
     flex-direction: column;
@@ -20,20 +20,30 @@ const FooterContainer = styled.div`
 
 const LogoContainer = styled.div`
   width: 50%;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 40px 0 0 50px;
+  }
 `;
 
 const LinkContainer = styled.div`
   width: 60%;
   display: flex;
   white-space: nowrap;
+
+  @media only screen and (max-width: 1280px) {
+    /* margin: 40px 0; */
+  }
 `;
 
 const LinkContainerSplit = styled.div`
   display: flex;
   flex-direction: row;
+
   @media only screen and (max-width: 1280px) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
   }
 `;
 
@@ -42,12 +52,21 @@ const LinkItem = styled.div`
   flex-direction: column;
   flex: 1;
   margin-left: 60px;
+
+  @media only screen and (max-width: 1280px) {
+    margin-left: 50px;
+  }
+
   .title {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     color: #ffffff;
     padding-bottom: 12px;
+
+    @media only screen and (max-width: 1280px) {
+      margin-top: 40px;
+    }
   }
   .link {
     padding: 12px 0;
@@ -101,6 +120,9 @@ const Footer = () => {
           <LinkContainerSplit>
             <LinkItem>
               <div className="title">Pokket Vaults</div>
+              <div className="link">Coming soon.</div>
+              <div className="link">Coming soon.</div>
+              <div className="link">Coming soon.</div>
               <div className="link">Coming soon.</div>
             </LinkItem>
             <LinkItem>

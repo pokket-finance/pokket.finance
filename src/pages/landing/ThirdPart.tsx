@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { LeftPoolCard, RightPoolCard } from '../../components/poolCard';
 
@@ -84,7 +84,8 @@ const CommunityCard = styled.div`
   margin: auto 0 auto 0;
 
   @media only screen and (max-width: 1280px) {
-    width: 300px;
+    width: 315px;
+    margin: 0 0 0 18px;
   }
 
   .communityTitle {
@@ -97,7 +98,6 @@ const CommunityCard = styled.div`
 
     @media only screen and (max-width: 1280px) {
       font-size: 24px;
-      width: 100vw;
     }
   }
   .communityContent {
@@ -109,7 +109,6 @@ const CommunityCard = styled.div`
 
     @media only screen and (max-width: 1280px) {
       font-size: 14px;
-      width: 100vw;
     }
   }
 `;
@@ -120,8 +119,14 @@ const SecondHalf = styled.div`
   margin-top: 100px;
   padding: 0 0 60px 0;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 640px) {
+    margin-top: 75px;
+    padding: 0;
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: flex;
     width: 100vw;
   }
 `;
@@ -138,8 +143,15 @@ const Image = styled.div`
   }};
 
   @media only screen and (max-width: 1280px) {
-    width: 100%;
+    width: 500px;
     height: 250px;
+    margin: 0 25px 0 0;
+  }
+
+  @media only screen and (max-width: 640px) {
+    width: 325px;
+    height: 250px;
+    margin: 25px auto 0 auto;
   }
 `;
 
@@ -149,7 +161,7 @@ const CopyWriteContainer = styled.div`
   padding: 0 0 120px 0;
 
   @media only screen and (max-width: 1280px) {
-    padding: 100px 18px 100px 18px;
+    padding: 0 18px 100px 18px;
   }
 
   .copyTitle {
@@ -192,6 +204,20 @@ const CopyWriteContainer = styled.div`
 `;
 
 const ThirdPart = () => {
+  const [size, setSize] = useState({
+    x: window.innerWidth,
+    y: window.innerHeight,
+  });
+
+  const updateSize = () => {
+    setSize({
+      x: window.innerWidth,
+      y: window.innerHeight,
+    });
+  };
+
+  useEffect(() => (window.onresize = updateSize), []);
+
   return (
     <Container>
       <InfoCardContainer>
@@ -216,17 +242,18 @@ const ThirdPart = () => {
       </InfoCardContainer>
 
       <SecondHalf>
-        <Image />
+        {size.x > 1280 ? <Image /> : ''}
         <CommunityCard>
           <div className="communityTitle">GOVERNED BY THE COMMUNITY.</div>
           <div className="communityContent">
-            The Pokket Protocol is overseen by a decentralised <br />
-            community of passionate PKKT token holders.
+            The Pokket Protocol is overseen by a decentralised community of
+            passionate PKKT token holders.
             <br />
-            <br /> Holders and their delegates propose and vote on upgrades to{' '}
+            <br /> Holders and their delegates propose and vote on upgrades to
             the protocol.
           </div>
         </CommunityCard>
+        {size.x < 1280 ? <Image /> : ''}
       </SecondHalf>
 
       <CopyWriteContainer>

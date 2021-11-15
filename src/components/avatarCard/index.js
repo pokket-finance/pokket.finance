@@ -42,66 +42,53 @@ const CoreTeam = styled.div`
   }
 `;
 
-const ImageStyle = styled(Image)`
-  border-radius: 12px;
-`;
-
 const ImageDiv = styled.div`
   width: 150px;
   height: 150px;
+  border: 3px solid ${(props) => {
+    return props.theme.name === 'Light' ? '#eceff8' : 'rgba(255,255,255,0)'
+
+  }};
+  border-radius: 10px;
+  overflow: hidden;
 `;
 
-const ImageTest = styled.img`
-  border-radius: 12px;
+const ReactSVGStyled = styled(ReactSVG)`
+  filter: grayscale(100%);
 `
 
-const StyledReactSVG = styled(ReactSVG)`
-  width: '150px';
-  height: '150px';
+const ReactSVGSocial = styled(ReactSVG)`
+ color: #d8d8d8;
 `
 
 const Card = (props) => {
   const { className, member } = props;
-  // const { Discord, Git, Twitter } = useThemeSVGUrl([
-  //   'Discord',
-  //   'Git',
-  //   'Twitter',
-  // ]);
+  const { Discord, Git, Twitter } = useThemeSVGUrl([
+    // 'Discord',
+    // 'Git',
+    'Twitter',
+  ]);
 
-  console.log('member', member);
 
   return (
     <AvatarCardContainer className={className}>
       <Avatar>
         <ImageDiv>
           {/* <ImageStyle src={member.pic} width="150" height="150" /> */}
-          <ReactSVG src={`/assets/Team/${member.pic}.svg`} />
+          <ReactSVGStyled src={`/assets/Team/${member.pic}.svg`} />
         </ImageDiv>
       </Avatar>
       <CoreTeam>
         <div className="coreTeamTitle">{member.name}</div>
         <div className="message">{member.position} </div>
         <div className="link">
-          {/* <ReactSVG
-            beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 24px;height: 24px;');
-            }}
-            src={Discord}
-          />
-          <ReactSVG
-            className="space"
-            beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 24px;height: 24px;');
-            }}
-            src={Git}
-          />
-          <ReactSVG
+          <a href="" target="blank"><ReactSVGSocial
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
             src={Twitter}
-          /> */}
+          /></a>
         </div>
       </CoreTeam>
     </AvatarCardContainer>

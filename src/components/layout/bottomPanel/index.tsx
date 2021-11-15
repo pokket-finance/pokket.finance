@@ -26,7 +26,11 @@ const Copyright = styled.div`
   color: rgba(255, 255, 255, 0.6);
 
   @media only screen and (max-width: 1280px) {
-    font-size: 8px;
+    display: flex;
+    width: 100%;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -38,18 +42,32 @@ const SVGButton = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media only screen and (max-width: 1280px) {
+    width: 20px
+    height: 20px;
+  }
 `;
 
 const LinkGroup = styled.div`
   height: 40px;
   display: flex;
-  margin: 14px 0 14px 0;
+  margin: 0 0 0 0;
   opacity: 0.5;
+
+  @media only screen and (max-width: 1280px) {
+    margin: 14px 0 14px 14px;
+    height: 50%;
+  }
 `;
 
 const LinkItem = styled(SVGButton)`
   margin-right: 10px;
   color: #d8d8d8;
+
+  @media only screen and (max-width: 1280px) {
+    margin-right: 3px;
+  }
 `;
 
 const BottomPanel = () => {

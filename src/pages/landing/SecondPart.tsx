@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: -125px 0;
 
   @media only screen and (max-width: 1280px) {
-    padding: 0;
+    padding: 60px 0;
   }
 `;
 
@@ -29,6 +29,7 @@ const DataContainer = styled.div`
   border-radius: 12px;
 
   @media only screen and (max-width: 1280px) {
+    margin-top: -100px;
     height: 130px;
     width: 90%;
   }
@@ -96,6 +97,7 @@ const BlueContainer = styled.div`
   /* background: linear-gradient(89.61deg, #295ad7 0.34%, #638df8 99.69%); */
 
   @media only screen and (max-width: 1280px) {
+    margin-top: 0px;
     padding: 150px 16px 0 16px;
   }
 
