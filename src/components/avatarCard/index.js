@@ -37,7 +37,7 @@ const CoreTeam = styled.div`
   .link {
     display: flex;
     .space {
-      margin-left: 10px;
+      /* margin-left: 10px; */
     }
   }
 `;
@@ -61,12 +61,15 @@ const ReactSVGSocial = styled(ReactSVG)`
  color: #d8d8d8;
 `
 
+const LinkStyle = styled.a`
+  margin: 0 10px 0 0;
+`
+
 const Card = (props) => {
   const { className, member } = props;
-  const { Discord, Git, Twitter } = useThemeSVGUrl([
-    // 'Discord',
-    // 'Git',
+  const { Twitter, LinkedIn } = useThemeSVGUrl([
     'Twitter',
+    'LinkedIn',
   ]);
 
 
@@ -74,7 +77,6 @@ const Card = (props) => {
     <AvatarCardContainer className={className}>
       <Avatar>
         <ImageDiv>
-          {/* <ImageStyle src={member.pic} width="150" height="150" /> */}
           <ReactSVGStyled src={`/assets/Team/${member.pic}.svg`} />
         </ImageDiv>
       </Avatar>
@@ -82,13 +84,20 @@ const Card = (props) => {
         <div className="coreTeamTitle">{member.name}</div>
         <div className="message">{member.position} </div>
         <div className="link">
-          <a href="" target="blank"><ReactSVGSocial
+          {member.twitter && <LinkStyle href={member.twitter} target="blank"><ReactSVGSocial
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
             src={Twitter}
-          /></a>
+          /></LinkStyle>}
+          {member.linkedin && <LinkStyle href={member.linkedin} target="blank"><ReactSVGSocial
+            className="space"
+            beforeInjection={(svg) => {
+              svg.setAttribute('style', 'width: 24px;height: 24px;');
+            }}
+            src={LinkedIn}
+          /></LinkStyle>}
         </div>
       </CoreTeam>
     </AvatarCardContainer>

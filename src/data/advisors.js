@@ -2,25 +2,23 @@ const Advisors = [
   {
     name: 'Wei',
     position: '',
-    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/wei-zhu-cfa-49162611/?originalSubdomain=hk',
     pic: 'wei',
   },
   {
     name: 'Ning',
     position: '',
-    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/ningxiang-zhang-78468662/?originalSubdomain=hk',
     pic: 'ning',
   },
   {
     name: 'Ayush',
     position: '',
-    twitter: '',
     pic: 'ayush',
   },
   {
     name: 'Elsa',
     position: '',
-    twitter: '',
     pic: 'elsa',
   }
 ]
