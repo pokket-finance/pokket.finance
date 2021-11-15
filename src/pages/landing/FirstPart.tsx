@@ -104,7 +104,7 @@ const ReactSVGStyled = styled(ReactSVG)`
   margin-left: calc((100vw / 2) - 475px);
   margin-top: 100px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 860px) {
     margin-top: -270px;
     margin-right: 0px;
     display: flex;
@@ -163,7 +163,7 @@ const FirstPart = () => {
           </a>
         </SocialContainer>
       </LeftContainer>
-      {size.x < 1280 ? (
+      {size.x < 860 ? (
         <ReactSVGStyled src={WebImageMobile} />
       ) : (
         <ReactSVGStyled src={WebImage} />

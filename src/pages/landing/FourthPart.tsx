@@ -47,7 +47,7 @@ const SponsorsContainer = styled.div`
 `;
 
 const SponsorLogo = styled.div`
-  margin: 56px 250px 0 0;
+  margin: 70px 250px 0 0;
   width: 370px;
   height: 120px;
   /* background: #ffffff33; */
@@ -55,9 +55,6 @@ const SponsorLogo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
-  font-weight: 400;
-  color: white;
 
   @media only screen and (max-width: 1280px) {
     margin: 0;
@@ -81,7 +78,7 @@ const SponsorDeetContainer = styled.div`
 `;
 
 const FourthPart = () => {
-  const { Bastion } = useThemeSVGUrl(['Bastion']);
+  const { BastionBanner } = useThemeSVGUrl(['BastionBanner']);
 
   return (
     <Container>
@@ -89,7 +86,7 @@ const FourthPart = () => {
         <SponsorsContainer>
           <div className="test">OUR BACKERS.</div>
           <SponsorLogo>
-            <ReactSVG src={Bastion} />
+            <ReactSVG src={BastionBanner} />
           </SponsorLogo>
         </SponsorsContainer>
         <SponsorDeetContainer>

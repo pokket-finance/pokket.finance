@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
-import CustomButton from '@/components/customButton';
+import { CustomButton, ComingSoonButton } from '@/components/customButton';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 import TopPanel from '../topPanel';
@@ -87,7 +87,8 @@ const Header = () => {
           <Dropdown width={100} title="Docs" />
         </DropdownGroup>
         <LinkContainer>
-          <CustomButton>Launch App</CustomButton>
+          {/* <CustomButton>Launch App</CustomButton> */}
+          <ComingSoonButton>Coming Soon</ComingSoonButton>
         </LinkContainer>
       </HeaderContainer>
     </>
