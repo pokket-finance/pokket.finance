@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
 import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
-import { CustomButton, ComingSoonButton } from '@/components/customButton';
+import { ComingSoonButton } from '@/components/customButton';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 import TopPanel from '../topPanel';

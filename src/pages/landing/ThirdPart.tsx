@@ -216,7 +216,9 @@ const ThirdPart = () => {
     });
   };
 
-  useEffect(() => (window.onresize = updateSize), []);
+  useEffect(() => {
+    window.onresize = updateSize;
+  }, []);
 
   return (
     <Container>
