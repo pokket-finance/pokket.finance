@@ -19,7 +19,9 @@ const HeaderContainer = styled.div`
   background-color: transparent;
 
   @media only screen and (max-width: 1280px) {
-    background-color: #252632;
+    background-color: ${(props) => {
+      return props.theme.name === 'Light' ? '#FFFFFF' : '#252632';
+    }};
     padding: 0;
     justify-content: right;
     align-items: none;

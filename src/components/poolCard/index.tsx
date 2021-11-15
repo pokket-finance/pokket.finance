@@ -58,7 +58,7 @@ const GraphicBoxRight = styled.div<StyleProps>`
   @media only screen and (max-width: 1280px) {
     width: 270px;
     height: 240px;
-    margin: 0 0 0 0;
+    margin: 0px 0 0 30px;
   }
 `;
 
@@ -66,7 +66,7 @@ const GraphicBoxTwoRight = styled(GraphicBox)`
   margin: -325px 0 0 25px;
 
   @media only screen and (max-width: 1280px) {
-    margin: -225px 0 0 0;
+    margin: -225px 0 0 15px;
   }
 `;
 
@@ -74,7 +74,7 @@ const GraphicBoxThreeRight = styled(GraphicBox)`
   margin: -325px 20px 0 0;
 
   @media only screen and (max-width: 1280px) {
-    margin: -250px 20px 0 0;
+    margin: -225px 20px 0 0;
   }
 `;
 
@@ -97,7 +97,10 @@ const PurpleBoxContainer = styled.div`
   padding: 16px;
 
   @media only screen and (max-width: 1280px) {
+    /* grid-template-columns: 90px 90px; */
+    background-color: transparent;
     padding: 8px;
+    height: 100%;
   }
 `;
 
@@ -129,6 +132,8 @@ const GreyPill = styled.div<StyleProps>`
   @media only screen and (max-width: 1280px) {
     height: 20px;
     width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 `;
 
@@ -143,8 +148,8 @@ const GreyBox = styled.div`
   margin: 0 0 0 16px;
 
   @media only screen and (max-width: 1280px) {
-    width: 265px;
-    height: 24px;
+    width: 237px;
+    height: 22px;
   }
 `;
 
@@ -157,8 +162,8 @@ const CyanBox = styled.div`
   margin: -3px 0 0 16px;
 
   @media only screen and (max-width: 1280px) {
-    width: 265px;
-    height: 60px;
+    width: 237px;
+    height: 50px;
   }
 `;
 
@@ -181,8 +186,8 @@ const GreenBox = styled.div`
   border: 1px solid #5fcf99;
 
   @media only screen and (max-width: 1280px) {
-    width: 265px;
-    height: 24px;
+    width: 237px;
+    height: 22px;
   }
 `;
 
@@ -218,6 +223,12 @@ const TypographyLighter = styled.div`
   font-weight: 400;
   font-size: 10px;
   color: #c8c8c8;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 6px;
+  }
 `;
 
 const Arrow = styled.div`
@@ -228,11 +239,19 @@ const Arrow = styled.div`
   .lineOnly {
     border-left: 2px solid #969696;
     height: 16px;
+
+    @media only screen and (max-width: 1280px) {
+      height: 8px;
+    }
   }
 
   .line {
     border-left: 2px solid #969696;
     height: 10px;
+
+    @media only screen and (max-width: 1280px) {
+      height: 5px;
+    }
   }
 
   .point {
