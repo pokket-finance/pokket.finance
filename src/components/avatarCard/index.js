@@ -55,18 +55,20 @@ const ImageDiv = styled.div`
 
 const ReactSVGStyled = styled(ReactSVG)`
   filter: grayscale(100%);
-  border-radius: 5px;
+`
+
+const ReactSVGSocial = styled(ReactSVG)`
+ color: #d8d8d8;
 `
 
 const Card = (props) => {
   const { className, member } = props;
-  // const { Discord, Git, Twitter } = useThemeSVGUrl([
-  //   'Discord',
-  //   'Git',
-  //   'Twitter',
-  // ]);
+  const { Discord, Git, Twitter } = useThemeSVGUrl([
+    // 'Discord',
+    // 'Git',
+    'Twitter',
+  ]);
 
-  console.log('member', member);
 
   return (
     <AvatarCardContainer className={className}>
@@ -80,26 +82,13 @@ const Card = (props) => {
         <div className="coreTeamTitle">{member.name}</div>
         <div className="message">{member.position} </div>
         <div className="link">
-          {/* <ReactSVG
-            beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 24px;height: 24px;');
-            }}
-            src={Discord}
-          />
-          <ReactSVG
-            className="space"
-            beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 24px;height: 24px;');
-            }}
-            src={Git}
-          />
-          <ReactSVG
+          <a href="" target="blank"><ReactSVGSocial
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
             src={Twitter}
-          /> */}
+          /></a>
         </div>
       </CoreTeam>
     </AvatarCardContainer>

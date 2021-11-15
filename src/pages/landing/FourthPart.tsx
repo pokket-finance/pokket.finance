@@ -49,7 +49,6 @@ const SponsorLogo = styled.div`
   margin: 70px 250px 0 0;
   width: 370px;
   height: 120px;
-  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +76,11 @@ const SponsorDeetContainer = styled.div`
 `;
 
 const ReactSVGStyled = styled(ReactSVG)`
-  width: 90%;
+  width: 100%;
+
+  @media only screen and (max-width: 1280px) {
+    width: 90%;
+  }
 `;
 
 const FourthPart = () => {
