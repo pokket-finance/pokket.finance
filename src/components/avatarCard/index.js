@@ -84,14 +84,14 @@ const Card = (props) => {
         <div className="coreTeamTitle">{member.name}</div>
         <div className="message">{member.position} </div>
         <div className="link">
-          {member.twitter && <LinkStyle href="" target="blank"><ReactSVGSocial
+          {member.twitter && <LinkStyle href={member.twitter} target="blank"><ReactSVGSocial
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');
             }}
             src={Twitter}
           /></LinkStyle>}
-          {member.linkedin && <LinkStyle href="" target="blank"><ReactSVGSocial
+          {member.linkedin && <LinkStyle href={member.linkedin} target="blank"><ReactSVGSocial
             className="space"
             beforeInjection={(svg) => {
               svg.setAttribute('style', 'width: 24px;height: 24px;');

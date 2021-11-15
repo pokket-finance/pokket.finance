@@ -27,6 +27,7 @@ const Team = [
   {
     name: 'Ada',
     position: 'Wallet & Blockchain Development Lead',
+    linkedin: 'https://www.linkedin.com/in/cai-ada-21809612/',
     pic: 'ada',
   },
   {
@@ -44,6 +45,7 @@ const Team = [
   {
     name: 'Doug',
     position: 'Marketing Lead',
+    twitter: 'https://twitter.com/Dougpokket',
     pic: 'doug'
   },
   {
