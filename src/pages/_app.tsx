@@ -6,7 +6,7 @@ import Head from 'next/head';
 import App from 'next/app';
 import ThemeProviders from './ThemeProviders';
 
-import PageLoader from '@/components/PageLoader';
+// import PageLoader from '@/components/PageLoader';
 
 class ReactApp extends App {
   render() {
@@ -14,7 +14,7 @@ class ReactApp extends App {
     return (
       <>
         <ThemeProviders>
-          <PageLoader />
+          {/* <PageLoader /> */}
           <Head>
             <title>POKKET</title>
             <link rel="shortcut icon" href="/favicon.ico" />
