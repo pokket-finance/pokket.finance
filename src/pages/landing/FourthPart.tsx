@@ -84,7 +84,7 @@ const ReactSVGStyled = styled(ReactSVG)`
 `;
 
 const FourthPart = () => {
-  const { BastionBanner } = useThemeSVGUrl(['BastionBanner']);
+  const { BastionGold } = useThemeSVGUrl(['BastionGold']);
 
   return (
     <Container>
@@ -92,7 +92,7 @@ const FourthPart = () => {
         <SponsorsContainer>
           <div className="test">OUR BACKERS.</div>
           <SponsorLogo>
-            <ReactSVGStyled src={BastionBanner} />
+            <ReactSVGStyled src={BastionGold} />
           </SponsorLogo>
         </SponsorsContainer>
         <SponsorDeetContainer>

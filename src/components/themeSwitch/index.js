@@ -11,7 +11,7 @@ const ThemeSwitchContainer = styled.div`
   height: 40px;
   align-items: center;
   .lightFont {
-    margin: 0 14px 0 8px;
+    margin: 0 8px 0 8px;
     font-weight: bold;
     font-size: 14px;
     color: ${(props) => {
@@ -48,7 +48,7 @@ const ThemeSwitch = () => {
 
   return (
     <ThemeSwitchContainer>
-      <ReactSVG src={Sun} style={{ marginTop: '5px' }} />
+      <ReactSVG src={Sun} style={{ marginTop: '4px' }} />
       <div className="lightFont"></div>
       <Switch
         onChange={handleChange}
