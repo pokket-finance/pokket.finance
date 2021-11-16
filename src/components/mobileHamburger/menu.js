@@ -6,13 +6,12 @@ import ThemeSwitch from '../../components/themeSwitch';
 
 const Container = styled.div`
   width: 100vw;
-  /* height: 300px; */
   background-color: ${(props) => {
     return props.theme.name === 'Light' ? '#FFFFFF' : '#252632';
   }};
   left: 0;
   position: absolute;
-  margin-top: 170px;
+  margin-top: 185px;
   border: none;
 `
 
@@ -45,7 +44,6 @@ const ThemeSwitchContainer = styled.div`
 const Menu = () => {
   return (
     <Container>
-
       <LinkContainer>
         <StyledLink href="/"><Typography>Home</Typography></StyledLink>
         <StyledLink href="/team"><Typography>Team</Typography></StyledLink>
@@ -54,7 +52,6 @@ const Menu = () => {
           <ThemeSwitch />
         </ThemeSwitchContainer>
       </LinkContainer>
-
     </Container>
   )
 }
