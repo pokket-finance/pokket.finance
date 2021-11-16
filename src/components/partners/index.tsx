@@ -43,33 +43,31 @@ const PartnerContainer = styled.div`
   }
 `;
 
-const ReactSVGStyled = styled(ReactSVG)`
-  width: 300px;
+const PartnerCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background: ${(props) => props.theme.color.topPanelBackground}; */
+  /* width: 20%; */
+  /* height: 150px; */
+  /* border-radius: 16px; */
+  /* border: 1px solid rgba(63, 109, 225, 0.2); */
+  margin: 1% 0;
 `;
-
-// const PartnerCard = styled.div`
-//   width: 20%;
-//   height: 150px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   background: ${(props) => props.theme.color.topPanelBackground};
-//   border-radius: 16px;
-//   border: 1px solid rgba(63, 109, 225, 0.2);
-//   margin: 1% 0;
-// `;
 
 const Partners = (props: { title: string; className?: string }) => {
   const { title, className } = props;
-  const { BastionBanner } = useThemeSVGUrl([
-    'BastionBanner',
+  const { BastionGold } = useThemeSVGUrl([
+    // 'BastionBanner',
+    'BastionGold',
     // 'Partner3',
     // 'Partner4',
     // 'Partner5',
     // 'Partner6',
   ]);
   const partnerUrlArray = [
-    { key: 'BastionBanner', value: BastionBanner },
+    // { key: 'BastionBanner', value: BastionBnner },
+    { key: 'BastionGold', value: BastionGold },
     // { key: 'Partner2', value: Partner2 },
     // { key: 'Partner3', value: Partner3 },
     // { key: 'Partner4', value: Partner4 },
@@ -84,8 +82,10 @@ const Partners = (props: { title: string; className?: string }) => {
       <PartnerContainer>
         {partnerUrlArray.map((item) => (
           // <PartnerCard key={item.key}>
-          <ReactSVGStyled src={item.value} />
-          // </PartnerCard>
+          // <ReactSVGStyled src={item.value} />
+          <PartnerCard>
+            <ReactSVG src={BastionGold} />
+          </PartnerCard>
         ))}
       </PartnerContainer>
     </Container>
