@@ -12,7 +12,7 @@ const Container = styled.div`
   }};
   left: 0;
   position: absolute;
-  margin-top: 270px;
+  margin-top: 170px;
   border: none;
 `
 
