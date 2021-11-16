@@ -63,9 +63,9 @@ const ReactSVGStyled = styled(ReactSVG)`
 
 const Partners = (props: { title: string; className?: string }) => {
   const { title, className } = props;
-  const { BastionGold } = useThemeSVGUrl([
+  const { BastionTrading } = useThemeSVGUrl([
     // 'BastionBanner',
-    'BastionGold',
+    'BastionTrading',
     // 'Partner3',
     // 'Partner4',
     // 'Partner5',
@@ -73,7 +73,7 @@ const Partners = (props: { title: string; className?: string }) => {
   ]);
   // const partnerUrlArray = [
   //   { key: 'BastionBanner', value: BastionBnner },
-  //   { key: 'BastionGold', value: BastionGold },
+  //   { key: 'BastionTrading', value: BastionTrading },
   //   { key: 'Partner2', value: Partner2 },
   //   { key: 'Partner3', value: Partner3 },
   //   { key: 'Partner4', value: Partner4 },
@@ -90,13 +90,13 @@ const Partners = (props: { title: string; className?: string }) => {
           <PartnerCard key={item.key}>
           <ReactSVGStyled src={item.value} />
           <PartnerCard>
-            <ReactSVG src={BastionGold} />
+            <ReactSVG src={BastionTrading} />
           </PartnerCard>
         ))}
       </PartnerContainer> */}
       <PartnerContainer>
         <PartnerCard>
-          <ReactSVGStyled src={BastionGold} />
+          <ReactSVGStyled src={BastionTrading} />
         </PartnerCard>
       </PartnerContainer>
     </Container>
