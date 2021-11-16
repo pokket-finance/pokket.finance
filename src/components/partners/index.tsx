@@ -65,28 +65,33 @@ const Partners = (props: { title: string; className?: string }) => {
     // 'Partner5',
     // 'Partner6',
   ]);
-  const partnerUrlArray = [
-    // { key: 'BastionBanner', value: BastionBnner },
-    { key: 'BastionGold', value: BastionGold },
-    // { key: 'Partner2', value: Partner2 },
-    // { key: 'Partner3', value: Partner3 },
-    // { key: 'Partner4', value: Partner4 },
-    // { key: 'Partner5', value: Partner5 },
-    // { key: 'Partner6', value: Partner6 },
-    // { key: 'Partner7', value: Partner1 },
-    // { key: 'Partner8', value: Partner2 },
-  ];
+  // const partnerUrlArray = [
+  //   { key: 'BastionBanner', value: BastionBnner },
+  //   { key: 'BastionGold', value: BastionGold },
+  //   { key: 'Partner2', value: Partner2 },
+  //   { key: 'Partner3', value: Partner3 },
+  //   { key: 'Partner4', value: Partner4 },
+  //   { key: 'Partner5', value: Partner5 },
+  //   { key: 'Partner6', value: Partner6 },
+  //   { key: 'Partner7', value: Partner1 },
+  //   { key: 'Partner8', value: Partner2 },
+  // ];
   return (
     <Container className={className}>
       {title && <Title>{title}</Title>}
-      <PartnerContainer>
+      {/* <PartnerContainer>
         {partnerUrlArray.map((item) => (
-          // <PartnerCard key={item.key}>
-          // <ReactSVGStyled src={item.value} />
+          <PartnerCard key={item.key}>
+          <ReactSVGStyled src={item.value} />
           <PartnerCard>
             <ReactSVG src={BastionGold} />
           </PartnerCard>
         ))}
+      </PartnerContainer> */}
+      <PartnerContainer>
+        <PartnerCard>
+          <ReactSVG src={BastionGold} />
+        </PartnerCard>
       </PartnerContainer>
     </Container>
   );
