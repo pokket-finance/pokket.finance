@@ -5,7 +5,7 @@ import Footer from '@/components/layout/footer';
 import Partners from '@/components/partners';
 import AvatarCard from '@/components/avatarCard';
 import TeamData from '../../data/team';
-import AdvisorData from '../../data/advisors';
+// import AdvisorData from '../../data/advisors';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color.bodyBG};
@@ -25,6 +25,11 @@ const TitleContainer = styled.div`
   font-size: 48px;
   color: ${(props) => props.theme.color.bodyfontColorLevel1};
   padding-bottom: 50px;
+
+  @media only screen and (max-width: 1280px) {
+    padding-top: 30px;
+    font-size: 24px;
+  }
 `;
 
 const TeamContainer = styled.div`
@@ -36,7 +41,7 @@ const TeamContainer = styled.div`
     props.theme.name === 'Light' ? ' #eceff8' : 'rgba(255, 255, 255, 0.07)'};
 
   @media only screen and (max-width: 1280px) {
-    padding: 0;
+    padding: 40px 0;
   }
   .avatarContainer {
     display: flex;
@@ -45,6 +50,11 @@ const TeamContainer = styled.div`
     padding: 60px 0 70px;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: 1280px) {
+      padding: 0;
+    }
+
     .avatarCard {
       margin-top: 24px;
     }
@@ -88,6 +98,11 @@ const Title = styled.div`
   font-weight: bold;
   font-size: 28px;
   text-align: center;
+
+  @media only screen and (max-width: 1280px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 `;
 
 const TeamPage = () => {
@@ -95,7 +110,7 @@ const TeamPage = () => {
     <Container>
       <Header />
       <BodyContainer>
-        <TitleContainer>Meet the Pokket team</TitleContainer>
+        <TitleContainer>Meet the Pokket Team</TitleContainer>
         <TeamContainer>
           <Title>Core Team</Title>
           <div className="avatarContainer">
@@ -107,14 +122,14 @@ const TeamPage = () => {
         <TransparentContainer>
           <Partners title="Liquidity Partners" />
         </TransparentContainer>
-        <TeamContainer>
+        {/* <TeamContainer>
           <Title>Advisors</Title>
           <div className="avatarContainer">
             {AdvisorData.map((member) => (
               <AvatarCard className="avatarCard" member={member} />
             ))}
           </div>
-        </TeamContainer>
+        </TeamContainer> */}
       </BodyContainer>
       <Footer />
     </Container>

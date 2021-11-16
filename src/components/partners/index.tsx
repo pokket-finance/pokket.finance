@@ -24,6 +24,11 @@ const Title = styled.div`
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 5%;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 70px;
+    font-size: 18px;
+  }
 `;
 
 const PartnerContainer = styled.div`
@@ -32,52 +37,61 @@ const PartnerContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 30px;
+  }
 `;
 
-const ReactSVGStyled = styled(ReactSVG)`
-  width: 300px;
+const PartnerCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background: ${(props) => props.theme.color.topPanelBackground}; */
+  /* width: 20%; */
+  /* height: 150px; */
+  /* border-radius: 16px; */
+  /* border: 1px solid rgba(63, 109, 225, 0.2); */
+  margin: 1% 0;
 `;
-
-// const PartnerCard = styled.div`
-//   width: 20%;
-//   height: 150px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   background: ${(props) => props.theme.color.topPanelBackground};
-//   border-radius: 16px;
-//   border: 1px solid rgba(63, 109, 225, 0.2);
-//   margin: 1% 0;
-// `;
 
 const Partners = (props: { title: string; className?: string }) => {
   const { title, className } = props;
-  const { BastionBanner } = useThemeSVGUrl([
-    'BastionBanner',
+  const { BastionGold } = useThemeSVGUrl([
+    // 'BastionBanner',
+    'BastionGold',
     // 'Partner3',
     // 'Partner4',
     // 'Partner5',
     // 'Partner6',
   ]);
-  const partnerUrlArray = [
-    { key: 'BastionBanner', value: BastionBanner },
-    // { key: 'Partner2', value: Partner2 },
-    // { key: 'Partner3', value: Partner3 },
-    // { key: 'Partner4', value: Partner4 },
-    // { key: 'Partner5', value: Partner5 },
-    // { key: 'Partner6', value: Partner6 },
-    // { key: 'Partner7', value: Partner1 },
-    // { key: 'Partner8', value: Partner2 },
-  ];
+  // const partnerUrlArray = [
+  //   { key: 'BastionBanner', value: BastionBnner },
+  //   { key: 'BastionGold', value: BastionGold },
+  //   { key: 'Partner2', value: Partner2 },
+  //   { key: 'Partner3', value: Partner3 },
+  //   { key: 'Partner4', value: Partner4 },
+  //   { key: 'Partner5', value: Partner5 },
+  //   { key: 'Partner6', value: Partner6 },
+  //   { key: 'Partner7', value: Partner1 },
+  //   { key: 'Partner8', value: Partner2 },
+  // ];
   return (
     <Container className={className}>
       {title && <Title>{title}</Title>}
-      <PartnerContainer>
+      {/* <PartnerContainer>
         {partnerUrlArray.map((item) => (
-          // <PartnerCard key={item.key}>
+          <PartnerCard key={item.key}>
           <ReactSVGStyled src={item.value} />
-          // </PartnerCard>
+          <PartnerCard>
+            <ReactSVG src={BastionGold} />
+          </PartnerCard>
         ))}
+      </PartnerContainer> */}
+      <PartnerContainer>
+        <PartnerCard>
+          <ReactSVG src={BastionGold} />
+        </PartnerCard>
       </PartnerContainer>
     </Container>
   );
