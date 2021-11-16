@@ -103,13 +103,21 @@ const Footer = () => {
               <StyledLink href="/team">
                 <div className="link">Team</div>
               </StyledLink>
-              <StyledExternalLink href="https://medium.com/pokketofficial">
+              <StyledExternalLink
+                href="https://medium.com/pokketofficial"
+                target="blank"
+              >
                 <div className="link">Blog</div>
               </StyledExternalLink>
               <StyledLink href="/roadmap">
                 <div className="link">Roadmap</div>
               </StyledLink>
-              <div className="link">Whitepaper</div>
+              <StyledExternalLink
+                href="https://swanky-lunch-e8a.notion.site/Pokket-White-Paper-c3413f92ca704205935d258ec1b370fc"
+                target="blank"
+              >
+                <div className="link">Whitepaper</div>
+              </StyledExternalLink>
             </LinkItem>
             <LinkItem>
               <div className="title">Legal</div>
@@ -127,10 +135,13 @@ const Footer = () => {
             </LinkItem>
             <LinkItem>
               <div className="title">Institutions</div>
-              <StyledExternalLink href="https://pokket.com/">
+              <StyledExternalLink href="https://pokket.com/" target="blank">
                 <div className="link">Pokket.com</div>
               </StyledExternalLink>
-              <StyledExternalLink href="https://pokket.com/crypto-savings-account">
+              <StyledExternalLink
+                href="https://pokket.com/crypto-savings-account"
+                target="blank"
+              >
                 <div className="link">Lend Assets</div>
               </StyledExternalLink>
             </LinkItem>

@@ -86,7 +86,7 @@ const BottomPanel = () => {
             <ReactSVG src={Discord} />
           </LinkItem>
         </a>
-        <a href="" target="blank">
+        <a href="https://github.com/pokket-finance" target="blank">
           <LinkItem>
             <ReactSVG src={Git} />
           </LinkItem>
