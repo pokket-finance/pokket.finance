@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Dropdown, { DropMenuItem } from '@/components/dropdown';
 import { ComingSoonButton } from '@/components/customButton';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
+import MobileHamburger from '../../mobileHamburger';
 
 import TopPanel from '../topPanel';
 
@@ -23,7 +24,8 @@ const HeaderContainer = styled.div`
       return props.theme.name === 'Light' ? '#FFFFFF' : '#252632';
     }};
     padding: 0;
-    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
     align-items: none;
     margin: 0;
     padding: 0 16px 0 16px;
@@ -90,8 +92,9 @@ const Header = () => {
         </DropdownGroup>
         <LinkContainer>
           {/* <CustomButton>Launch App</CustomButton> */}
-          <ComingSoonButton>Coming Soon</ComingSoonButton>
+          {window.innerWidth < 1280 ? <MobileHamburger /> : ''}
         </LinkContainer>
+        <ComingSoonButton>Coming Soon</ComingSoonButton>
       </HeaderContainer>
     </>
   );
