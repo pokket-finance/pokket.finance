@@ -47,12 +47,18 @@ const PartnerCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 90%;
   /* background: ${(props) => props.theme.color.topPanelBackground}; */
   /* width: 20%; */
   /* height: 150px; */
   /* border-radius: 16px; */
   /* border: 1px solid rgba(63, 109, 225, 0.2); */
   margin: 1% 0;
+`;
+
+const ReactSVGStyled = styled(ReactSVG)`
+  width: 372px;
+  height: 120px;
 `;
 
 const Partners = (props: { title: string; className?: string }) => {
@@ -90,7 +96,7 @@ const Partners = (props: { title: string; className?: string }) => {
       </PartnerContainer> */}
       <PartnerContainer>
         <PartnerCard>
-          <ReactSVG src={BastionGold} />
+          <ReactSVGStyled src={BastionGold} />
         </PartnerCard>
       </PartnerContainer>
     </Container>
