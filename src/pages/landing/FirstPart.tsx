@@ -23,19 +23,6 @@ const Container = styled.div`
   }
 `;
 
-// const RightContainer = styled.div`
-//   position: relative;
-//   overflow: visible;
-//   width: 1200px;
-//   height: 700px;
-//   margin: 100px 0 0 0;
-//   padding: 0 250px 0 0;
-
-//   @media only screen and (max-width: 1280px) {
-//     display: none;
-//   }
-// `;
-
 const LeftContainer = styled.div`
   width: 300px;
   display: flex;
@@ -95,11 +82,6 @@ const SVGStyle = {
   color: 'white',
 };
 
-// const SVGWebStyle = {
-//   marginTop: '100px',
-//   marginLeft: 'calc((100vw/2) - 475px)',
-// };
-
 const ReactSVGStyled = styled(ReactSVG)`
   margin-left: calc((100vw / 2) - 475px);
   margin-top: 100px;
@@ -153,7 +135,7 @@ const FirstPart = () => {
               <ReactSVG src={Discord} style={SVGStyle} />
             </LinkItem>
           </a>
-          <a href="" target="blank">
+          <a href="https://github.com/pokket-finance" target="blank">
             <LinkItem>
               <ReactSVG src={Git} style={SVGStyle} />
             </LinkItem>
