@@ -1,7 +1,7 @@
 const Team = [
   {
     name: 'Bill',
-    position: 'CEO',
+    position: 'Cheif Executive Officer',
     linkedin: 'https://www.linkedin.com/in/billbilguun/',
     pic: 'bill',
   },
@@ -14,15 +14,29 @@ const Team = [
   },
   {
     name: 'Mikio',
-    position: 'Co-Founder',
+    position: 'Developer & Co-Founder',
     twitter: 'https://twitter.com/eremitik',
     linkedin: 'https://www.linkedin.com/in/eremitik/',
     pic: 'mikio',
   },
+
+  // {
+  //   name: 'Edward',
+  //   position: 'Architect & Development Lead',
+  //   pic: 'edward',
+  // },
+
+  // {
+  //   name: 'Harold',
+  //   position: 'Project Manager',
+  //   pic: 'harold',
+  // },
+
   {
-    name: 'Edward',
-    position: 'Architect & Development Lead',
-    pic: 'edward',
+    name: 'Wei',
+    position: 'Investor & Advisor',
+    linkedin: 'https://www.linkedin.com/in/wei-zhu-cfa-49162611/?originalSubdomain=hk',
+    pic: 'wei',
   },
   {
     name: 'Ada',
@@ -31,28 +45,22 @@ const Team = [
     pic: 'ada',
   },
   {
-    name: 'Harold',
-    position: 'Project Manager',
-    pic: 'harold',
-  },
-  {
     name: 'Masa',
     position: 'Investor & Advisor',
-    twitter: 'https://twitter.com/TheSkyhopper',
     linkedin: 'https://www.linkedin.com/in/masahide-hoshi-84467b1b7/',
     pic: 'masa',
   },
-  {
-    name: 'Doug',
-    position: 'Marketing Lead',
-    twitter: 'https://twitter.com/Dougpokket',
-    pic: 'doug'
-  },
-  {
-    name: 'Clare',
-    position: 'Marketing Specialist',
-    pic: 'clare',
-  }
+  // {
+  //   name: 'Doug',
+  //   position: 'Marketing Lead',
+  //   twitter: 'https://twitter.com/Dougpokket',
+  //   pic: 'doug'
+  // },
+  // {
+  //   name: 'Clare',
+  //   position: 'Marketing Specialist',
+  //   pic: 'clare',
+  // }
 ]
 
 

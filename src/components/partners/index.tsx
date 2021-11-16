@@ -24,6 +24,11 @@ const Title = styled.div`
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 5%;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 70px;
+    font-size: 18px;
+  }
 `;
 
 const PartnerContainer = styled.div`
@@ -32,6 +37,10 @@ const PartnerContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 30px;
+  }
 `;
 
 const ReactSVGStyled = styled(ReactSVG)`

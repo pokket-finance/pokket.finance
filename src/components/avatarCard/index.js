@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactSVG } from 'react-svg';
-import Image from 'next/image';
+// import Image from 'next/image';
 import useThemeSVGUrl from '@/hooks/useThemeSVGUrl';
 
 const AvatarCardContainer = styled.div`
@@ -9,12 +9,24 @@ const AvatarCardContainer = styled.div`
   width: 30%;
   display: flex;
   flex-direction: row;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: wrap;
+    width: 100%;
+    /* margin-left: 20px; */
+    justify-content: center;
+  }
 `;
 
 const Avatar = styled.div`
   font-size: 42px;
   font-weight: bold;
   color: ${(props) => props.theme.color.bodyfontColorLevel1};
+
+  @media only screen and (max-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const CoreTeam = styled.div`
@@ -22,10 +34,20 @@ const CoreTeam = styled.div`
   flex-direction: column;
   padding: 10px 0;
   margin-left: 24px;
+
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+    width: 180px;
+  }
+
   .coreTeamTitle {
     font-weight: bold;
     font-size: 20px;
     color: ${(props) => props.theme.color.bodyfontColorLevel1};
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 16px;
+    }
   }
   .message {
     font-weight: normal;
@@ -33,6 +55,11 @@ const CoreTeam = styled.div`
     color: #969696;
     height: 55px;
     padding: 10px 0;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 14px;
+      height: 35px;
+  }
   }
   .link {
     display: flex;
@@ -45,16 +72,22 @@ const CoreTeam = styled.div`
 const ImageDiv = styled.div`
   width: 150px;
   height: 150px;
-  border: 3px solid ${(props) => {
-    return props.theme.name === 'Light' ? '#eceff8' : 'rgba(255,255,255,0)'
-
-  }};
-  border-radius: 10px;
   overflow: hidden;
+
+  @media only screen and (max-width: 1280px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 const ReactSVGStyled = styled(ReactSVG)`
-  filter: grayscale(100%);
+  width: 150px;
+  height: 150px;
+
+  @media only screen and (max-width: 1280px) {
+    width: 120px;
+    height: 120px;
+  }
 `
 
 const ReactSVGSocial = styled(ReactSVG)`
