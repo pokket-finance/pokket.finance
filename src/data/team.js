@@ -1,7 +1,7 @@
 const Team = [
   {
     name: 'Bill',
-    position: 'Cheif Executive Officer',
+    position: 'Chief Executive Officer',
     linkedin: 'https://www.linkedin.com/in/billbilguun/',
     pic: 'bill',
   },

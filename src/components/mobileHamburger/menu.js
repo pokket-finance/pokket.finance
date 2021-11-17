@@ -23,6 +23,8 @@ const Typography = styled.p`
   color: ${(props) => {
     return props.theme.name === 'Light' ? '#3F6DE1' : 'white';
   }};
+  cursor: pointer;
+
 `
 
 const StyledLink = styled(Link)`
